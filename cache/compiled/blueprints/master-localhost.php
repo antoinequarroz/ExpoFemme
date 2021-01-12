@@ -1,8 +1,8 @@
 <?php
 return [
     '@class' => 'Grav\\Common\\Config\\CompiledBlueprints',
-    'timestamp' => 1609772871,
-    'checksum' => '3485402be03e992e05d243b73b7442eb',
+    'timestamp' => 1609837116,
+    'checksum' => '403a7317ac6202e64b630abffeeb44de',
     'files' => [
         'system/blueprints/config' => [
             'backups' => [
@@ -49,6 +49,10 @@ return [
                 'file' => 'user/plugins/form/blueprints.yaml',
                 'modified' => 1608003118
             ],
+            'plugins/admin-power-tools' => [
+                'file' => 'user/plugins/admin-power-tools/blueprints.yaml',
+                'modified' => 1609837101
+            ],
             'plugins/admin' => [
                 'file' => 'user/plugins/admin/blueprints.yaml',
                 'modified' => 1608003118
@@ -68,6 +72,14 @@ return [
             'plugins/email' => [
                 'file' => 'user/plugins/email/blueprints.yaml',
                 'modified' => 1608003118
+            ],
+            'plugins/editor' => [
+                'file' => 'user/plugins/editor/blueprints.yaml',
+                'modified' => 1609837111
+            ],
+            'plugins/core-service-manager' => [
+                'file' => 'user/plugins/core-service-manager/blueprints.yaml',
+                'modified' => 1609837098
             ]
         ]
     ],
@@ -2688,6 +2700,164 @@ return [
                 'name' => 'plugins.form.recaptcha.secret_key',
                 'validation' => 'strict'
             ],
+            'plugins.admin-power-tools' => [
+                'type' => '_root',
+                'form_field' => false,
+                'form' => [
+                    'validation' => 'strict'
+                ]
+            ],
+            'plugins.admin-power-tools.enabled' => [
+                'type' => 'toggle',
+                'label' => 'Plugin status',
+                'highlight' => 1,
+                'default' => 0,
+                'options' => [
+                    1 => 'Enabled',
+                    0 => 'Disabled'
+                ],
+                'validate' => [
+                    'type' => 'bool'
+                ],
+                'name' => 'plugins.admin-power-tools.enabled',
+                'validation' => 'strict'
+            ],
+            'plugins.admin-power-tools.edit_page_enabled' => [
+                'type' => 'toggle',
+                'label' => 'Edit this page',
+                'highlight' => 1,
+                'default' => 1,
+                'options' => [
+                    1 => 'Enabled',
+                    0 => 'Disabled'
+                ],
+                'validate' => [
+                    'type' => 'bool'
+                ],
+                'name' => 'plugins.admin-power-tools.edit_page_enabled',
+                'validation' => 'strict'
+            ],
+            'plugins.admin-power-tools.edit_section_enabled' => [
+                'type' => 'toggle',
+                'label' => 'Edit this section',
+                'highlight' => 1,
+                'default' => 1,
+                'options' => [
+                    1 => 'Enabled',
+                    0 => 'Disabled'
+                ],
+                'validate' => [
+                    'type' => 'bool'
+                ],
+                'name' => 'plugins.admin-power-tools.edit_section_enabled',
+                'validation' => 'strict'
+            ],
+            'plugins.admin-power-tools.edit_section_syntax_enabled' => [
+                'type' => 'toggle',
+                'label' => 'Use CodeMirror if available',
+                'description' => 'Enables syntax highlighing for the section editor. The editor plugin must be installed.',
+                'highlight' => 1,
+                'default' => 1,
+                'options' => [
+                    1 => 'Enabled',
+                    0 => 'Disabled'
+                ],
+                'validate' => [
+                    'type' => 'bool'
+                ],
+                'name' => 'plugins.admin-power-tools.edit_section_syntax_enabled',
+                'validation' => 'strict'
+            ],
+            'plugins.admin-power-tools.add_page_enabled' => [
+                'type' => 'toggle',
+                'label' => 'Additional <strong>Add Page</strong> options',
+                'highlight' => 1,
+                'default' => 1,
+                'options' => [
+                    1 => 'Enabled',
+                    0 => 'Disabled'
+                ],
+                'validate' => [
+                    'type' => 'bool'
+                ],
+                'name' => 'plugins.admin-power-tools.add_page_enabled',
+                'validation' => 'strict'
+            ],
+            'plugins.admin-power-tools.reports_enabled' => [
+                'type' => 'toggle',
+                'label' => 'Reports',
+                'highlight' => 1,
+                'default' => 1,
+                'options' => [
+                    1 => 'Enabled',
+                    0 => 'Disabled'
+                ],
+                'validate' => [
+                    'type' => 'bool'
+                ],
+                'name' => 'plugins.admin-power-tools.reports_enabled',
+                'validation' => 'strict'
+            ],
+            'plugins.admin-power-tools.rename_page_enabled' => [
+                'type' => 'toggle',
+                'label' => 'Rename Page',
+                'highlight' => 1,
+                'default' => 0,
+                'options' => [
+                    1 => 'Enabled',
+                    0 => 'Disabled'
+                ],
+                'validate' => [
+                    'type' => 'bool'
+                ],
+                'name' => 'plugins.admin-power-tools.rename_page_enabled',
+                'validation' => 'strict'
+            ],
+            'plugins.admin-power-tools.move_page_enabled' => [
+                'type' => 'toggle',
+                'label' => 'Move Page',
+                'highlight' => 1,
+                'default' => 0,
+                'options' => [
+                    1 => 'Enabled',
+                    0 => 'Disabled'
+                ],
+                'validate' => [
+                    'type' => 'bool'
+                ],
+                'name' => 'plugins.admin-power-tools.move_page_enabled',
+                'validation' => 'strict'
+            ],
+            'plugins.admin-power-tools.child_reordering_enabled' => [
+                'type' => 'toggle',
+                'label' => 'Child Reordering',
+                'highlight' => 1,
+                'default' => 1,
+                'options' => [
+                    1 => 'Show',
+                    0 => 'Hide'
+                ],
+                'validate' => [
+                    'type' => 'bool'
+                ],
+                'name' => 'plugins.admin-power-tools.child_reordering_enabled',
+                'validation' => 'strict'
+            ],
+            'plugins.admin-power-tools.child_reordering_immediate' => [
+                'type' => 'toggle',
+                'label' => 'Child Reordering Immediate',
+                'highlight' => 1,
+                'default' => 1,
+                'options' => [
+                    1 => 'Show',
+                    0 => 'Hide'
+                ],
+                'validate' => [
+                    'type' => 'bool'
+                ],
+                'name' => 'plugins.admin-power-tools.child_reordering_immediate',
+                'validation' => 'strict'
+            ],
             'plugins.admin' => [
                 'type' => '_root',
                 'form_field' => false,
@@ -4174,6 +4344,172 @@ return [
                 ],
                 'name' => 'plugins.email.debug',
                 'validation' => 'loose'
+            ],
+            'plugins.editor' => [
+                'type' => '_root',
+                'form_field' => false,
+                'form' => [
+                    'validation' => 'strict'
+                ]
+            ],
+            'plugins.editor.enabled' => [
+                'type' => 'toggle',
+                'label' => 'Plugin status',
+                'highlight' => 1,
+                'default' => 0,
+                'options' => [
+                    1 => 'Enabled',
+                    0 => 'Disabled'
+                ],
+                'validate' => [
+                    'type' => 'bool'
+                ],
+                'name' => 'plugins.editor.enabled',
+                'validation' => 'strict'
+            ],
+            'plugins.editor.css_enabled' => [
+                'type' => 'toggle',
+                'label' => 'CSS',
+                'highlight' => 1,
+                'default' => 1,
+                'options' => [
+                    1 => 'Enabled',
+                    0 => 'Disabled'
+                ],
+                'validate' => [
+                    'type' => 'bool'
+                ],
+                'name' => 'plugins.editor.css_enabled',
+                'validation' => 'strict'
+            ],
+            'plugins.editor.twig_enabled' => [
+                'type' => 'toggle',
+                'label' => 'Twig',
+                'highlight' => 1,
+                'default' => 1,
+                'options' => [
+                    1 => 'Enabled',
+                    0 => 'Disabled'
+                ],
+                'validate' => [
+                    'type' => 'bool'
+                ],
+                'name' => 'plugins.editor.twig_enabled',
+                'validation' => 'strict'
+            ],
+            'plugins.editor.js_enabled' => [
+                'type' => 'toggle',
+                'label' => 'Javascript',
+                'highlight' => 1,
+                'default' => 1,
+                'options' => [
+                    1 => 'Enabled',
+                    0 => 'Disabled'
+                ],
+                'validate' => [
+                    'type' => 'bool'
+                ],
+                'name' => 'plugins.editor.js_enabled',
+                'validation' => 'strict'
+            ],
+            'plugins.editor.php_enabled' => [
+                'type' => 'toggle',
+                'label' => 'PHP',
+                'highlight' => 1,
+                'default' => 1,
+                'options' => [
+                    1 => 'Enabled',
+                    0 => 'Disabled'
+                ],
+                'validate' => [
+                    'type' => 'bool'
+                ],
+                'name' => 'plugins.editor.php_enabled',
+                'validation' => 'strict'
+            ],
+            'plugins.editor.yaml_enabled' => [
+                'type' => 'toggle',
+                'label' => 'YAML',
+                'highlight' => 1,
+                'default' => 1,
+                'options' => [
+                    1 => 'Enabled',
+                    0 => 'Disabled'
+                ],
+                'validate' => [
+                    'type' => 'bool'
+                ],
+                'name' => 'plugins.editor.yaml_enabled',
+                'validation' => 'strict'
+            ],
+            'plugins.editor.markdown_enabled' => [
+                'type' => 'toggle',
+                'label' => 'Markdown',
+                'highlight' => 1,
+                'default' => 1,
+                'options' => [
+                    1 => 'Enabled',
+                    0 => 'Disabled'
+                ],
+                'validate' => [
+                    'type' => 'bool'
+                ],
+                'name' => 'plugins.editor.markdown_enabled',
+                'validation' => 'strict'
+            ],
+            'plugins.core-service-manager' => [
+                'type' => '_root',
+                'form_field' => false,
+                'form' => [
+                    'validation' => 'strict'
+                ]
+            ],
+            'plugins.core-service-manager.enabled' => [
+                'type' => 'toggle',
+                'label' => 'Plugin status',
+                'highlight' => 1,
+                'default' => 0,
+                'options' => [
+                    1 => 'Enabled',
+                    0 => 'Disabled'
+                ],
+                'validate' => [
+                    'type' => 'bool'
+                ],
+                'name' => 'plugins.core-service-manager.enabled',
+                'validation' => 'strict'
+            ],
+            'plugins.core-service-manager.override_admin_twigs' => [
+                'type' => 'toggle',
+                'label' => 'Override Admin Twig',
+                'description' => 'This option should <strong>never</strong> be disabled. The setting is only provided as a troubleshooting tool.',
+                'highlight' => 1,
+                'default' => 1,
+                'options' => [
+                    1 => 'Yes',
+                    0 => 'No'
+                ],
+                'validate' => [
+                    'type' => 'bool'
+                ],
+                'name' => 'plugins.core-service-manager.override_admin_twigs',
+                'validation' => 'strict'
+            ],
+            'plugins.core-service-manager.show_samples' => [
+                'type' => 'toggle',
+                'label' => 'Add sample services',
+                'description' => 'For testing purposes, several sample services will be registered.',
+                'highlight' => 0,
+                'default' => 0,
+                'options' => [
+                    1 => 'Enabled',
+                    0 => 'Disabled'
+                ],
+                'validate' => [
+                    'type' => 'bool'
+                ],
+                'name' => 'plugins.core-service-manager.show_samples',
+                'validation' => 'strict'
             ]
         ],
         'rules' => [
@@ -4466,6 +4802,18 @@ return [
                         'secret_key' => 'plugins.form.recaptcha.secret_key'
                     ]
                 ],
+                'admin-power-tools' => [
+                    'enabled' => 'plugins.admin-power-tools.enabled',
+                    'edit_page_enabled' => 'plugins.admin-power-tools.edit_page_enabled',
+                    'edit_section_enabled' => 'plugins.admin-power-tools.edit_section_enabled',
+                    'edit_section_syntax_enabled' => 'plugins.admin-power-tools.edit_section_syntax_enabled',
+                    'add_page_enabled' => 'plugins.admin-power-tools.add_page_enabled',
+                    'reports_enabled' => 'plugins.admin-power-tools.reports_enabled',
+                    'rename_page_enabled' => 'plugins.admin-power-tools.rename_page_enabled',
+                    'move_page_enabled' => 'plugins.admin-power-tools.move_page_enabled',
+                    'child_reordering_enabled' => 'plugins.admin-power-tools.child_reordering_enabled',
+                    'child_reordering_immediate' => 'plugins.admin-power-tools.child_reordering_immediate'
+                ],
                 'admin' => [
                     'enabled' => 'plugins.admin.enabled',
                     'cache_enabled' => 'plugins.admin.cache_enabled',
@@ -4632,6 +4980,20 @@ return [
                         'flush_time_limit' => 'plugins.email.queue.flush_time_limit'
                     ],
                     'debug' => 'plugins.email.debug'
+                ],
+                'editor' => [
+                    'enabled' => 'plugins.editor.enabled',
+                    'css_enabled' => 'plugins.editor.css_enabled',
+                    'twig_enabled' => 'plugins.editor.twig_enabled',
+                    'js_enabled' => 'plugins.editor.js_enabled',
+                    'php_enabled' => 'plugins.editor.php_enabled',
+                    'yaml_enabled' => 'plugins.editor.yaml_enabled',
+                    'markdown_enabled' => 'plugins.editor.markdown_enabled'
+                ],
+                'core-service-manager' => [
+                    'enabled' => 'plugins.core-service-manager.enabled',
+                    'override_admin_twigs' => 'plugins.core-service-manager.override_admin_twigs',
+                    'show_samples' => 'plugins.core-service-manager.show_samples'
                 ]
             ]
         ],

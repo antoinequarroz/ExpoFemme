@@ -2,9 +2,9 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => '/Users/antoinequarroz/Sites/expoFemme/user/data/feed/21232f297a57a5a743894a0e4a801fc3.yaml',
-    'modified' => 1609772796,
+    'modified' => 1609837062,
     'data' => [
-        'last_checked' => 1609772796,
+        'last_checked' => 1609837062,
         'data' => [
             0 => [
                 'title' => 'Grav Premium Coming Soon',
