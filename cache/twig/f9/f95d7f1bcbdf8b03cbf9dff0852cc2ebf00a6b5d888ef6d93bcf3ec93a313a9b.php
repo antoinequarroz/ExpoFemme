@@ -47,9 +47,11 @@ class __TwigTemplate_61a2549b39c784a6826fe02b809ff2a90a2ead6660698cea28923bc88df
             <h1 class=\"v-title mb-0\">Voies</h1>
             <h1 class=\"v-title\">citoyennes</h1>
 
+
             <div class=\"v-box\">
 
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci asperiores atque aut cum deserunt dolorem eligendi error labore libero, mollitia, officia officiis porro quibusdam repudiandae saepe sequi soluta suscipit voluptates! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci asperiores atque aut cum deserunt dolorem eligendi error labore libero, mollitia, officia officiis porro quibusdam repudiandae saepe sequi soluta suscipit voluptates! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci asperiores atque aut cum deserunt dolorem eligendi error labore libero, mollitia, officia officiis porro quibusdam repudiandae saepe sequi soluta suscipit voluptates! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci asperiores atque aut cum deserunt dolorem eligendi error labore libero, mollitia, officia officiis porro quibusdam repudiandae saepe sequi soluta suscipit voluptates!</p>
+                <button class=\"v-box-plus\">En savoir plus</button>
             </div>
 
             <div class=\"v-theme\">
@@ -91,6 +93,7 @@ class __TwigTemplate_61a2549b39c784a6826fe02b809ff2a90a2ead6660698cea28923bc88df
             </div>
         </div>
     </div>
+
 
 </section>
 ";
@@ -132,9 +135,11 @@ class __TwigTemplate_61a2549b39c784a6826fe02b809ff2a90a2ead6660698cea28923bc88df
             <h1 class=\"v-title mb-0\">Voies</h1>
             <h1 class=\"v-title\">citoyennes</h1>
 
+
             <div class=\"v-box\">
 
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci asperiores atque aut cum deserunt dolorem eligendi error labore libero, mollitia, officia officiis porro quibusdam repudiandae saepe sequi soluta suscipit voluptates! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci asperiores atque aut cum deserunt dolorem eligendi error labore libero, mollitia, officia officiis porro quibusdam repudiandae saepe sequi soluta suscipit voluptates! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci asperiores atque aut cum deserunt dolorem eligendi error labore libero, mollitia, officia officiis porro quibusdam repudiandae saepe sequi soluta suscipit voluptates! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci asperiores atque aut cum deserunt dolorem eligendi error labore libero, mollitia, officia officiis porro quibusdam repudiandae saepe sequi soluta suscipit voluptates!</p>
+                <button class=\"v-box-plus\">En savoir plus</button>
             </div>
 
             <div class=\"v-theme\">
@@ -176,6 +181,7 @@ class __TwigTemplate_61a2549b39c784a6826fe02b809ff2a90a2ead6660698cea28923bc88df
             </div>
         </div>
     </div>
+
 
 </section>
 {% endblock %}

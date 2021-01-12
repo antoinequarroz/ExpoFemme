@@ -57,6 +57,9 @@ class __TwigTemplate_ecaab57f276dac6a90ab56bd2a05b68bb07ff930f087e04b36816b52050
         $this->displayBlock('content', $context, $blocks);
         // line 31
         echo "</body>
+
+<footer class=\"mt-5\">
+</footer>
 ";
         $this->env->getExtension('Phive\Twig\Extensions\Deferred\DeferredExtension')->resolve($this, $context, $blocks);
     }
@@ -136,7 +139,7 @@ class __TwigTemplate_ecaab57f276dac6a90ab56bd2a05b68bb07ff930f087e04b36816b52050
 
     public function getDebugInfo()
     {
-        return array (  123 => 29,  120 => 28,  115 => 25,  112 => 24,  109 => 23,  106 => 22,  100 => 18,  97 => 17,  89 => 13,  85 => 12,  82 => 11,  80 => 10,  73 => 5,  70 => 4,  59 => 31,  57 => 28,  54 => 27,  52 => 22,  49 => 21,  47 => 17,  44 => 16,  42 => 4,  37 => 2,  34 => 1,);
+        return array (  126 => 29,  123 => 28,  118 => 25,  115 => 24,  112 => 23,  109 => 22,  103 => 18,  100 => 17,  92 => 13,  88 => 12,  85 => 11,  83 => 10,  76 => 5,  73 => 4,  59 => 31,  57 => 28,  54 => 27,  52 => 22,  49 => 21,  47 => 17,  44 => 16,  42 => 4,  37 => 2,  34 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -180,6 +183,9 @@ class __TwigTemplate_ecaab57f276dac6a90ab56bd2a05b68bb07ff930f087e04b36816b52050
 
     {% endblock %}
 </body>
+
+<footer class=\"mt-5\">
+</footer>
 ", "partials/base.html.twig", "/Users/antoinequarroz/Sites/expoFemme/user/themes/expo/templates/partials/base.html.twig");
     }
 }
