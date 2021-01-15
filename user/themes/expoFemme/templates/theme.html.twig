@@ -3,7 +3,7 @@
 {% block content %}
     <section class="v-background">
 
-        <div class="container mt-5">
+        <div class="container">
             <div class="row">
                 <h1 class="v-h1">Voies <br> citoyennes</h1>
                 <h2 class="v-h2 mb-5">50 ans du suffrage féminin</h2>
@@ -26,8 +26,10 @@
                                     <picture class="card-img-top">
                                         <img src="{{ card.image }}" class="img-fluid" title="{{ card.title }}" alt="{{ card.title }}" />
                                     </picture>
-                                    <h3 class="card-title" style="overflow-wrap: initial;">{{ card.title }}</h3>
-                                    <p class="card-text">{{ card.text }}</p>
+
+                                        <h3 class="card-title" style="overflow-wrap: initial;">{{ card.title }}</h3>
+                                        <p class="card-text">{{ card.text }}</p>
+
                                 </div>
                             </a>
                     </div>

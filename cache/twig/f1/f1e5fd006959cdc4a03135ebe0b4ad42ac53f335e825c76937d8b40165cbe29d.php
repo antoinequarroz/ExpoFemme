@@ -42,7 +42,7 @@ class __TwigTemplate_e8b1a7d53cf331d08967adc103757a5b016c3ce18d79fe1a02ba8846693
         // line 4
         echo "    <section class=\"v-background\">
 
-        <div class=\"container mt-5\">
+        <div class=\"container\">
             <div class=\"row\">
                 <h1 class=\"v-h1\">Voies <br> citoyennes</h1>
                 <h2 class=\"v-h2 mb-5\">50 ans du suffrage féminin</h2>
@@ -93,14 +93,16 @@ class __TwigTemplate_e8b1a7d53cf331d08967adc103757a5b016c3ce18d79fe1a02ba8846693
             echo $this->getAttribute($context["card"], "title", []);
             echo "\" />
                                     </picture>
-                                    <h3 class=\"card-title\" style=\"overflow-wrap: initial;\">";
-            // line 29
+
+                                        <h3 class=\"card-title\" style=\"overflow-wrap: initial;\">";
+            // line 30
             echo $this->getAttribute($context["card"], "title", []);
             echo "</h3>
-                                    <p class=\"card-text\">";
-            // line 30
+                                        <p class=\"card-text\">";
+            // line 31
             echo $this->getAttribute($context["card"], "text", []);
             echo "</p>
+
                                 </div>
                             </a>
                     </div>
@@ -109,7 +111,7 @@ class __TwigTemplate_e8b1a7d53cf331d08967adc103757a5b016c3ce18d79fe1a02ba8846693
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['card'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 35
+        // line 37
         echo "            </div>
         </div>
 
@@ -118,7 +120,7 @@ class __TwigTemplate_e8b1a7d53cf331d08967adc103757a5b016c3ce18d79fe1a02ba8846693
 ";
     }
 
-    // line 42
+    // line 44
     public function block_footer($context, array $blocks = [])
     {
     }
@@ -135,7 +137,7 @@ class __TwigTemplate_e8b1a7d53cf331d08967adc103757a5b016c3ce18d79fe1a02ba8846693
 
     public function getDebugInfo()
     {
-        return array (  122 => 42,  113 => 35,  102 => 30,  98 => 29,  89 => 27,  83 => 24,  80 => 23,  76 => 22,  69 => 17,  60 => 14,  57 => 13,  53 => 12,  43 => 4,  40 => 3,  30 => 1,);
+        return array (  124 => 44,  115 => 37,  103 => 31,  99 => 30,  89 => 27,  83 => 24,  80 => 23,  76 => 22,  69 => 17,  60 => 14,  57 => 13,  53 => 12,  43 => 4,  40 => 3,  30 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -153,7 +155,7 @@ class __TwigTemplate_e8b1a7d53cf331d08967adc103757a5b016c3ce18d79fe1a02ba8846693
 {% block content %}
     <section class=\"v-background\">
 
-        <div class=\"container mt-5\">
+        <div class=\"container\">
             <div class=\"row\">
                 <h1 class=\"v-h1\">Voies <br> citoyennes</h1>
                 <h2 class=\"v-h2 mb-5\">50 ans du suffrage féminin</h2>
@@ -176,8 +178,10 @@ class __TwigTemplate_e8b1a7d53cf331d08967adc103757a5b016c3ce18d79fe1a02ba8846693
                                     <picture class=\"card-img-top\">
                                         <img src=\"{{ card.image }}\" class=\"img-fluid\" title=\"{{ card.title }}\" alt=\"{{ card.title }}\" />
                                     </picture>
-                                    <h3 class=\"card-title\" style=\"overflow-wrap: initial;\">{{ card.title }}</h3>
-                                    <p class=\"card-text\">{{ card.text }}</p>
+
+                                        <h3 class=\"card-title\" style=\"overflow-wrap: initial;\">{{ card.title }}</h3>
+                                        <p class=\"card-text\">{{ card.text }}</p>
+
                                 </div>
                             </a>
                     </div>

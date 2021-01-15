@@ -45,10 +45,9 @@ form:
                   label: Texte de la carte
                 .image:
                   type: filepicker
-                  folder: './user/themes/expoFemme/images/svg'
+                  folder: './user/themes/expoFemme/images'
                   label: Image
                   preview_images: true
                   accept:
                   - .png
                   - .jpg
-                  - .svg

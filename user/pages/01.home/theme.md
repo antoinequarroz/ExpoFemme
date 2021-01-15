@@ -9,32 +9,30 @@ cards:
         title: 'Le jour J'
         uri: jourj
         text: '12 avril 1970. Cette date ne vous dit rien ? Pourtant, elle marque un tournant dans la vie des Valaisans et des Valaisannes.'
-        image: 50_picto.svg
+        image: img_1.jpg
     -
         title: 'De Gabrielle Nanchen à Viola Amherd, elles sont les pionnières'
         uri: pionnieres
         text: 'Obtenir le droit de vote et d’éligibilité n’est qu’une première étape. Désormais, il faut se faire élire.'
-        image: 50_picto.svg
     -
         title: 'Iris von Roten, la Simone de Beauvoir suisse'
         uri: irisVonRoten
         text: 'En France, tout le monde, ou presque, connaît Simone de Beauvoir, figure féministe qui a marqué de son empreinte l’histoire du 20e siècle.'
-        image: 50_picto.svg
     -
         title: 'Derrière le suffrage féminin, des hommes'
         uri: hommes
         text: 'Sans eux, la cause du suffrage féminin n’aurait probablement jamais été portée dans l’arène politique.'
-        image: 50_picto.svg
     -
         title: 'Pas tous·tes acquis·es à la cause'
         uri: cause
         text: '« La femme suisse sait depuis toujours qu’elle peut gouverner l’homme sans droit de vote, c’est pourquoi elle s’en passe avec plaisir. »'
-        image: 50_picto.svg
     -
         title: 'Et après ?'
         uri: apres
         text: 'Si la conquête du suffrage féminin est une grande victoire pour les femmes, elle ne signifie pas pour autant l’égalité entre femmes et hommes.'
-        image: 50_picto.svg
+images:
+    -
+        image: img_1.jpg
 ---
 
 # Say Hello to Grav!

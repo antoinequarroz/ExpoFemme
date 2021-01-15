@@ -42,7 +42,7 @@ class __TwigTemplate_2ed5c3cc30459939d5771d2988b8e6ac758b45b88842d86d108ea0f3ccf
         // line 4
         echo "    <section class=\"v-background\">
 
-        <div class=\"container mt-5\">
+        <div class=\"container\">
             <div class=\"row\">
                 <div class=\"align-right\">
                 <button class=\"btn\">
@@ -154,7 +154,7 @@ class __TwigTemplate_2ed5c3cc30459939d5771d2988b8e6ac758b45b88842d86d108ea0f3ccf
 {% block content %}
     <section class=\"v-background\">
 
-        <div class=\"container mt-5\">
+        <div class=\"container\">
             <div class=\"row\">
                 <div class=\"align-right\">
                 <button class=\"btn\">
