@@ -44,8 +44,8 @@ class __TwigTemplate_e8b1a7d53cf331d08967adc103757a5b016c3ce18d79fe1a02ba8846693
 
         <div class=\"container\">
             <div class=\"row\">
-                <h1 class=\"v-h1\">Voies <br> citoyennes</h1>
-                <h2 class=\"v-h2 mb-5\">50 ans du suffrage féminin</h2>
+                <h1 class=\"v-h1\" data-aos=\"fade-right\">Voies <br> citoyennes</h1>
+                <h2 class=\"v-h2 mb-5\" data-aos=\"fade-left\">50 ans du suffrage féminin</h2>
 
 
                 ";
@@ -54,7 +54,7 @@ class __TwigTemplate_e8b1a7d53cf331d08967adc103757a5b016c3ce18d79fe1a02ba8846693
         $context['_seq'] = twig_ensure_traversable($this->getAttribute($this->getAttribute(($context["page"] ?? null), "header", []), "paragraphes", []));
         foreach ($context['_seq'] as $context["_key"] => $context["para"]) {
             // line 13
-            echo "                <div class=\"v-box v-box-shadow\">
+            echo "                <div class=\"v-box v-box-shadow\" data-aos=\"fade-up\" data-aos-duration=\"1000\">
                     <p class=\"fs-4\">";
             // line 14
             echo $this->getAttribute($context["para"], "description", []);
@@ -69,7 +69,7 @@ class __TwigTemplate_e8b1a7d53cf331d08967adc103757a5b016c3ce18d79fe1a02ba8846693
         echo "            </div>
         </div>
 
-        <div class=\"container\">
+        <div class=\"container\" data-aos=\"fade-up\" data-aos-duration=\"1000\">
             <div class=\"row\">
             ";
         // line 22
@@ -112,7 +112,8 @@ class __TwigTemplate_e8b1a7d53cf331d08967adc103757a5b016c3ce18d79fe1a02ba8846693
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['card'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
         // line 37
-        echo "            </div>
+        echo "
+            </div>
         </div>
 
 
@@ -120,7 +121,7 @@ class __TwigTemplate_e8b1a7d53cf331d08967adc103757a5b016c3ce18d79fe1a02ba8846693
 ";
     }
 
-    // line 44
+    // line 45
     public function block_footer($context, array $blocks = [])
     {
     }
@@ -137,7 +138,7 @@ class __TwigTemplate_e8b1a7d53cf331d08967adc103757a5b016c3ce18d79fe1a02ba8846693
 
     public function getDebugInfo()
     {
-        return array (  124 => 44,  115 => 37,  103 => 31,  99 => 30,  89 => 27,  83 => 24,  80 => 23,  76 => 22,  69 => 17,  60 => 14,  57 => 13,  53 => 12,  43 => 4,  40 => 3,  30 => 1,);
+        return array (  125 => 45,  115 => 37,  103 => 31,  99 => 30,  89 => 27,  83 => 24,  80 => 23,  76 => 22,  69 => 17,  60 => 14,  57 => 13,  53 => 12,  43 => 4,  40 => 3,  30 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -157,19 +158,19 @@ class __TwigTemplate_e8b1a7d53cf331d08967adc103757a5b016c3ce18d79fe1a02ba8846693
 
         <div class=\"container\">
             <div class=\"row\">
-                <h1 class=\"v-h1\">Voies <br> citoyennes</h1>
-                <h2 class=\"v-h2 mb-5\">50 ans du suffrage féminin</h2>
+                <h1 class=\"v-h1\" data-aos=\"fade-right\">Voies <br> citoyennes</h1>
+                <h2 class=\"v-h2 mb-5\" data-aos=\"fade-left\">50 ans du suffrage féminin</h2>
 
 
                 {% for para in page.header.paragraphes %}
-                <div class=\"v-box v-box-shadow\">
+                <div class=\"v-box v-box-shadow\" data-aos=\"fade-up\" data-aos-duration=\"1000\">
                     <p class=\"fs-4\">{{ para.description }}</p>
                 </div>
                 {% endfor %}
             </div>
         </div>
 
-        <div class=\"container\">
+        <div class=\"container\" data-aos=\"fade-up\" data-aos-duration=\"1000\">
             <div class=\"row\">
             {% for card in page.header.cards %}
             <div class=\"col-sm-3 col-sm-4 mt-5\">
@@ -186,6 +187,7 @@ class __TwigTemplate_e8b1a7d53cf331d08967adc103757a5b016c3ce18d79fe1a02ba8846693
                             </a>
                     </div>
             {% endfor %}
+
             </div>
         </div>
 

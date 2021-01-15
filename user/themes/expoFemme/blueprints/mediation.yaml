@@ -37,3 +37,18 @@ form:
                 .description:
                   type: textarea
                   label: Rentrer le texte
+
+
+            header.images:
+              name: image
+              type: list
+              label: Image
+              fields:
+                .image:
+                  type: filepicker
+                  folder: './user/themes/expoFemme/images'
+                  label: Image
+                  preview_images: true
+                  accept:
+                    - .png
+                    - .jpg

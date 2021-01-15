@@ -45,16 +45,34 @@ class __TwigTemplate_9baac1fc3ab481219dd9e643c3b94542c540e6d1cb8eeda9e06b98c6a31
         <div class=\"container\">
             <div class=\"row\">
 
-
+                <div data-flickity='{\"pageDots\": false,\"cellAlign\": \"left\", \"wrapAround\": true, \"imagesLoaded\": true}'>
+                    <div class=\"col-12 col-md-4 px-1\">
+                        ";
+        // line 11
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable($this->getAttribute($this->getAttribute(($context["page"] ?? null), "header", []), "images", []));
+        foreach ($context['_seq'] as $context["_key"] => $context["image"]) {
+            // line 12
+            echo "                        <img src=\"";
+            echo $this->getAttribute($context["image"], "image", []);
+            echo "\" class=\"img-fluid\" alt=\"";
+            echo $this->getAttribute($context["image"], "title", []);
+            echo "\">
+                        ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['image'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 14
+        echo "                    </div>
+                </div>
             </div>
         </div>
-
-
     </section>
 ";
     }
 
-    // line 17
+    // line 21
     public function block_footer($context, array $blocks = [])
     {
     }
@@ -71,7 +89,7 @@ class __TwigTemplate_9baac1fc3ab481219dd9e643c3b94542c540e6d1cb8eeda9e06b98c6a31
 
     public function getDebugInfo()
     {
-        return array (  58 => 17,  43 => 4,  40 => 3,  30 => 1,);
+        return array (  76 => 21,  67 => 14,  56 => 12,  52 => 11,  43 => 4,  40 => 3,  30 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -92,11 +110,15 @@ class __TwigTemplate_9baac1fc3ab481219dd9e643c3b94542c540e6d1cb8eeda9e06b98c6a31
         <div class=\"container\">
             <div class=\"row\">
 
-
+                <div data-flickity='{\"pageDots\": false,\"cellAlign\": \"left\", \"wrapAround\": true, \"imagesLoaded\": true}'>
+                    <div class=\"col-12 col-md-4 px-1\">
+                        {% for image in page.header.images %}
+                        <img src=\"{{ image.image }}\" class=\"img-fluid\" alt=\"{{ image.title }}\">
+                        {% endfor %}
+                    </div>
+                </div>
             </div>
         </div>
-
-
     </section>
 {% endblock %}
 

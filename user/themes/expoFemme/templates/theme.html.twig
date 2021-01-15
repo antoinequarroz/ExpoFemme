@@ -5,19 +5,19 @@
 
         <div class="container">
             <div class="row">
-                <h1 class="v-h1">Voies <br> citoyennes</h1>
-                <h2 class="v-h2 mb-5">50 ans du suffrage féminin</h2>
+                <h1 class="v-h1" data-aos="fade-right">Voies <br> citoyennes</h1>
+                <h2 class="v-h2 mb-5" data-aos="fade-left">50 ans du suffrage féminin</h2>
 
 
                 {% for para in page.header.paragraphes %}
-                <div class="v-box v-box-shadow">
+                <div class="v-box v-box-shadow" data-aos="fade-up" data-aos-duration="1000">
                     <p class="fs-4">{{ para.description }}</p>
                 </div>
                 {% endfor %}
             </div>
         </div>
 
-        <div class="container">
+        <div class="container" data-aos="fade-up" data-aos-duration="1000">
             <div class="row">
             {% for card in page.header.cards %}
             <div class="col-sm-3 col-sm-4 mt-5">
@@ -34,6 +34,7 @@
                             </a>
                     </div>
             {% endfor %}
+
             </div>
         </div>
 
