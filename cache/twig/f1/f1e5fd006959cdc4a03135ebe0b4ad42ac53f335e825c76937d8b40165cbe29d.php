@@ -54,7 +54,7 @@ class __TwigTemplate_e8b1a7d53cf331d08967adc103757a5b016c3ce18d79fe1a02ba8846693
         $context['_seq'] = twig_ensure_traversable($this->getAttribute($this->getAttribute(($context["page"] ?? null), "header", []), "paragraphes", []));
         foreach ($context['_seq'] as $context["_key"] => $context["para"]) {
             // line 13
-            echo "                <div class=\"v-box\">
+            echo "                <div class=\"v-box v-box-shadow\">
                     <p class=\"fs-4\">";
             // line 14
             echo $this->getAttribute($context["para"], "description", []);
@@ -162,7 +162,7 @@ class __TwigTemplate_e8b1a7d53cf331d08967adc103757a5b016c3ce18d79fe1a02ba8846693
 
 
                 {% for para in page.header.paragraphes %}
-                <div class=\"v-box\">
+                <div class=\"v-box v-box-shadow\">
                     <p class=\"fs-4\">{{ para.description }}</p>
                 </div>
                 {% endfor %}

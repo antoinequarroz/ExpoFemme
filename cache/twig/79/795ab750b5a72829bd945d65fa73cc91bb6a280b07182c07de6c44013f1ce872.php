@@ -76,7 +76,7 @@ class __TwigTemplate_2ed5c3cc30459939d5771d2988b8e6ac758b45b88842d86d108ea0f3ccf
         $context['_seq'] = twig_ensure_traversable($this->getAttribute($this->getAttribute($context["page"], "header", []), "pages", []));
         foreach ($context['_seq'] as $context["_key"] => $context["page"]) {
             // line 23
-            echo "                    <div class=\"v-box\">
+            echo "                    <div class=\"v-box v-box-shadow\">
                 <p class=\"fs-4\">";
             // line 24
             echo $this->getAttribute($context["page"], "description", []);
@@ -171,7 +171,7 @@ class __TwigTemplate_2ed5c3cc30459939d5771d2988b8e6ac758b45b88842d86d108ea0f3ccf
         <div class=\"container\">
             <div class=\"row\">
                 {% for page in page.header.pages %}
-                    <div class=\"v-box\">
+                    <div class=\"v-box v-box-shadow\">
                 <p class=\"fs-4\">{{ page.description }}</p>
                     </div>
                 {% endfor %}

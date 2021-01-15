@@ -10,6 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     {% include 'partials/metadata.html.twig' %}
 
+
     <link rel="icon" type="image/png" href="{{ url('theme://images/logo.png')|e }}" />
     <link rel="canonical" href="{{ page.url(true, true)|e }}" />
 {% endblock head %}
@@ -21,12 +22,18 @@
     {% do assets.addCss('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css', 96) %}
     {% do assets.addCss('theme://css/custom.css', 100) %}
     {% do assets.addCss('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap', 95) %}
+    {% do assets.addCss('https://unpkg.com/aos@2.3.1/dist/aos.css>', 94) %}
+
 {% endblock %}
 
 {% block javascripts %}
     {% do assets.addJs('jquery', 100) %}
     {% do assets.addJs('theme://js/script.js', 98) %}
     {% do assets.addJs('https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js', 99) %}
+    {% do assets.addJs('https://unpkg.com/aos@2.3.1/dist/aos.js', 97) %}
+    <script>
+        AOS.init();
+    </script>
 {% endblock %}
 
 {% block assets deferred %}
