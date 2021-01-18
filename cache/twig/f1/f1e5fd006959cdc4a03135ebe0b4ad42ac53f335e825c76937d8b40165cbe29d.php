@@ -87,7 +87,7 @@ class __TwigTemplate_e8b1a7d53cf331d08967adc103757a5b016c3ce18d79fe1a02ba8846693
         echo "            </div>
         </div>
 
-        <div class=\"container v-card-image\" data-aos=\"fade-up\" data-aos-duration=\"1000\">
+        <div class=\"container\" data-aos=\"fade-up\" data-aos-duration=\"1000\">
             <div class=\"row\">
             ";
         // line 34
@@ -101,7 +101,7 @@ class __TwigTemplate_e8b1a7d53cf331d08967adc103757a5b016c3ce18d79fe1a02ba8846693
             echo $this->getAttribute($context["card"], "uri", []);
             echo "\" class=\"card link-trapeze-horizontal text-dark\" style=\"box-shadow: 10px -10px ";
             echo $this->getAttribute($context["card"], "color", []);
-            echo ";\">
+            echo "\">
                                 <div class=\"card-body\">
                                     <picture class=\"card-img-top\">
                                         <img src=\"";
@@ -201,11 +201,11 @@ class __TwigTemplate_e8b1a7d53cf331d08967adc103757a5b016c3ce18d79fe1a02ba8846693
             </div>
         </div>
 
-        <div class=\"container v-card-image\" data-aos=\"fade-up\" data-aos-duration=\"1000\">
+        <div class=\"container\" data-aos=\"fade-up\" data-aos-duration=\"1000\">
             <div class=\"row\">
             {% for card in page.header.cards %}
             <div class=\"col-sm-3 col-sm-4 mt-5\">
-                            <a href=\"{{ card.uri }}\" class=\"card link-trapeze-horizontal text-dark\" style=\"box-shadow: 10px -10px {{ card.color }};\">
+                            <a href=\"{{ card.uri }}\" class=\"card link-trapeze-horizontal text-dark\" style=\"box-shadow: 10px -10px {{ card.color }}\">
                                 <div class=\"card-body\">
                                     <picture class=\"card-img-top\">
                                         <img src=\"{{ base_url_simple }}/user/themes/expoFemme/images/{{ card.image }}\" class=\"img-fluid\" title=\"{{ card.title }}\" alt=\"{{ card.title }}\" />
