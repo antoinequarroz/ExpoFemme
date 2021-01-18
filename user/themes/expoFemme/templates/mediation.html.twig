@@ -1,0 +1,22 @@
+{% extends 'partials/base.html.twig' %}
+
+{% block content %}
+    <section class="v-background">
+
+        <div class="container">
+            <div class="row">
+
+                <div data-flickity='{"pageDots": false,"cellAlign": "left", "wrapAround": true, "imagesLoaded": true}'>
+                    <div class="col-12 col-md-4 px-1">
+                        {% for image in page.header.images %}
+                        <img src="{{ image.image }}" class="img-fluid" alt="{{ image.title }}">
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
+
+{% block footer %}
+{% endblock %}
