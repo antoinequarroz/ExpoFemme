@@ -43,3 +43,7 @@ body {
 .v-footer {
     background: rgba(0,0,0,0);
 }
+
+.v-card-image {
+    height: 300px;
+}

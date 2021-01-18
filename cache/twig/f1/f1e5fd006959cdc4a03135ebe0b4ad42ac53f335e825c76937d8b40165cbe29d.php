@@ -87,7 +87,7 @@ class __TwigTemplate_e8b1a7d53cf331d08967adc103757a5b016c3ce18d79fe1a02ba8846693
         echo "            </div>
         </div>
 
-        <div class=\"container\" data-aos=\"fade-up\" data-aos-duration=\"1000\">
+        <div class=\"container v-card-image\" data-aos=\"fade-up\" data-aos-duration=\"1000\">
             <div class=\"row\">
             ";
         // line 34
@@ -201,7 +201,7 @@ class __TwigTemplate_e8b1a7d53cf331d08967adc103757a5b016c3ce18d79fe1a02ba8846693
             </div>
         </div>
 
-        <div class=\"container\" data-aos=\"fade-up\" data-aos-duration=\"1000\">
+        <div class=\"container v-card-image\" data-aos=\"fade-up\" data-aos-duration=\"1000\">
             <div class=\"row\">
             {% for card in page.header.cards %}
             <div class=\"col-sm-3 col-sm-4 mt-5\">
