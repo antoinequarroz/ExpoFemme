@@ -2,17 +2,17 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => '/Users/antoinequarroz/Sites/suffrageFeminin/user/config/system.yaml',
-    'modified' => 1610531769,
+    'modified' => 1610963933,
     'data' => [
         'absolute_urls' => false,
-        'timezone' => '',
+        'timezone' => NULL,
         'default_locale' => NULL,
         'param_sep' => ':',
         'wrapped_site' => false,
         'reverse_proxy_setup' => false,
         'force_ssl' => false,
         'force_lowercase_urls' => true,
-        'custom_base_url' => '',
+        'custom_base_url' => NULL,
         'username_regex' => '^[a-z0-9_-]{3,16}$',
         'pwd_regex' => '(?=.*\\d)(?=.*[a-z])(?=.*[A-Z]).{8,}',
         'intl_enabled' => true,
@@ -24,15 +24,16 @@ return [
         ],
         'languages' => [
             'supported' => [
-                
+                0 => 'fr',
+                1 => 'de'
             ],
-            'default_lang' => NULL,
+            'default_lang' => 'fr',
             'include_default_lang' => true,
             'pages_fallback_only' => false,
             'translations' => true,
             'translations_fallback' => true,
             'session_store_active' => false,
-            'http_accept_language' => false,
+            'http_accept_language' => true,
             'override_locale' => false
         ],
         'home' => [
@@ -90,14 +91,14 @@ return [
                 5 => 'rss',
                 6 => 'atom'
             ],
-            'append_url_extension' => '',
+            'append_url_extension' => NULL,
             'expires' => 604800,
             'cache_control' => NULL,
             'last_modified' => false,
             'etag' => false,
             'vary_accept_encoding' => false,
             'redirect_default_route' => false,
-            'redirect_default_code' => 302,
+            'redirect_default_code' => '302',
             'redirect_trailing_slash' => true,
             'ignore_files' => [
                 0 => '.DS_Store'
@@ -133,7 +134,18 @@ return [
             'gzip' => false,
             'allow_webserver_gzip' => false,
             'redis' => [
-                'socket' => false
+                'socket' => NULL,
+                'server' => NULL,
+                'port' => NULL,
+                'password' => NULL
+            ],
+            'memcache' => [
+                'server' => NULL,
+                'port' => NULL
+            ],
+            'memcached' => [
+                'server' => NULL,
+                'port' => NULL
             ]
         ],
         'twig' => [
@@ -162,7 +174,7 @@ return [
             ]
         ],
         'errors' => [
-            'display' => true,
+            'display' => 1,
             'log' => true
         ],
         'log' => [
@@ -188,12 +200,8 @@ return [
         ],
         'media' => [
             'enable_media_timestamp' => false,
-            'unsupported_inline_types' => [
-                
-            ],
-            'allowed_fallback_types' => [
-                
-            ],
+            'unsupported_inline_types' => NULL,
+            'allowed_fallback_types' => NULL,
             'auto_metadata_exif' => false,
             'upload_limit' => 8388608
         ],

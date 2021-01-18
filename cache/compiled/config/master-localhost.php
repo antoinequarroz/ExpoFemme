@@ -1,8 +1,8 @@
 <?php
 return [
     '@class' => 'Grav\\Common\\Config\\CompiledConfig',
-    'timestamp' => 1610531838,
-    'checksum' => '783792da89a8168bc4790cff44a952b3',
+    'timestamp' => 1610964188,
+    'checksum' => 'd3d83d4b64593c1a20b8dc8c99673efe',
     'files' => [
         'user/config' => [
             'backups' => [
@@ -23,7 +23,7 @@ return [
             ],
             'site' => [
                 'file' => 'user/config/site.yaml',
-                'modified' => 1608003118
+                'modified' => 1610964188
             ],
             'streams' => [
                 'file' => 'user/config/streams.yaml',
@@ -31,7 +31,7 @@ return [
             ],
             'system' => [
                 'file' => 'user/config/system.yaml',
-                'modified' => 1610531769
+                'modified' => 1610963933
             ],
             'versions' => [
                 'file' => 'user/config/versions.yaml',
@@ -650,11 +650,11 @@ node_modules'
             'salt' => 'Le3Wb52ojfauUh'
         ],
         'site' => [
-            'title' => 'Grav',
-            'default_lang' => 'en',
+            'title' => 'ExpoFemme',
+            'default_lang' => 'fr',
             'author' => [
-                'name' => 'Joe Bloggs',
-                'email' => 'joe@example.com'
+                'name' => 'Antoine Quarroz',
+                'email' => 'antoine.quarroz@admin.vs.ch'
             ],
             'taxonomies' => [
                 0 => 'category',
@@ -700,14 +700,14 @@ node_modules'
         ],
         'system' => [
             'absolute_urls' => false,
-            'timezone' => '',
+            'timezone' => NULL,
             'default_locale' => NULL,
             'param_sep' => ':',
             'wrapped_site' => false,
             'reverse_proxy_setup' => false,
             'force_ssl' => false,
             'force_lowercase_urls' => true,
-            'custom_base_url' => '',
+            'custom_base_url' => NULL,
             'username_regex' => '^[a-z0-9_-]{3,16}$',
             'pwd_regex' => '(?=.*\\d)(?=.*[a-z])(?=.*[A-Z]).{8,}',
             'intl_enabled' => true,
@@ -719,15 +719,16 @@ node_modules'
             ],
             'languages' => [
                 'supported' => [
-                    
+                    0 => 'fr',
+                    1 => 'de'
                 ],
-                'default_lang' => NULL,
+                'default_lang' => 'fr',
                 'include_default_lang' => true,
                 'pages_fallback_only' => false,
                 'translations' => true,
                 'translations_fallback' => true,
                 'session_store_active' => false,
-                'http_accept_language' => false,
+                'http_accept_language' => true,
                 'override_locale' => false
             ],
             'home' => [
@@ -785,14 +786,14 @@ node_modules'
                     5 => 'rss',
                     6 => 'atom'
                 ],
-                'append_url_extension' => '',
+                'append_url_extension' => NULL,
                 'expires' => 604800,
                 'cache_control' => NULL,
                 'last_modified' => false,
                 'etag' => false,
                 'vary_accept_encoding' => false,
                 'redirect_default_route' => false,
-                'redirect_default_code' => 302,
+                'redirect_default_code' => '302',
                 'redirect_trailing_slash' => true,
                 'ignore_files' => [
                     0 => '.DS_Store'
@@ -828,7 +829,18 @@ node_modules'
                 'gzip' => false,
                 'allow_webserver_gzip' => false,
                 'redis' => [
-                    'socket' => false
+                    'socket' => NULL,
+                    'server' => NULL,
+                    'port' => NULL,
+                    'password' => NULL
+                ],
+                'memcache' => [
+                    'server' => NULL,
+                    'port' => NULL
+                ],
+                'memcached' => [
+                    'server' => NULL,
+                    'port' => NULL
                 ]
             ],
             'twig' => [
@@ -857,7 +869,7 @@ node_modules'
                 ]
             ],
             'errors' => [
-                'display' => true,
+                'display' => 1,
                 'log' => true
             ],
             'log' => [
@@ -883,12 +895,8 @@ node_modules'
             ],
             'media' => [
                 'enable_media_timestamp' => false,
-                'unsupported_inline_types' => [
-                    
-                ],
-                'allowed_fallback_types' => [
-                    
-                ],
+                'unsupported_inline_types' => NULL,
+                'allowed_fallback_types' => NULL,
                 'auto_metadata_exif' => false,
                 'upload_limit' => 8388608
             ],

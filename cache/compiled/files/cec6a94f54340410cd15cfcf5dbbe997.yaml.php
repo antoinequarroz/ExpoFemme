@@ -2,7 +2,7 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => '/Users/antoinequarroz/Sites/suffrageFeminin/user/themes/expoFemme/blueprints/theme.yaml',
-    'modified' => 1610698486,
+    'modified' => 1610745147,
     'data' => [
         'title' => 'Content item',
         '@extends' => [
@@ -51,6 +51,28 @@ return [
                                             'type' => 'textarea',
                                             'label' => 'Texte de la carte'
                                         ],
+                                        '.image' => [
+                                            'type' => 'filepicker',
+                                            'folder' => './user/themes/expoFemme/images',
+                                            'label' => 'Image',
+                                            'preview_images' => true,
+                                            'accept' => [
+                                                0 => '.png',
+                                                1 => '.jpg'
+                                            ]
+                                        ],
+                                        '.color' => [
+                                            'type' => 'text',
+                                            'label' => 'Couleur des thèmes'
+                                        ]
+                                    ]
+                                ],
+                                'header.entreprises' => [
+                                    'name' => 'entreprise',
+                                    'type' => 'list',
+                                    'style' => 'vertical',
+                                    'label' => 'Logo d\'entreprise',
+                                    'fields' => [
                                         '.image' => [
                                             'type' => 'filepicker',
                                             'folder' => './user/themes/expoFemme/images',

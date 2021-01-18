@@ -40,23 +40,56 @@ class __TwigTemplate_2ed5c3cc30459939d5771d2988b8e6ac758b45b88842d86d108ea0f3ccf
     public function block_content($context, array $blocks = [])
     {
         // line 4
-        echo "    <section class=\"v-background\">
+        echo "
+    ";
+        // line 5
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable($this->getAttribute(($context["header"] ?? null), "colors", []));
+        foreach ($context['_seq'] as $context["_key"] => $context["color"]) {
+            // line 6
+            echo "        <section style=\"background: ";
+            echo $this->getAttribute($context["color"], "background", []);
+            echo "\">
 
-        <div class=\"container\">
+        <div class=\"container row\">
+            <nav class=\"nav-lang nav-lang-short ml-auto\">
+                <button class=\"btn btn-outline-dark btn-lg\" style=\"background: rgba(0,0,0,0)\">
+                    <a href=\"";
+            // line 11
+            echo "/";
+            echo "suffrageFeminin/fr\" aria-label=\"Français\" class=\"text-dark\">FR</a>
+                </button>
+
+                <button class=\"btn btn-outline-dark btn-lg\" style=\"background: rgba(0,0,0,0)\">
+                    <a href=\"";
+            // line 15
+            echo "/";
+            echo "suffrageFeminin/de\" aria-label=\"Deutsch\" class=\"text-dark\">DE</a>
+                </button>
+            </nav>
+        </div>
+
+    ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['color'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 21
+        echo "        <div class=\"container\">
             <div class=\"row\">
-                <div class=\"align-right\">
-                <button class=\"btn\">
-                    <a href=\"/\">Retour</a>
+                <div class=\"align-right mt-3\">
+                <button class=\"btn btn-outline-dark btn-lg\" style=\"background: rgba(0,0,0,0)\" data-aos=\"fade-down\" data-aos-easing=\"linear\" data-aos-duration=\"500\">
+                    <a href=\"/\" style=\"color: rgba(0,0,0)\">Retour</a>
                 </button>
                 </div>
 
                 ";
-        // line 14
+        // line 29
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable($this->getAttribute($this->getAttribute(($context["page"] ?? null), "header", []), "titres", []));
         foreach ($context['_seq'] as $context["_key"] => $context["titre"]) {
-            // line 15
-            echo "                <h1 class=\"display-1 mb-5\">";
+            // line 30
+            echo "                <h1 class=\"display-1 mb-5\" data-aos=\"fade-right\">";
             echo $this->getAttribute($context["titre"], "theme", []);
             echo "</h1>
                 ";
@@ -64,21 +97,21 @@ class __TwigTemplate_2ed5c3cc30459939d5771d2988b8e6ac758b45b88842d86d108ea0f3ccf
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['titre'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 17
+        // line 32
         echo "            </div>
         </div>
 
-        <div class=\"container\">
+        <div class=\"container\" data-aos=\"fade-left\">
             <div class=\"row\">
                 ";
-        // line 22
+        // line 37
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable($this->getAttribute($this->getAttribute($context["page"], "header", []), "pages", []));
         foreach ($context['_seq'] as $context["_key"] => $context["page"]) {
-            // line 23
+            // line 38
             echo "                    <div class=\"v-box v-box-shadow\">
                 <p class=\"fs-4\">";
-            // line 24
+            // line 39
             echo $this->getAttribute($context["page"], "description", []);
             echo "</p>
                     </div>
@@ -87,22 +120,25 @@ class __TwigTemplate_2ed5c3cc30459939d5771d2988b8e6ac758b45b88842d86d108ea0f3ccf
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['page'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 27
+        // line 42
         echo "            </div>
         </div>
 
-        <div class=\"container mt-5\">
+        <div class=\"container mt-5\" data-aos=\"fade-up\" data-aos-duration=\"1000\">
             <div class=\"row\">
                 <div class=\"col-sm-2 col-sm-3\">
                     ";
-        // line 33
+        // line 48
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable(range(0, 0));
         foreach ($context['_seq'] as $context["_key"] => $context["i"]) {
-            // line 34
+            // line 49
             echo "                    <div class=\"card-group\">
                         <div class=\"card\">
-                            <img src=\"...\" class=\"card-img-top\" alt=\"...\">
+                            <img src=\"";
+            // line 51
+            echo ($context["base_url_simple"] ?? null);
+            echo "/user/themes/expoFemme/images/\" class=\"card-img-top\" alt=\"...\">
                         </div>
                     </div>
                     ";
@@ -110,7 +146,7 @@ class __TwigTemplate_2ed5c3cc30459939d5771d2988b8e6ac758b45b88842d86d108ea0f3ccf
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['i'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 40
+        // line 55
         echo "                </div>
             </div>
         </div>
@@ -119,7 +155,7 @@ class __TwigTemplate_2ed5c3cc30459939d5771d2988b8e6ac758b45b88842d86d108ea0f3ccf
 ";
     }
 
-    // line 47
+    // line 62
     public function block_footer($context, array $blocks = [])
     {
     }
@@ -136,7 +172,7 @@ class __TwigTemplate_2ed5c3cc30459939d5771d2988b8e6ac758b45b88842d86d108ea0f3ccf
 
     public function getDebugInfo()
     {
-        return array (  123 => 47,  114 => 40,  103 => 34,  99 => 33,  91 => 27,  82 => 24,  79 => 23,  75 => 22,  68 => 17,  59 => 15,  55 => 14,  43 => 4,  40 => 3,  30 => 1,);
+        return array (  159 => 62,  150 => 55,  140 => 51,  136 => 49,  132 => 48,  124 => 42,  115 => 39,  112 => 38,  108 => 37,  101 => 32,  92 => 30,  88 => 29,  78 => 21,  66 => 15,  59 => 11,  50 => 6,  46 => 5,  43 => 4,  40 => 3,  30 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -152,23 +188,38 @@ class __TwigTemplate_2ed5c3cc30459939d5771d2988b8e6ac758b45b88842d86d108ea0f3ccf
         return new Source("{% extends 'partials/base.html.twig' %}
 
 {% block content %}
-    <section class=\"v-background\">
 
+    {% for color in header.colors %}
+        <section style=\"background: {{color.background}}\">
+
+        <div class=\"container row\">
+            <nav class=\"nav-lang nav-lang-short ml-auto\">
+                <button class=\"btn btn-outline-dark btn-lg\" style=\"background: rgba(0,0,0,0)\">
+                    <a href=\"{{ '/' }}suffrageFeminin/fr\" aria-label=\"Français\" class=\"text-dark\">FR</a>
+                </button>
+
+                <button class=\"btn btn-outline-dark btn-lg\" style=\"background: rgba(0,0,0,0)\">
+                    <a href=\"{{ '/' }}suffrageFeminin/de\" aria-label=\"Deutsch\" class=\"text-dark\">DE</a>
+                </button>
+            </nav>
+        </div>
+
+    {% endfor %}
         <div class=\"container\">
             <div class=\"row\">
-                <div class=\"align-right\">
-                <button class=\"btn\">
-                    <a href=\"/\">Retour</a>
+                <div class=\"align-right mt-3\">
+                <button class=\"btn btn-outline-dark btn-lg\" style=\"background: rgba(0,0,0,0)\" data-aos=\"fade-down\" data-aos-easing=\"linear\" data-aos-duration=\"500\">
+                    <a href=\"/\" style=\"color: rgba(0,0,0)\">Retour</a>
                 </button>
                 </div>
 
                 {% for titre in page.header.titres %}
-                <h1 class=\"display-1 mb-5\">{{ titre.theme }}</h1>
+                <h1 class=\"display-1 mb-5\" data-aos=\"fade-right\">{{ titre.theme }}</h1>
                 {% endfor %}
             </div>
         </div>
 
-        <div class=\"container\">
+        <div class=\"container\" data-aos=\"fade-left\">
             <div class=\"row\">
                 {% for page in page.header.pages %}
                     <div class=\"v-box v-box-shadow\">
@@ -178,13 +229,13 @@ class __TwigTemplate_2ed5c3cc30459939d5771d2988b8e6ac758b45b88842d86d108ea0f3ccf
             </div>
         </div>
 
-        <div class=\"container mt-5\">
+        <div class=\"container mt-5\" data-aos=\"fade-up\" data-aos-duration=\"1000\">
             <div class=\"row\">
                 <div class=\"col-sm-2 col-sm-3\">
                     {% for i in 0..0 %}
                     <div class=\"card-group\">
                         <div class=\"card\">
-                            <img src=\"...\" class=\"card-img-top\" alt=\"...\">
+                            <img src=\"{{ base_url_simple }}/user/themes/expoFemme/images/\" class=\"card-img-top\" alt=\"...\">
                         </div>
                     </div>
                     {% endfor %}

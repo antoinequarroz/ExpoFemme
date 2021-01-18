@@ -55,19 +55,15 @@
         <div class="wrapper padding">
         {% block content %}
 
-
         {% endblock %}
         </div>
     </section>
 {% endblock %}
 
-{% block footer %}
-    <div class="footer text-center">
-        <div class="wrapper padding">
-
-        </div>
-    </div>
-{% endblock %}
+<footer class="v-footer">
+    {% block footer %}
+    {% endblock %}
+</footer>
 
 {% block bottom %}
     {{ assets.js('bottom')|raw }}

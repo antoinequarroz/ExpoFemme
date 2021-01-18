@@ -13,7 +13,6 @@ form:
           title: Configuration
 
           fields:
-
             header_options:
               type: section
               title: Page du thème
@@ -37,3 +36,12 @@ form:
                 .description:
                   type: textarea
                   label: Rentrer le texte
+
+            header.colors:
+              name: color
+              type: list
+              label: Choix de couleur
+              fields:
+                .background:
+                  type: text
+                  label: choix couleur

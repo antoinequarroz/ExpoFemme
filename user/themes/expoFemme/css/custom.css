@@ -1,6 +1,5 @@
 
 body {
-    background-color: rgba(178,178,178,0.39);
     font-family: 'Roboto Slab', serif;
     padding: 1px;
 }
@@ -13,6 +12,7 @@ body {
     background-size: initial;
     background-repeat: no-repeat;
 }
+
 
 .v-h1 {
     font-size: 200px;
@@ -38,4 +38,8 @@ body {
 
 .v-box-shadow {
     box-shadow: 10px -10px;
+}
+
+.v-footer {
+    background: rgba(0,0,0,0);
 }

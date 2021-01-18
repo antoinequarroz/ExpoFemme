@@ -3,14 +3,26 @@
 {% block content %}
     <section class="v-background">
 
-        <div class="container">
+        <div class="container row">
+        <nav class="nav-lang nav-lang-short ml-auto">
+                    <button class="btn btn-outline-dark btn-lg" style="background: rgba(0,0,0,0)">
+                        <a href="{{ '/' }}suffrageFeminin/fr" aria-label="Français" class="text-dark">FR</a>
+                    </button>
+
+                <button class="btn btn-outline-dark btn-lg" style="background: rgba(0,0,0,0)">
+                    <a href="{{ '/' }}suffrageFeminin/de" aria-label="Deutsch" class="text-dark">DE</a>
+                </button>
+        </nav>
+        </div>
+
+        <div class="container" >
             <div class="row">
-                <h1 class="v-h1" data-aos="fade-right">Voies <br> citoyennes</h1>
-                <h2 class="v-h2 mb-5" data-aos="fade-left">50 ans du suffrage féminin</h2>
+                <h1 class="v-h1" data-aos="fade-right" data-aos-delay="700">Voies <br> citoyennes</h1>
+                <h2 class="v-h2 mb-5" data-aos="fade-left" data-aos-delay="700">50 ans du suffrage féminin</h2>
 
 
                 {% for para in page.header.paragraphes %}
-                <div class="v-box v-box-shadow" data-aos="fade-up" data-aos-duration="1000">
+                <div class="v-box v-box-shadow" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="700">
                     <p class="fs-4">{{ para.description }}</p>
                 </div>
                 {% endfor %}
@@ -20,11 +32,12 @@
         <div class="container" data-aos="fade-up" data-aos-duration="1000">
             <div class="row">
             {% for card in page.header.cards %}
+                {{ dump(card) }}
             <div class="col-sm-3 col-sm-4 mt-5">
-                            <a href="{{ card.uri }}" class="card link-trapeze-horizontal">
+                            <a href="{{ card.uri }}" class="card link-trapeze-horizontal text-dark" style="box-shadow: 10px -10px {{ card.color }};">
                                 <div class="card-body">
                                     <picture class="card-img-top">
-                                        <img src="{{ card.image }}" class="img-fluid" title="{{ card.title }}" alt="{{ card.title }}" />
+                                        <img src="{{ base_url_simple }}/user/themes/expoFemme/images/{{ card.image }}" class="img-fluid" title="{{ card.title }}" alt="{{ card.title }}" />
                                     </picture>
 
                                         <h3 class="card-title" style="overflow-wrap: initial;">{{ card.title }}</h3>
@@ -37,9 +50,8 @@
 
             </div>
         </div>
-
-
     </section>
+
 {% endblock %}
 
 {% block footer %}

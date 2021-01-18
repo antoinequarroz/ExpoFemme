@@ -74,17 +74,19 @@ class __TwigTemplate_73b378e356a919a011ea8cc9e8d36f2a382c5999ed634be09dcad1a818f
 ";
         // line 53
         $this->displayBlock('body', $context, $blocks);
-        // line 63
+        // line 62
         echo "
-";
+<footer class=\"v-footer\">
+    ";
         // line 64
         $this->displayBlock('footer', $context, $blocks);
-        // line 71
-        echo "
+        // line 66
+        echo "</footer>
+
 ";
-        // line 72
+        // line 68
         $this->displayBlock('bottom', $context, $blocks);
-        // line 75
+        // line 71
         echo "
 </body>
     <script src=\"https://unpkg.com/aos@next/dist/aos.js\"></script>
@@ -214,7 +216,7 @@ class __TwigTemplate_73b378e356a919a011ea8cc9e8d36f2a382c5999ed634be09dcad1a818f
         ";
         // line 56
         $this->displayBlock('content', $context, $blocks);
-        // line 60
+        // line 59
         echo "        </div>
     </section>
 ";
@@ -225,7 +227,6 @@ class __TwigTemplate_73b378e356a919a011ea8cc9e8d36f2a382c5999ed634be09dcad1a818f
     {
         // line 57
         echo "
-
         ";
     }
 
@@ -233,18 +234,13 @@ class __TwigTemplate_73b378e356a919a011ea8cc9e8d36f2a382c5999ed634be09dcad1a818f
     public function block_footer($context, array $blocks = [])
     {
         // line 65
-        echo "    <div class=\"footer text-center\">
-        <div class=\"wrapper padding\">
-
-        </div>
-    </div>
-";
+        echo "    ";
     }
 
-    // line 72
+    // line 68
     public function block_bottom($context, array $blocks = [])
     {
-        // line 73
+        // line 69
         echo "    ";
         echo $this->getAttribute(($context["assets"] ?? null), "js", [0 => "bottom"], "method");
         echo "
@@ -263,7 +259,7 @@ class __TwigTemplate_73b378e356a919a011ea8cc9e8d36f2a382c5999ed634be09dcad1a818f
 
     public function getDebugInfo()
     {
-        return array (  248 => 73,  245 => 72,  236 => 65,  233 => 64,  227 => 57,  224 => 56,  218 => 60,  216 => 56,  212 => 54,  209 => 53,  202 => 45,  197 => 44,  194 => 43,  183 => 39,  180 => 38,  177 => 37,  174 => 36,  171 => 35,  168 => 34,  162 => 30,  159 => 29,  156 => 28,  153 => 27,  150 => 26,  147 => 25,  144 => 24,  141 => 23,  138 => 22,  128 => 15,  124 => 14,  120 => 12,  118 => 11,  107 => 7,  104 => 6,  101 => 5,  88 => 75,  86 => 72,  83 => 71,  81 => 64,  78 => 63,  76 => 53,  71 => 51,  65 => 47,  63 => 43,  60 => 42,  58 => 34,  55 => 33,  53 => 22,  50 => 21,  48 => 5,  43 => 3,  40 => 2,  38 => 1,);
+        return array (  244 => 69,  241 => 68,  237 => 65,  234 => 64,  229 => 57,  226 => 56,  220 => 59,  218 => 56,  214 => 54,  211 => 53,  204 => 45,  199 => 44,  196 => 43,  185 => 39,  182 => 38,  179 => 37,  176 => 36,  173 => 35,  170 => 34,  164 => 30,  161 => 29,  158 => 28,  155 => 27,  152 => 26,  149 => 25,  146 => 24,  143 => 23,  140 => 22,  130 => 15,  126 => 14,  122 => 12,  120 => 11,  109 => 7,  106 => 6,  103 => 5,  90 => 71,  88 => 68,  84 => 66,  82 => 64,  78 => 62,  76 => 53,  71 => 51,  65 => 47,  63 => 43,  60 => 42,  58 => 34,  55 => 33,  53 => 22,  50 => 21,  48 => 5,  43 => 3,  40 => 2,  38 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -333,19 +329,15 @@ class __TwigTemplate_73b378e356a919a011ea8cc9e8d36f2a382c5999ed634be09dcad1a818f
         <div class=\"wrapper padding\">
         {% block content %}
 
-
         {% endblock %}
         </div>
     </section>
 {% endblock %}
 
-{% block footer %}
-    <div class=\"footer text-center\">
-        <div class=\"wrapper padding\">
-
-        </div>
-    </div>
-{% endblock %}
+<footer class=\"v-footer\">
+    {% block footer %}
+    {% endblock %}
+</footer>
 
 {% block bottom %}
     {{ assets.js('bottom')|raw }}

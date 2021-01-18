@@ -51,3 +51,21 @@ form:
                   accept:
                   - .png
                   - .jpg
+                .color:
+                  type: text
+                  label: Couleur des thèmes
+
+            header.entreprises:
+              name: entreprise
+              type: list
+              style: vertical
+              label: Logo d'entreprise
+              fields:
+                .image:
+                  type: filepicker
+                  folder: './user/themes/expoFemme/images'
+                  label: Image
+                  preview_images: true
+                  accept:
+                    - .png
+                    - .jpg
