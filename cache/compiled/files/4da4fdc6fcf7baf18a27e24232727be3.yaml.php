@@ -2,7 +2,7 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => '/Users/antoinequarroz/Sites/suffrageFeminin/user/config/system.yaml',
-    'modified' => 1610963933,
+    'modified' => 1610975645,
     'data' => [
         'absolute_urls' => false,
         'timezone' => NULL,
@@ -29,7 +29,7 @@ return [
             ],
             'default_lang' => 'fr',
             'include_default_lang' => true,
-            'pages_fallback_only' => false,
+            'pages_fallback_only' => true,
             'translations' => true,
             'translations_fallback' => true,
             'session_store_active' => false,

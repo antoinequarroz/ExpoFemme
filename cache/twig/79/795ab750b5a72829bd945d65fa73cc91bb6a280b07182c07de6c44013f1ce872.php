@@ -56,15 +56,15 @@ class __TwigTemplate_2ed5c3cc30459939d5771d2988b8e6ac758b45b88842d86d108ea0f3ccf
                 <button class=\"btn btn-outline-dark btn-lg\" style=\"background: rgba(0,0,0,0)\">
                     <a href=\"";
             // line 11
-            echo "/";
-            echo "suffrageFeminin/fr\" aria-label=\"Français\" class=\"text-dark\">FR</a>
+            echo "/suffrageFeminin/fr";
+            echo "\" aria-label=\"Français\" class=\"text-dark\">FR</a>
                 </button>
 
                 <button class=\"btn btn-outline-dark btn-lg\" style=\"background: rgba(0,0,0,0)\">
                     <a href=\"";
             // line 15
-            echo "/";
-            echo "suffrageFeminin/de\" aria-label=\"Deutsch\" class=\"text-dark\">DE</a>
+            echo "/suffrageFeminin/de";
+            echo "\" aria-label=\"Deutsch\" class=\"text-dark\">DE</a>
                 </button>
             </nav>
         </div>
@@ -126,25 +126,27 @@ class __TwigTemplate_2ed5c3cc30459939d5771d2988b8e6ac758b45b88842d86d108ea0f3ccf
 
         <div class=\"container mt-5\" data-aos=\"fade-up\" data-aos-duration=\"1000\">
             <div class=\"row\">
-                <div class=\"col-sm-2 col-sm-3\">
                     ";
-        // line 48
+        // line 47
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(range(0, 0));
-        foreach ($context['_seq'] as $context["_key"] => $context["i"]) {
-            // line 49
-            echo "                    <div class=\"card-group\">
+        $context['_seq'] = twig_ensure_traversable($this->getAttribute($this->getAttribute(($context["page"] ?? null), "header", []), "images", []));
+        foreach ($context['_seq'] as $context["_key"] => $context["image"]) {
+            // line 48
+            echo "                <div class=\"col-sm-3 col-sm-4 mt-5\">
+                    <div class=\"card-group\">
                         <div class=\"card\">
                             <img src=\"";
             // line 51
             echo ($context["base_url_simple"] ?? null);
-            echo "/user/themes/expoFemme/images/\" class=\"card-img-top\" alt=\"...\">
+            echo "/user/themes/expoFemme/images/";
+            echo $this->getAttribute($context["image"], "image", []);
+            echo "\" class=\"card-img-top\" alt=\"...\">
                         </div>
                     </div>
                     ";
         }
         $_parent = $context['_parent'];
-        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['i'], $context['_parent'], $context['loop']);
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['image'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
         // line 55
         echo "                </div>
@@ -172,7 +174,7 @@ class __TwigTemplate_2ed5c3cc30459939d5771d2988b8e6ac758b45b88842d86d108ea0f3ccf
 
     public function getDebugInfo()
     {
-        return array (  159 => 62,  150 => 55,  140 => 51,  136 => 49,  132 => 48,  124 => 42,  115 => 39,  112 => 38,  108 => 37,  101 => 32,  92 => 30,  88 => 29,  78 => 21,  66 => 15,  59 => 11,  50 => 6,  46 => 5,  43 => 4,  40 => 3,  30 => 1,);
+        return array (  161 => 62,  152 => 55,  140 => 51,  135 => 48,  131 => 47,  124 => 42,  115 => 39,  112 => 38,  108 => 37,  101 => 32,  92 => 30,  88 => 29,  78 => 21,  66 => 15,  59 => 11,  50 => 6,  46 => 5,  43 => 4,  40 => 3,  30 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -195,11 +197,11 @@ class __TwigTemplate_2ed5c3cc30459939d5771d2988b8e6ac758b45b88842d86d108ea0f3ccf
         <div class=\"container row\">
             <nav class=\"nav-lang nav-lang-short ml-auto\">
                 <button class=\"btn btn-outline-dark btn-lg\" style=\"background: rgba(0,0,0,0)\">
-                    <a href=\"{{ '/' }}suffrageFeminin/fr\" aria-label=\"Français\" class=\"text-dark\">FR</a>
+                    <a href=\"{{ '/suffrageFeminin/fr' }}\" aria-label=\"Français\" class=\"text-dark\">FR</a>
                 </button>
 
                 <button class=\"btn btn-outline-dark btn-lg\" style=\"background: rgba(0,0,0,0)\">
-                    <a href=\"{{ '/' }}suffrageFeminin/de\" aria-label=\"Deutsch\" class=\"text-dark\">DE</a>
+                    <a href=\"{{ '/suffrageFeminin/de' }}\" aria-label=\"Deutsch\" class=\"text-dark\">DE</a>
                 </button>
             </nav>
         </div>
@@ -231,11 +233,11 @@ class __TwigTemplate_2ed5c3cc30459939d5771d2988b8e6ac758b45b88842d86d108ea0f3ccf
 
         <div class=\"container mt-5\" data-aos=\"fade-up\" data-aos-duration=\"1000\">
             <div class=\"row\">
-                <div class=\"col-sm-2 col-sm-3\">
-                    {% for i in 0..0 %}
+                    {% for image in page.header.images %}
+                <div class=\"col-sm-3 col-sm-4 mt-5\">
                     <div class=\"card-group\">
                         <div class=\"card\">
-                            <img src=\"{{ base_url_simple }}/user/themes/expoFemme/images/\" class=\"card-img-top\" alt=\"...\">
+                            <img src=\"{{ base_url_simple }}/user/themes/expoFemme/images/{{ image.image }}\" class=\"card-img-top\" alt=\"...\">
                         </div>
                     </div>
                     {% endfor %}

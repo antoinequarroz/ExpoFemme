@@ -21,7 +21,7 @@ languages:
     - de
   default_lang: fr
   include_default_lang: true
-  pages_fallback_only: false
+  pages_fallback_only: true
   translations: true
   translations_fallback: true
   session_store_active: false

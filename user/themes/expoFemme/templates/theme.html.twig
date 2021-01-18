@@ -6,11 +6,11 @@
         <div class="container row">
         <nav class="nav-lang nav-lang-short ml-auto">
                     <button class="btn btn-outline-dark btn-lg" style="background: rgba(0,0,0,0)">
-                        <a href="{{ '/' }}suffrageFeminin/fr" aria-label="Français" class="text-dark">FR</a>
+                        <a href="{{ '/suffrageFeminin/fr' }}" aria-label="Français" class="text-dark">FR</a>
                     </button>
 
                 <button class="btn btn-outline-dark btn-lg" style="background: rgba(0,0,0,0)">
-                    <a href="{{ '/' }}suffrageFeminin/de" aria-label="Deutsch" class="text-dark">DE</a>
+                    <a href="{{ '/suffrageFeminin/de' }}" aria-label="Deutsch" class="text-dark">DE</a>
                 </button>
         </nav>
         </div>
@@ -32,7 +32,6 @@
         <div class="container" data-aos="fade-up" data-aos-duration="1000">
             <div class="row">
             {% for card in page.header.cards %}
-                {{ dump(card) }}
             <div class="col-sm-3 col-sm-4 mt-5">
                             <a href="{{ card.uri }}" class="card link-trapeze-horizontal text-dark" style="box-shadow: 10px -10px {{ card.color }};">
                                 <div class="card-body">
@@ -47,11 +46,9 @@
                             </a>
                     </div>
             {% endfor %}
-
             </div>
         </div>
     </section>
-
 {% endblock %}
 
 {% block footer %}

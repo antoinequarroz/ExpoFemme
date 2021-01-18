@@ -8,11 +8,11 @@
         <div class="container row">
             <nav class="nav-lang nav-lang-short ml-auto">
                 <button class="btn btn-outline-dark btn-lg" style="background: rgba(0,0,0,0)">
-                    <a href="{{ '/' }}suffrageFeminin/fr" aria-label="Français" class="text-dark">FR</a>
+                    <a href="{{ '/suffrageFeminin/fr' }}" aria-label="Français" class="text-dark">FR</a>
                 </button>
 
                 <button class="btn btn-outline-dark btn-lg" style="background: rgba(0,0,0,0)">
-                    <a href="{{ '/' }}suffrageFeminin/de" aria-label="Deutsch" class="text-dark">DE</a>
+                    <a href="{{ '/suffrageFeminin/de' }}" aria-label="Deutsch" class="text-dark">DE</a>
                 </button>
             </nav>
         </div>
@@ -44,11 +44,11 @@
 
         <div class="container mt-5" data-aos="fade-up" data-aos-duration="1000">
             <div class="row">
-                <div class="col-sm-2 col-sm-3">
-                    {% for i in 0..0 %}
+                    {% for image in page.header.images %}
+                <div class="col-sm-3 col-sm-4 mt-5">
                     <div class="card-group">
                         <div class="card">
-                            <img src="{{ base_url_simple }}/user/themes/expoFemme/images/" class="card-img-top" alt="...">
+                            <img src="{{ base_url_simple }}/user/themes/expoFemme/images/{{ image.image }}" class="card-img-top" alt="...">
                         </div>
                     </div>
                     {% endfor %}

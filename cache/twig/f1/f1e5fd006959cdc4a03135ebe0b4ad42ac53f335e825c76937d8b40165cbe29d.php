@@ -44,18 +44,18 @@ class __TwigTemplate_e8b1a7d53cf331d08967adc103757a5b016c3ce18d79fe1a02ba8846693
 
         <div class=\"container row\">
         <nav class=\"nav-lang nav-lang-short ml-auto\">
-                    <button class=\"btn btn-outline-dark btn-lg\">
+                    <button class=\"btn btn-outline-dark btn-lg\" style=\"background: rgba(0,0,0,0)\">
                         <a href=\"";
         // line 9
-        echo "/";
-        echo "suffrageFeminin/fr\" aria-label=\"Français\" class=\"text-dark\">FR</a>
+        echo "/suffrageFeminin/fr";
+        echo "\" aria-label=\"Français\" class=\"text-dark\">FR</a>
                     </button>
 
-                <button class=\"btn btn-outline-dark btn-lg\">
+                <button class=\"btn btn-outline-dark btn-lg\" style=\"background: rgba(0,0,0,0)\">
                     <a href=\"";
         // line 13
-        echo "/";
-        echo "suffrageFeminin/de\" aria-label=\"Deutsch\" class=\"text-dark\">DE</a>
+        echo "/suffrageFeminin/de";
+        echo "\" aria-label=\"Deutsch\" class=\"text-dark\">DE</a>
                 </button>
         </nav>
         </div>
@@ -95,12 +95,9 @@ class __TwigTemplate_e8b1a7d53cf331d08967adc103757a5b016c3ce18d79fe1a02ba8846693
         $context['_seq'] = twig_ensure_traversable($this->getAttribute($this->getAttribute(($context["page"] ?? null), "header", []), "cards", []));
         foreach ($context['_seq'] as $context["_key"] => $context["card"]) {
             // line 35
-            echo "                ";
-            echo $this->env->getExtension('Grav\Common\Twig\TwigExtension')->dump($this->env, $context, $context["card"]);
-            echo "
-            <div class=\"col-sm-3 col-sm-4 mt-5\">
+            echo "            <div class=\"col-sm-3 col-sm-4 mt-5\">
                             <a href=\"";
-            // line 37
+            // line 36
             echo $this->getAttribute($context["card"], "uri", []);
             echo "\" class=\"card link-trapeze-horizontal text-dark\" style=\"box-shadow: 10px -10px ";
             echo $this->getAttribute($context["card"], "color", []);
@@ -108,7 +105,7 @@ class __TwigTemplate_e8b1a7d53cf331d08967adc103757a5b016c3ce18d79fe1a02ba8846693
                                 <div class=\"card-body\">
                                     <picture class=\"card-img-top\">
                                         <img src=\"";
-            // line 40
+            // line 39
             echo ($context["base_url_simple"] ?? null);
             echo "/user/themes/expoFemme/images/";
             echo $this->getAttribute($context["card"], "image", []);
@@ -120,11 +117,11 @@ class __TwigTemplate_e8b1a7d53cf331d08967adc103757a5b016c3ce18d79fe1a02ba8846693
                                     </picture>
 
                                         <h3 class=\"card-title\" style=\"overflow-wrap: initial;\">";
-            // line 43
+            // line 42
             echo $this->getAttribute($context["card"], "title", []);
             echo "</h3>
                                         <p class=\"card-text\">";
-            // line 44
+            // line 43
             echo $this->getAttribute($context["card"], "text", []);
             echo "</p>
 
@@ -136,16 +133,14 @@ class __TwigTemplate_e8b1a7d53cf331d08967adc103757a5b016c3ce18d79fe1a02ba8846693
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['card'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 50
-        echo "
-            </div>
+        // line 49
+        echo "            </div>
         </div>
     </section>
-
 ";
     }
 
-    // line 57
+    // line 54
     public function block_footer($context, array $blocks = [])
     {
     }
@@ -162,7 +157,7 @@ class __TwigTemplate_e8b1a7d53cf331d08967adc103757a5b016c3ce18d79fe1a02ba8846693
 
     public function getDebugInfo()
     {
-        return array (  149 => 57,  140 => 50,  128 => 44,  124 => 43,  112 => 40,  104 => 37,  98 => 35,  94 => 34,  87 => 29,  78 => 26,  75 => 25,  71 => 24,  57 => 13,  50 => 9,  43 => 4,  40 => 3,  30 => 1,);
+        return array (  144 => 54,  137 => 49,  125 => 43,  121 => 42,  109 => 39,  101 => 36,  98 => 35,  94 => 34,  87 => 29,  78 => 26,  75 => 25,  71 => 24,  57 => 13,  50 => 9,  43 => 4,  40 => 3,  30 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -182,12 +177,12 @@ class __TwigTemplate_e8b1a7d53cf331d08967adc103757a5b016c3ce18d79fe1a02ba8846693
 
         <div class=\"container row\">
         <nav class=\"nav-lang nav-lang-short ml-auto\">
-                    <button class=\"btn btn-outline-dark btn-lg\">
-                        <a href=\"{{ '/' }}suffrageFeminin/fr\" aria-label=\"Français\" class=\"text-dark\">FR</a>
+                    <button class=\"btn btn-outline-dark btn-lg\" style=\"background: rgba(0,0,0,0)\">
+                        <a href=\"{{ '/suffrageFeminin/fr' }}\" aria-label=\"Français\" class=\"text-dark\">FR</a>
                     </button>
 
-                <button class=\"btn btn-outline-dark btn-lg\">
-                    <a href=\"{{ '/' }}suffrageFeminin/de\" aria-label=\"Deutsch\" class=\"text-dark\">DE</a>
+                <button class=\"btn btn-outline-dark btn-lg\" style=\"background: rgba(0,0,0,0)\">
+                    <a href=\"{{ '/suffrageFeminin/de' }}\" aria-label=\"Deutsch\" class=\"text-dark\">DE</a>
                 </button>
         </nav>
         </div>
@@ -209,7 +204,6 @@ class __TwigTemplate_e8b1a7d53cf331d08967adc103757a5b016c3ce18d79fe1a02ba8846693
         <div class=\"container\" data-aos=\"fade-up\" data-aos-duration=\"1000\">
             <div class=\"row\">
             {% for card in page.header.cards %}
-                {{ dump(card) }}
             <div class=\"col-sm-3 col-sm-4 mt-5\">
                             <a href=\"{{ card.uri }}\" class=\"card link-trapeze-horizontal text-dark\" style=\"box-shadow: 10px -10px {{ card.color }};\">
                                 <div class=\"card-body\">
@@ -224,11 +218,9 @@ class __TwigTemplate_e8b1a7d53cf331d08967adc103757a5b016c3ce18d79fe1a02ba8846693
                             </a>
                     </div>
             {% endfor %}
-
             </div>
         </div>
     </section>
-
 {% endblock %}
 
 {% block footer %}

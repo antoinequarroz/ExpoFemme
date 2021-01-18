@@ -2,7 +2,7 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => '/Users/antoinequarroz/Sites/suffrageFeminin/user/themes/expoFemme/blueprints/thematique.yaml',
-    'modified' => 1610744760,
+    'modified' => 1610967511,
     'data' => [
         'title' => 'Content item',
         '@extends' => [
@@ -52,6 +52,19 @@ return [
                                         '.background' => [
                                             'type' => 'text',
                                             'label' => 'choix couleur'
+                                        ]
+                                    ]
+                                ],
+                                'header.images' => [
+                                    'name' => 'images',
+                                    'type' => 'list',
+                                    'label' => 'Images',
+                                    'fields' => [
+                                        '.image' => [
+                                            'type' => 'filepicker',
+                                            'folder' => './user/themes/expoFemme/images',
+                                            'label' => 'Image',
+                                            'preview_images' => true
                                         ]
                                     ]
                                 ]
