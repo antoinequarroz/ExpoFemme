@@ -2,9 +2,9 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => '/Users/antoinequarroz/Sites/suffrageFeminin/user/config/plugins/git-sync.yaml',
-    'modified' => 1610989084,
+    'modified' => 1610989467,
     'data' => [
-        'enabled' => true,
+        'enabled' => false,
         'folders' => [
             0 => 'pages'
         ],

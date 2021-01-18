@@ -1,8 +1,8 @@
 <?php
 return [
     '@class' => 'Grav\\Common\\Config\\CompiledConfig',
-    'timestamp' => 1610989093,
-    'checksum' => 'b523232b243dd383c21161cb3257513f',
+    'timestamp' => 1610989467,
+    'checksum' => 'f57bd45b4a70c6eb9aa2a43149161611',
     'files' => [
         'user/config' => [
             'backups' => [
@@ -15,7 +15,7 @@ return [
             ],
             'plugins/git-sync' => [
                 'file' => 'user/config/plugins/git-sync.yaml',
-                'modified' => 1610989089
+                'modified' => 1610989467
             ],
             'scheduler' => [
                 'file' => 'user/config/scheduler.yaml',
@@ -35,7 +35,7 @@ return [
             ],
             'system' => [
                 'file' => 'user/config/system.yaml',
-                'modified' => 1610975645
+                'modified' => 1610989451
             ],
             'versions' => [
                 'file' => 'user/config/versions.yaml',
@@ -219,7 +219,7 @@ return [
                 'collision_check' => true
             ],
             'git-sync' => [
-                'enabled' => true,
+                'enabled' => false,
                 'folders' => [
                     0 => 'pages'
                 ],
