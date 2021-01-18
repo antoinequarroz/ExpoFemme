@@ -1,8 +1,8 @@
 <?php
 return [
     '@class' => 'Grav\\Common\\Config\\CompiledConfig',
-    'timestamp' => 1610975649,
-    'checksum' => 'a4fdc28b48ad194ba31223e6626705f0',
+    'timestamp' => 1610989093,
+    'checksum' => 'b523232b243dd383c21161cb3257513f',
     'files' => [
         'user/config' => [
             'backups' => [
@@ -12,6 +12,10 @@ return [
             'media' => [
                 'file' => 'user/config/media.yaml',
                 'modified' => 1610526109
+            ],
+            'plugins/git-sync' => [
+                'file' => 'user/config/plugins/git-sync.yaml',
+                'modified' => 1610989089
             ],
             'scheduler' => [
                 'file' => 'user/config/scheduler.yaml',
@@ -84,6 +88,10 @@ return [
             'plugins/devtools' => [
                 'file' => 'user/plugins/devtools/devtools.yaml',
                 'modified' => 1606919106
+            ],
+            'plugins/git-sync' => [
+                'file' => 'user/plugins/git-sync/git-sync.yaml',
+                'modified' => 1610988493
             ],
             'plugins/error' => [
                 'file' => 'user/plugins/error/error.yaml',
@@ -209,6 +217,40 @@ return [
             'devtools' => [
                 'enabled' => true,
                 'collision_check' => true
+            ],
+            'git-sync' => [
+                'enabled' => true,
+                'folders' => [
+                    0 => 'pages'
+                ],
+                'sync' => [
+                    'on_save' => true,
+                    'on_delete' => true,
+                    'on_media' => true,
+                    'cron_enable' => false,
+                    'cron_at' => '0 12,23 * * *'
+                ],
+                'local_repository' => NULL,
+                'repository' => 'https://github.com/antoinequarroz/ExpoFemme.git',
+                'no_user' => '0',
+                'user' => 'antoinequarroz.mediam@gmail.com',
+                'password' => 'gitsync-def5020001cac64822d811b17ab33a944f9c05883b03ed691f3286c44c38d495bbb06ac8466d14b28a1023a6b58951549674b5aaeeaa8607617152d259afa14675aec6ceecab4d1662979f2bb3c4257ac976e35d3407ad1143576e07e56a432bc8',
+                'webhook' => '/_git-sync-4c1692f09cb1',
+                'webhook_enabled' => '1',
+                'webhook_secret' => 'c1878125e84fb3ddf474d02607eb29082bf4980e5e8bc967',
+                'branch' => 'master',
+                'remote' => [
+                    'name' => 'origin',
+                    'branch' => 'master'
+                ],
+                'git' => [
+                    'author' => 'gituser',
+                    'message' => '(Grav GitSync) Automatic Commit',
+                    'name' => 'GitSync',
+                    'email' => 'git-sync@trilby.media',
+                    'bin' => 'git'
+                ],
+                'logging' => false
             ],
             'error' => [
                 'enabled' => true,

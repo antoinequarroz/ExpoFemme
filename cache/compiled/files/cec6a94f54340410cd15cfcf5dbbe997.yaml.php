@@ -2,7 +2,7 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => '/Users/antoinequarroz/Sites/suffrageFeminin/user/themes/expoFemme/blueprints/theme.yaml',
-    'modified' => 1610745147,
+    'modified' => 1610980223,
     'data' => [
         'title' => 'Content item',
         '@extends' => [
@@ -21,6 +21,25 @@ return [
                                     'type' => 'section',
                                     'title' => 'Carte des thèmes',
                                     'underline' => true
+                                ],
+                                'header.titres' => [
+                                    'name' => 'Titre',
+                                    'type' => 'list',
+                                    'Label' => 'Titre',
+                                    'fields' => [
+                                        '.firsttitle' => [
+                                            'type' => 'text',
+                                            'label' => 'titre de l\'expo'
+                                        ],
+                                        '.secondtitle' => [
+                                            'type' => 'text',
+                                            'label' => 'titre de l\'expo 2'
+                                        ],
+                                        '.thirdtitle' => [
+                                            'type' => 'text',
+                                            'label' => 'titre 3'
+                                        ]
+                                    ]
                                 ],
                                 'header.paragraphes' => [
                                     'name' => 'description',
@@ -60,6 +79,10 @@ return [
                                                 0 => '.png',
                                                 1 => '.jpg'
                                             ]
+                                        ],
+                                        '.copyright' => [
+                                            'type' => 'text',
+                                            'label' => 'copyright'
                                         ],
                                         '.color' => [
                                             'type' => 'text',

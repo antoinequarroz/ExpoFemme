@@ -62,19 +62,37 @@ class __TwigTemplate_e8b1a7d53cf331d08967adc103757a5b016c3ce18d79fe1a02ba8846693
 
         <div class=\"container\" >
             <div class=\"row\">
-                <h1 class=\"v-h1\" data-aos=\"fade-right\" data-aos-delay=\"700\">Voies <br> citoyennes</h1>
-                <h2 class=\"v-h2 mb-5\" data-aos=\"fade-left\" data-aos-delay=\"700\">50 ans du suffrage féminin</h2>
-
-
                 ";
+        // line 20
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable($this->getAttribute($this->getAttribute(($context["page"] ?? null), "header", []), "titres", []));
+        foreach ($context['_seq'] as $context["_key"] => $context["titre"]) {
+            // line 21
+            echo "                    <h1 class=\"v-h1\" data-aos=\"fade-right\" data-aos-delay=\"700\">";
+            echo $this->getAttribute($context["titre"], "firsttitle", []);
+            echo " <br> ";
+            echo $this->getAttribute($context["titre"], "secondtitle", []);
+            echo "</h1>
+                    <h2 class=\"v-h2 mb-5\" data-aos=\"fade-left\" data-aos-delay=\"700\">";
+            // line 22
+            echo $this->getAttribute($context["titre"], "thirdtitle", []);
+            echo "</h2>
+                ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['titre'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
         // line 24
+        echo "
+                ";
+        // line 25
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable($this->getAttribute($this->getAttribute(($context["page"] ?? null), "header", []), "paragraphes", []));
         foreach ($context['_seq'] as $context["_key"] => $context["para"]) {
-            // line 25
+            // line 26
             echo "                <div class=\"v-box v-box-shadow\" data-aos=\"fade-up\" data-aos-duration=\"1000\" data-aos-delay=\"700\">
                     <p class=\"fs-4\">";
-            // line 26
+            // line 27
             echo $this->getAttribute($context["para"], "description", []);
             echo "</p>
                 </div>
@@ -83,21 +101,21 @@ class __TwigTemplate_e8b1a7d53cf331d08967adc103757a5b016c3ce18d79fe1a02ba8846693
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['para'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 29
+        // line 30
         echo "            </div>
         </div>
 
         <div class=\"container\" data-aos=\"fade-up\" data-aos-duration=\"1000\">
             <div class=\"row\">
             ";
-        // line 34
+        // line 35
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable($this->getAttribute($this->getAttribute(($context["page"] ?? null), "header", []), "cards", []));
         foreach ($context['_seq'] as $context["_key"] => $context["card"]) {
-            // line 35
+            // line 36
             echo "            <div class=\"col-sm-3 col-sm-4 mt-5\">
                             <a href=\"";
-            // line 36
+            // line 37
             echo $this->getAttribute($context["card"], "uri", []);
             echo "\" class=\"card link-trapeze-horizontal text-dark\" style=\"box-shadow: 10px -10px ";
             echo $this->getAttribute($context["card"], "color", []);
@@ -105,23 +123,23 @@ class __TwigTemplate_e8b1a7d53cf331d08967adc103757a5b016c3ce18d79fe1a02ba8846693
                                 <div class=\"card-body\">
                                     <picture class=\"card-img-top\">
                                         <img src=\"";
-            // line 39
+            // line 40
             echo ($context["base_url_simple"] ?? null);
             echo "/user/themes/expoFemme/images/";
             echo $this->getAttribute($context["card"], "image", []);
             echo "\" class=\"img-fluid\" title=\"";
-            echo $this->getAttribute($context["card"], "title", []);
+            echo $this->getAttribute($context["card"], "copyright", []);
             echo "\" alt=\"";
-            echo $this->getAttribute($context["card"], "title", []);
+            echo $this->getAttribute($context["card"], "copyright", []);
             echo "\" />
                                     </picture>
 
                                         <h3 class=\"card-title\" style=\"overflow-wrap: initial;\">";
-            // line 42
+            // line 43
             echo $this->getAttribute($context["card"], "title", []);
             echo "</h3>
                                         <p class=\"card-text\">";
-            // line 43
+            // line 44
             echo $this->getAttribute($context["card"], "text", []);
             echo "</p>
 
@@ -133,14 +151,14 @@ class __TwigTemplate_e8b1a7d53cf331d08967adc103757a5b016c3ce18d79fe1a02ba8846693
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['card'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 49
+        // line 50
         echo "            </div>
         </div>
     </section>
 ";
     }
 
-    // line 54
+    // line 55
     public function block_footer($context, array $blocks = [])
     {
     }
@@ -157,7 +175,7 @@ class __TwigTemplate_e8b1a7d53cf331d08967adc103757a5b016c3ce18d79fe1a02ba8846693
 
     public function getDebugInfo()
     {
-        return array (  144 => 54,  137 => 49,  125 => 43,  121 => 42,  109 => 39,  101 => 36,  98 => 35,  94 => 34,  87 => 29,  78 => 26,  75 => 25,  71 => 24,  57 => 13,  50 => 9,  43 => 4,  40 => 3,  30 => 1,);
+        return array (  162 => 55,  155 => 50,  143 => 44,  139 => 43,  127 => 40,  119 => 37,  116 => 36,  112 => 35,  105 => 30,  96 => 27,  93 => 26,  89 => 25,  86 => 24,  78 => 22,  71 => 21,  67 => 20,  57 => 13,  50 => 9,  43 => 4,  40 => 3,  30 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -189,9 +207,10 @@ class __TwigTemplate_e8b1a7d53cf331d08967adc103757a5b016c3ce18d79fe1a02ba8846693
 
         <div class=\"container\" >
             <div class=\"row\">
-                <h1 class=\"v-h1\" data-aos=\"fade-right\" data-aos-delay=\"700\">Voies <br> citoyennes</h1>
-                <h2 class=\"v-h2 mb-5\" data-aos=\"fade-left\" data-aos-delay=\"700\">50 ans du suffrage féminin</h2>
-
+                {% for titre in page.header.titres %}
+                    <h1 class=\"v-h1\" data-aos=\"fade-right\" data-aos-delay=\"700\">{{ titre.firsttitle}} <br> {{ titre.secondtitle }}</h1>
+                    <h2 class=\"v-h2 mb-5\" data-aos=\"fade-left\" data-aos-delay=\"700\">{{titre.thirdtitle}}</h2>
+                {% endfor %}
 
                 {% for para in page.header.paragraphes %}
                 <div class=\"v-box v-box-shadow\" data-aos=\"fade-up\" data-aos-duration=\"1000\" data-aos-delay=\"700\">
@@ -208,7 +227,7 @@ class __TwigTemplate_e8b1a7d53cf331d08967adc103757a5b016c3ce18d79fe1a02ba8846693
                             <a href=\"{{ card.uri }}\" class=\"card link-trapeze-horizontal text-dark\" style=\"box-shadow: 10px -10px {{ card.color }}\">
                                 <div class=\"card-body\">
                                     <picture class=\"card-img-top\">
-                                        <img src=\"{{ base_url_simple }}/user/themes/expoFemme/images/{{ card.image }}\" class=\"img-fluid\" title=\"{{ card.title }}\" alt=\"{{ card.title }}\" />
+                                        <img src=\"{{ base_url_simple }}/user/themes/expoFemme/images/{{ card.image }}\" class=\"img-fluid\" title=\"{{ card.copyright }}\" alt=\"{{ card.copyright }}\" />
                                     </picture>
 
                                         <h3 class=\"card-title\" style=\"overflow-wrap: initial;\">{{ card.title }}</h3>

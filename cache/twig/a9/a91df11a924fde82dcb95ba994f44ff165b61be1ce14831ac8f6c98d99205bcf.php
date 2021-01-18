@@ -130,8 +130,8 @@ class __TwigTemplate_73b378e356a919a011ea8cc9e8d36f2a382c5999ed634be09dcad1a818f
 
     <link rel=\"icon\" type=\"image/png\" href=\"";
         // line 14
-        echo twig_escape_filter($this->env, $this->env->getExtension('Grav\Common\Twig\TwigExtension')->urlFunc("theme://images/logo.png"));
-        echo "\" />
+        echo twig_escape_filter($this->env, $this->env->getExtension('Grav\Common\Twig\TwigExtension')->urlFunc("theme://images/50_picto.png"));
+        echo "\" sizes=\"152x152\"/>
     <link rel=\"canonical\" href=\"";
         // line 15
         echo twig_escape_filter($this->env, $this->getAttribute(($context["page"] ?? null), "url", [0 => true, 1 => true], "method"));
@@ -296,7 +296,7 @@ class __TwigTemplate_73b378e356a919a011ea8cc9e8d36f2a382c5999ed634be09dcad1a818f
     {% include 'partials/metadata.html.twig' %}
 
 
-    <link rel=\"icon\" type=\"image/png\" href=\"{{ url('theme://images/logo.png')|e }}\" />
+    <link rel=\"icon\" type=\"image/png\" href=\"{{ url('theme://images/50_picto.png')|e }}\" sizes=\"152x152\"/>
     <link rel=\"canonical\" href=\"{{ page.url(true, true)|e }}\" />
     <link rel=\"stylesheet\" href=\"https://unpkg.com/aos@next/dist/aos.css\" />
     <link rel=\"stylesheet\" href=\"./node_modules/sal.js/dist/sal.css\">

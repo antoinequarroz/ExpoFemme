@@ -2,7 +2,7 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => '/Users/antoinequarroz/Sites/suffrageFeminin/user/themes/expoFemme/blueprints/dates.yaml',
-    'modified' => 1610699675,
+    'modified' => 1610708116,
     'data' => [
         'title' => 'Content item',
         '@extends' => [
@@ -41,6 +41,16 @@ return [
                                         '.description' => [
                                             'type' => 'textarea',
                                             'label' => 'Rentrer le texte'
+                                        ],
+                                        '.image' => [
+                                            'type' => 'filepicker',
+                                            'folder' => './user/themes/expoFemme/images',
+                                            'label' => 'Image',
+                                            'preview_images' => true,
+                                            'accept' => [
+                                                0 => '.png',
+                                                1 => '.jpg'
+                                            ]
                                         ]
                                     ]
                                 ]

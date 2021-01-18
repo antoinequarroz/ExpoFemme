@@ -1,8 +1,8 @@
 <?php
 return [
     '@class' => 'Grav\\Common\\Config\\CompiledBlueprints',
-    'timestamp' => 1610975649,
-    'checksum' => 'c7fde66cb2751d7f08aa0780f029939c',
+    'timestamp' => 1610989086,
+    'checksum' => 'd939905c621e9a24a04116bf75b8cadc',
     'files' => [
         'system/blueprints/config' => [
             'backups' => [
@@ -54,6 +54,10 @@ return [
             'plugins/devtools' => [
                 'file' => 'user/plugins/devtools/blueprints.yaml',
                 'modified' => 1606919106
+            ],
+            'plugins/git-sync' => [
+                'file' => 'user/plugins/git-sync/blueprints.yaml',
+                'modified' => 1610988493
             ],
             'plugins/error' => [
                 'file' => 'user/plugins/error/blueprints.yaml',
@@ -3598,6 +3602,327 @@ return [
                 'name' => 'plugins.devtools.collision_check',
                 'validation' => 'strict'
             ],
+            'plugins.git-sync' => [
+                'type' => '_root',
+                'form_field' => false,
+                'form' => [
+                    'validation' => 'strict'
+                ]
+            ],
+            'plugins.git-sync.Basic' => [
+                'type' => 'section',
+                'underline' => true,
+                'name' => 'plugins.git-sync.Basic',
+                'validation' => 'strict'
+            ],
+            'plugins.git-sync.enabled' => [
+                'type' => 'toggle',
+                'label' => 'Plugin Status',
+                'highlight' => 1,
+                'default' => 0,
+                'options' => [
+                    1 => 'Enabled',
+                    0 => 'Disabled'
+                ],
+                'validate' => [
+                    'type' => 'bool'
+                ],
+                'name' => 'plugins.git-sync.enabled',
+                'validation' => 'strict'
+            ],
+            'plugins.git-sync.folders' => [
+                'type' => 'selectize',
+                'multiple' => true,
+                'label' => 'Folders to Sync',
+                'classes' => 'fancy',
+                'description' => 'Removing folders after they have been synced may cause undesired results.',
+                'default' => [
+                    0 => 'pages'
+                ],
+                'options' => [
+                    0 => 'pages',
+                    1 => 'themes',
+                    2 => 'plugins',
+                    3 => 'config',
+                    4 => 'data'
+                ],
+                'selectize' => [
+                    'create' => true
+                ],
+                'validate' => [
+                    'type' => 'commalist'
+                ],
+                'name' => 'plugins.git-sync.folders',
+                'validation' => 'strict'
+            ],
+            'plugins.git-sync.Sync' => [
+                'type' => 'section',
+                'underline' => true,
+                'name' => 'plugins.git-sync.Sync',
+                'validation' => 'strict'
+            ],
+            'plugins.git-sync.SyncNotice' => [
+                'type' => 'spacer',
+                'markdown' => true,
+                'text' => '! To improve the speed of saving pages you can disable automatic sync. Then, changes to a page will not be sent to the remote repository on every save. To sync your changes to the repository tap the GitSync button (<i class="fa fa-git"></i>) in the top left of the Administration Panel, or use the below Scheduler option to add the GitSync Syncronization Job to the Scheduler (<strong>Grav 1.6 required</strong>).
+',
+                'name' => 'plugins.git-sync.SyncNotice',
+                'validation' => 'strict'
+            ],
+            'plugins.git-sync.sync' => [
+                'type' => '_parent',
+                'name' => 'plugins.git-sync.sync',
+                'form_field' => false
+            ],
+            'plugins.git-sync.sync.on_save' => [
+                'type' => 'toggle',
+                'label' => 'Sync on Page Save',
+                'default' => 1,
+                'highlight' => 1,
+                'options' => [
+                    1 => 'PLUGIN_ADMIN.YES',
+                    0 => 'PLUGIN_ADMIN.NO'
+                ],
+                'validate' => [
+                    'type' => 'bool'
+                ],
+                'name' => 'plugins.git-sync.sync.on_save',
+                'validation' => 'strict'
+            ],
+            'plugins.git-sync.sync.on_delete' => [
+                'type' => 'toggle',
+                'label' => 'Sync on Page Delete',
+                'default' => 1,
+                'highlight' => 1,
+                'options' => [
+                    1 => 'PLUGIN_ADMIN.YES',
+                    0 => 'PLUGIN_ADMIN.NO'
+                ],
+                'validate' => [
+                    'type' => 'bool'
+                ],
+                'name' => 'plugins.git-sync.sync.on_delete',
+                'validation' => 'strict'
+            ],
+            'plugins.git-sync.sync.on_media' => [
+                'type' => 'toggle',
+                'label' => 'Sync on Media Changes',
+                'default' => 1,
+                'highlight' => 1,
+                'options' => [
+                    1 => 'PLUGIN_ADMIN.YES',
+                    0 => 'PLUGIN_ADMIN.NO'
+                ],
+                'validate' => [
+                    'type' => 'bool'
+                ],
+                'name' => 'plugins.git-sync.sync.on_media',
+                'validation' => 'strict'
+            ],
+            'plugins.git-sync.sync.cron_enable' => [
+                'type' => 'toggle',
+                'label' => 'Add Sync to Scheduler',
+                'default' => 0,
+                'highlight' => 1,
+                'options' => [
+                    1 => 'PLUGIN_ADMIN.YES',
+                    0 => 'PLUGIN_ADMIN.NO'
+                ],
+                'validate' => [
+                    'type' => 'bool'
+                ],
+                'name' => 'plugins.git-sync.sync.cron_enable',
+                'validation' => 'strict'
+            ],
+            'plugins.git-sync.sync.cron_at' => [
+                'type' => 'cron',
+                'label' => 'Run Sync at',
+                'default' => '0 12,23 * * *',
+                'name' => 'plugins.git-sync.sync.cron_at',
+                'validation' => 'strict'
+            ],
+            'plugins.git-sync.Repo' => [
+                'type' => 'section',
+                'underline' => true,
+                'name' => 'plugins.git-sync.Repo',
+                'validation' => 'strict'
+            ],
+            'plugins.git-sync.local_repository' => [
+                'type' => 'hidden',
+                'multiple' => false,
+                'size' => 'medium',
+                'label' => 'Local Repository Path',
+                'name' => 'plugins.git-sync.local_repository',
+                'validation' => 'strict'
+            ],
+            'plugins.git-sync.repository' => [
+                'type' => 'text',
+                'label' => 'Git Repository',
+                'name' => 'plugins.git-sync.repository',
+                'validation' => 'strict'
+            ],
+            'plugins.git-sync.no_user' => [
+                'type' => 'toggle',
+                'label' => 'User not required',
+                'highlight' => 0,
+                'default' => 0,
+                'options' => [
+                    1 => 'Enabled',
+                    0 => 'Disabled'
+                ],
+                'description' => 'With this setting enabled, the user can be left blank and it will be ignored from the authentication. Useful when only needing access tokens `token@host` rather than `user:password@host`',
+                'name' => 'plugins.git-sync.no_user',
+                'validation' => 'strict'
+            ],
+            'plugins.git-sync.user' => [
+                'type' => 'text',
+                'label' => 'Git User',
+                'autocomplete' => 'off',
+                'name' => 'plugins.git-sync.user',
+                'validation' => 'strict'
+            ],
+            'plugins.git-sync.password' => [
+                'type' => 'enc-password',
+                'label' => 'Git Password or Token',
+                'description' => 'Enter your password or token to encrypt and securely store it, then save the settings. It will not show up here for security reasons.',
+                'autocomplete' => 'off',
+                'name' => 'plugins.git-sync.password',
+                'validation' => 'strict'
+            ],
+            'plugins.git-sync.webhook' => [
+                'type' => 'text',
+                'label' => 'Repository Web Hook URL',
+                'data-default@' => '\\Grav\\Plugin\\GitSyncPlugin::generateRandomWebhook',
+                'name' => 'plugins.git-sync.webhook',
+                'validation' => 'strict'
+            ],
+            'plugins.git-sync.webhook_enabled' => [
+                'type' => 'toggle',
+                'label' => 'Web Hook Secret',
+                'highlight' => 1,
+                'default' => 0,
+                'options' => [
+                    1 => 'Enabled',
+                    0 => 'Disabled'
+                ],
+                'description' => 'With this setting enabled, only authorized webhook calls will be able to trigger a synchronization (recommended)',
+                'name' => 'plugins.git-sync.webhook_enabled',
+                'validation' => 'strict'
+            ],
+            'plugins.git-sync.webhook_secret' => [
+                'type' => 'text',
+                'label' => 'Repository Web Hook Secret',
+                'data-default@' => '\\Grav\\Plugin\\GitSyncPlugin::generateWebhookSecret',
+                'description' => 'You can either use this randomly generated string or enter your own secret. <br /> **Bitbucket** does not yet support Webhook Secrets.',
+                'markdown' => true,
+                'name' => 'plugins.git-sync.webhook_secret',
+                'validation' => 'strict'
+            ],
+            'plugins.git-sync.Advanced' => [
+                'type' => 'section',
+                'underline' => true,
+                'name' => 'plugins.git-sync.Advanced',
+                'validation' => 'strict'
+            ],
+            'plugins.git-sync.branch' => [
+                'type' => 'text',
+                'default' => 'master',
+                'label' => 'Local Branch',
+                'name' => 'plugins.git-sync.branch',
+                'validation' => 'strict'
+            ],
+            'plugins.git-sync.remote' => [
+                'type' => '_parent',
+                'name' => 'plugins.git-sync.remote',
+                'form_field' => false
+            ],
+            'plugins.git-sync.remote.name' => [
+                'type' => 'text',
+                'default' => 'origin',
+                'label' => 'Remote Name',
+                'name' => 'plugins.git-sync.remote.name',
+                'validation' => 'strict'
+            ],
+            'plugins.git-sync.remote.branch' => [
+                'type' => 'text',
+                'default' => 'master',
+                'label' => 'Remote Branch',
+                'name' => 'plugins.git-sync.remote.branch',
+                'validation' => 'strict'
+            ],
+            'plugins.git-sync.git' => [
+                'type' => '_parent',
+                'name' => 'plugins.git-sync.git',
+                'form_field' => false
+            ],
+            'plugins.git-sync.git.author' => [
+                'type' => 'select',
+                'default' => 'gituser',
+                'label' => 'Commits Author',
+                'options' => [
+                    'gituser' => 'Use Git User Name',
+                    'gitsync' => 'Use GitSync Committer Name',
+                    'gravuser' => 'Use Grav User Name',
+                    'gravfull' => 'Use Grav User Full Name'
+                ],
+                'name' => 'plugins.git-sync.git.author',
+                'validation' => 'strict'
+            ],
+            'plugins.git-sync.git.message' => [
+                'type' => 'text',
+                'default' => '(Grav GitSync) Automatic Commit',
+                'label' => 'Commit message',
+                'name' => 'plugins.git-sync.git.message',
+                'validation' => 'strict'
+            ],
+            'plugins.git-sync.git.name' => [
+                'type' => 'text',
+                'default' => 'GitSync',
+                'label' => 'Committer Name',
+                'name' => 'plugins.git-sync.git.name',
+                'validation' => 'strict'
+            ],
+            'plugins.git-sync.git.email' => [
+                'type' => 'text',
+                'default' => 'git-sync@trilby.media',
+                'label' => 'Committer Email',
+                'name' => 'plugins.git-sync.git.email',
+                'validation' => 'strict'
+            ],
+            'plugins.git-sync.git.bin' => [
+                'type' => 'text',
+                'default' => 'git',
+                'label' => 'Git Binary Path',
+                'name' => 'plugins.git-sync.git.bin',
+                'validation' => 'strict'
+            ],
+            'plugins.git-sync.logging' => [
+                'type' => 'toggle',
+                'default' => 0,
+                'label' => 'Log Git Commands',
+                'highlight' => 0,
+                'options' => [
+                    1 => 'PLUGIN_ADMIN.YES',
+                    0 => 'PLUGIN_ADMIN.NO'
+                ],
+                'validate' => [
+                    'type' => 'bool'
+                ],
+                'name' => 'plugins.git-sync.logging',
+                'validation' => 'strict'
+            ],
+            'plugins.git-sync.Actions' => [
+                'type' => 'section',
+                'underline' => true,
+                'name' => 'plugins.git-sync.Actions',
+                'validation' => 'strict'
+            ],
+            'plugins.git-sync._wizard' => [
+                'type' => 'git-wizard',
+                'label' => 'Text Variable',
+                'name' => 'plugins.git-sync._wizard',
+                'validation' => 'strict'
+            ],
             'plugins.error' => [
                 'type' => '_root',
                 'form_field' => false,
@@ -4873,6 +5198,45 @@ return [
                 'devtools' => [
                     'enabled' => 'plugins.devtools.enabled',
                     'collision_check' => 'plugins.devtools.collision_check'
+                ],
+                'git-sync' => [
+                    'Basic' => 'plugins.git-sync.Basic',
+                    'enabled' => 'plugins.git-sync.enabled',
+                    'folders' => 'plugins.git-sync.folders',
+                    'Sync' => 'plugins.git-sync.Sync',
+                    'SyncNotice' => 'plugins.git-sync.SyncNotice',
+                    'sync' => [
+                        'on_save' => 'plugins.git-sync.sync.on_save',
+                        'on_delete' => 'plugins.git-sync.sync.on_delete',
+                        'on_media' => 'plugins.git-sync.sync.on_media',
+                        'cron_enable' => 'plugins.git-sync.sync.cron_enable',
+                        'cron_at' => 'plugins.git-sync.sync.cron_at'
+                    ],
+                    'Repo' => 'plugins.git-sync.Repo',
+                    'local_repository' => 'plugins.git-sync.local_repository',
+                    'repository' => 'plugins.git-sync.repository',
+                    'no_user' => 'plugins.git-sync.no_user',
+                    'user' => 'plugins.git-sync.user',
+                    'password' => 'plugins.git-sync.password',
+                    'webhook' => 'plugins.git-sync.webhook',
+                    'webhook_enabled' => 'plugins.git-sync.webhook_enabled',
+                    'webhook_secret' => 'plugins.git-sync.webhook_secret',
+                    'Advanced' => 'plugins.git-sync.Advanced',
+                    'branch' => 'plugins.git-sync.branch',
+                    'remote' => [
+                        'name' => 'plugins.git-sync.remote.name',
+                        'branch' => 'plugins.git-sync.remote.branch'
+                    ],
+                    'git' => [
+                        'author' => 'plugins.git-sync.git.author',
+                        'message' => 'plugins.git-sync.git.message',
+                        'name' => 'plugins.git-sync.git.name',
+                        'email' => 'plugins.git-sync.git.email',
+                        'bin' => 'plugins.git-sync.git.bin'
+                    ],
+                    'logging' => 'plugins.git-sync.logging',
+                    'Actions' => 'plugins.git-sync.Actions',
+                    '_wizard' => 'plugins.git-sync._wizard'
                 ],
                 'error' => [
                     'enabled' => 'plugins.error.enabled',

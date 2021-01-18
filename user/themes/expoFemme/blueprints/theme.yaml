@@ -19,6 +19,22 @@ form:
               title: Carte des thèmes
               underline: true
 
+
+            header.titres:
+              name: Titre
+              type: list
+              Label: Titre
+              fields:
+                .firsttitle:
+                  type: text
+                  label: titre de l'expo
+                .secondtitle:
+                  type: text
+                  label: titre de l'expo 2
+                .thirdtitle:
+                  type: text
+                  label: titre 3
+
             header.paragraphes:
               name: description
               type: list
@@ -51,6 +67,9 @@ form:
                   accept:
                   - .png
                   - .jpg
+                .copyright:
+                  type: text
+                  label: copyright
                 .color:
                   type: text
                   label: Couleur des thèmes
