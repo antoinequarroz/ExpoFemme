@@ -8,7 +8,7 @@ Pour l'expo j'ai uttlisé Grav PHP pour avoir un admin simple et modulable
 
 # Sponsors
 Médiathèque valais
-<img src="https://pbs.twimg.com/profile_images/834321646932656129/a3Jxex5e_400x400.jpg" />
+<img src="https://pbs.twimg.com/profile_images/834321646932656129/a3Jxex5e_200x200.jpg" />
 
 # License
 
