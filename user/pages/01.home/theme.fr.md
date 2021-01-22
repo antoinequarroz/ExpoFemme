@@ -12,56 +12,67 @@ paragraphes:
 cards:
     -
         title: 'Le jour J'
-        uri: jourj
+        url: jourj
         text: '12 avril 1970. Cette date ne vous dit rien ? Pourtant, elle marque un tournant dans la vie des Valaisans et des Valaisannes.'
         image: jourJ.jpg
-        copyright: 'copyr_Léonard Gianadda, Médiathèque Valais - Martigny'
+        copyright: '© Léonard Gianadda, Médiathèque Valais - Martigny'
         color: '#faca30'
     -
         title: 'De Gabrielle Nanchen à Viola Amherd, elles sont les pionnières'
-        uri: pionnieres
+        url: pionnieres
         text: 'Obtenir le droit de vote et d’éligibilité n’est qu’une première étape. Désormais, il faut se faire élire.'
-        image: img_1.jpg
+        image: pionneres.png
+        copyright: '© Dessin de Pauline Lugon, 2021'
         color: '#6093ac'
     -
         title: 'Iris von Roten, la Simone de Beauvoir suisse'
-        uri: irisvonroten
+        url: irisvonroten
         text: 'En France, tout le monde, ou presque, connaît Simone de Beauvoir, figure féministe qui a marqué de son empreinte l’histoire du 20e siècle.'
         image: img_1.jpg
+        copyright: null
         color: '#7ebab5'
     -
         title: 'Derrière le suffrage féminin, des hommes'
-        uri: hommes
+        url: hommes
         text: 'Sans eux, la cause du suffrage féminin n’aurait probablement jamais été portée dans l’arène politique.'
         image: img_1.jpg
+        copyright: null
         color: '#61993b'
     -
         title: 'Pas tous·tes acquis·es à la cause'
-        uri: cause
+        url: cause
         text: '« La femme suisse sait depuis toujours qu’elle peut gouverner l’homme sans droit de vote, c’est pourquoi elle s’en passe avec plaisir. »'
         image: img_1.jpg
+        copyright: null
         color: '#6093ac'
     -
         title: 'Et après ?'
-        uri: apres
+        url: apres
         text: 'Si la conquête du suffrage féminin est une grande victoire pour les femmes, elle ne signifie pas pour autant l’égalité entre femmes et hommes.'
         image: img_1.jpg
+        copyright: null
         color: '#faca30'
     -
         title: 'Médiation culturelle'
-        uri: mediation
+        url: mediation
         text: 'Médiation culturelle'
         image: img_1.jpg
+        copyright: null
+        color: null
     -
         title: Scolaire
-        uri: scolaire
+        url: scolaire
         text: Scolaire
         image: img_1.jpg
+        copyright: null
+        color: null
     -
         title: 'Les dates'
-        uri: dates
+        url: dates
         text: 'Les dates'
         image: img_1.jpg
+        copyright: null
+        color: null
 entreprises:
     -
         image: logo.png

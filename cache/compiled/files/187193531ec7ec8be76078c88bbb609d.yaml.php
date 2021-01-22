@@ -2,7 +2,7 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => '/Users/antoinequarroz/Sites/suffrageFeminin/system/languages/hr.yaml',
-    'modified' => 1608003118,
+    'modified' => 1611307234,
     'data' => [
         'GRAV' => [
             'INFLECTOR_UNCOUNTABLE' => [

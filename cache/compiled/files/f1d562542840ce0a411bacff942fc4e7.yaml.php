@@ -2,7 +2,7 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => '/Users/antoinequarroz/Sites/suffrageFeminin/system/config/system.yaml',
-    'modified' => 1608003118,
+    'modified' => 1611307234,
     'data' => [
         'absolute_urls' => false,
         'timezone' => '',
@@ -28,18 +28,23 @@ return [
             ],
             'default_lang' => NULL,
             'include_default_lang' => true,
-            'pages_fallback_only' => false,
+            'include_default_lang_file_extension' => true,
             'translations' => true,
             'translations_fallback' => true,
             'session_store_active' => false,
             'http_accept_language' => false,
-            'override_locale' => false
+            'override_locale' => false,
+            'content_fallback' => [
+                
+            ],
+            'pages_fallback_only' => false
         ],
         'home' => [
             'alias' => '/home',
             'hide_in_urls' => false
         ],
         'pages' => [
+            'type' => 'regular',
             'theme' => 'quark',
             'order' => [
                 'by' => 'default',
@@ -94,7 +99,7 @@ return [
             'expires' => 604800,
             'cache_control' => NULL,
             'last_modified' => false,
-            'etag' => false,
+            'etag' => true,
             'vary_accept_encoding' => false,
             'redirect_default_route' => false,
             'redirect_default_code' => 302,
@@ -140,7 +145,7 @@ return [
             'cache' => true,
             'debug' => true,
             'auto_reload' => true,
-            'autoescape' => false,
+            'autoescape' => true,
             'undefined_functions' => true,
             'undefined_filters' => true,
             'umask_fix' => false
@@ -173,6 +178,8 @@ return [
         ],
         'debugger' => [
             'enabled' => false,
+            'provider' => 'clockwork',
+            'censored' => false,
             'shutdown' => [
                 'close_connection' => true
             ]
@@ -182,8 +189,11 @@ return [
             'cache_all' => false,
             'cache_perms' => '0755',
             'debug' => false,
-            'auto_fix_orientation' => false,
-            'seofriendly' => false
+            'auto_fix_orientation' => true,
+            'seofriendly' => false,
+            'defaults' => [
+                'loading' => 'auto'
+            ]
         ],
         'media' => [
             'enable_media_timestamp' => false,
@@ -203,6 +213,7 @@ return [
             'uniqueness' => 'path',
             'secure' => false,
             'httponly' => true,
+            'samesite' => 'Lax',
             'split' => true,
             'path' => NULL
         ],
@@ -214,12 +225,29 @@ return [
             'official_gpm_only' => true
         ],
         'accounts' => [
-            'type' => 'data',
+            'type' => 'regular',
             'storage' => 'file'
         ],
+        'flex' => [
+            'cache' => [
+                'index' => [
+                    'enabled' => true,
+                    'lifetime' => 60
+                ],
+                'object' => [
+                    'enabled' => true,
+                    'lifetime' => 600
+                ],
+                'render' => [
+                    'enabled' => true,
+                    'lifetime' => 600
+                ]
+            ]
+        ],
         'strict_mode' => [
-            'yaml_compat' => true,
-            'twig_compat' => true
+            'yaml_compat' => false,
+            'twig_compat' => false,
+            'blueprint_compat' => false
         ]
     ]
 ];

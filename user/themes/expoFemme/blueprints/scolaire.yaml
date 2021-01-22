@@ -24,7 +24,7 @@ form:
               type: list
               label: Titre
               fields:
-                .theme:
+                .titre:
                   type: text
                   label: Votre titre
 
@@ -37,3 +37,13 @@ form:
                 .description:
                   type: textarea
                   label: Rentrer le texte
+
+
+            header.liens:
+              name: description
+              type: list
+              label: Texte
+              fields:
+                .mail:
+                  type: text
+                  label: lien pour contact

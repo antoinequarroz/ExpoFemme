@@ -2,7 +2,7 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => '/Users/antoinequarroz/Sites/suffrageFeminin/user/plugins/admin/blueprints/admin/pages/new.yaml',
-    'modified' => 1608003118,
+    'modified' => 1611307256,
     'data' => [
         'rules' => [
             'slug' => [

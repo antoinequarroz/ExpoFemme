@@ -6,11 +6,11 @@
         <div class="container row">
         <nav class="nav-lang nav-lang-short ml-auto">
                     <button class="btn btn-outline-dark btn-lg" style="background: rgba(0,0,0,0)">
-                        <a href="{{ '/suffrageFeminin/fr' }}" aria-label="Français" class="text-dark">FR</a>
+                        <a href="{{ base_url_simple }}/fr" aria-label="Français" class="text-dark">FR</a>
                     </button>
 
                 <button class="btn btn-outline-dark btn-lg" style="background: rgba(0,0,0,0)">
-                    <a href="{{ '/suffrageFeminin/de' }}" aria-label="Deutsch" class="text-dark">DE</a>
+                    <a href="{{ base_url_simple }}/de" aria-label="Deutsch" class="text-dark">DE</a>
                 </button>
         </nav>
         </div>
@@ -34,7 +34,7 @@
             <div class="row">
             {% for card in page.header.cards %}
             <div class="col-sm-3 col-sm-4 mt-5">
-                            <a href="{{ card.uri }}" class="card link-trapeze-horizontal text-dark" style="box-shadow: 10px -10px {{ card.color }}">
+                            <a href="{{ card.url }}" class="card link-trapeze-horizontal text-dark" style="box-shadow: 10px -10px {{ card.color }}">
                                 <div class="card-body">
                                     <picture class="card-img-top">
                                         <img src="{{ base_url_simple }}/user/themes/expoFemme/images/{{ card.image }}" class="img-fluid" title="{{ card.copyright }}" alt="{{ card.copyright }}" />
@@ -49,6 +49,9 @@
             {% endfor %}
             </div>
         </div>
+
+        <hr>
+        <img src="./user/themes/expoFemme/images/arsenaux.jpg" alt="Arseanux">
     </section>
 {% endblock %}
 

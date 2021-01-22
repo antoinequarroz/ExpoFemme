@@ -8,5 +8,8 @@ pages:
 colors:
     -
         background: '#6093ac'
+images:
+    -
+        image: pionneres.png
 ---
 

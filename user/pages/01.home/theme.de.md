@@ -12,56 +12,67 @@ paragraphes:
 cards:
     -
         title: 'Der Tag X'
-        uri: jourj
-        text: '12. April 1970. Hat dieses Datum keine Bedeutung für Sie? Immerhin markiert es einen Wendepunkt im Leben der Walliserinnen und Walliser. '
+        url: tagx
+        text: '12. April 1970. Hat dieses Datum keine Bedeutung für Sie? Immerhin markiert es einen Wendepunkt im Leben der Walliserinnen und Walliser.'
         image: jourJ.jpg
-        copyright: 'copyr_Léonard Gianadda, Médiathèque Valais - Martigny'
+        copyright: '© Léonard Gianadda, Médiathèque Valais - Martigny'
         color: '#faca30'
     -
         title: 'Die Pionierinnen: von Gabrielle Nanchen bis Viola Amherd'
-        uri: pionnieres
+        url: null
         text: 'Die Erlangung des aktiven und passiven Wahlrechts ist nur der erste Schritt. Nun gilt es, gewählt zu werden.'
-        image: img_1.jpg
+        image: pionneres.png
+        copyright: '© Dessin de Pauline Lugon, 2021'
         color: '#6093ac'
     -
         title: 'Iris von Roten, die Simone de Beauvoir der Schweiz'
-        uri: irisvonroten
+        url: null
         text: 'In Frankreich kennt fast jede und jeder Simone de Beauvoir, die als Feministin die Geschichte des 20.'
         image: img_1.jpg
+        copyright: null
         color: '#7ebab5'
     -
         title: 'Die Männer hinter dem Frauenstimmrecht'
-        uri: hommes
+        url: null
         text: 'Ohne sie hätte es das Anliegen des Frauenstimmrechts wahrscheinlich nie auf die politische Bühne geschafft.'
         image: img_1.jpg
+        copyright: null
         color: '#61993b'
     -
         title: 'Nicht alle sind begeistert'
-        uri: cause
+        url: null
         text: '"Die Schweizer Frauen haben schon immer gewusst, dass sie auch ohne Stimmrecht regieren können, weshalb sie gerne darauf verzichten."'
         image: img_1.jpg
+        copyright: null
         color: '#6093ac'
     -
         title: 'Und was folgt nun?'
-        uri: apres
+        url: null
         text: 'Auch wenn die Erlangung des Frauenstimmrechts ein bedeutender Sieg für die Frauen ist, so bedeutet dies noch keine Gleichberechtigung zwischen Frauen und Männern.'
         image: img_1.jpg
+        copyright: null
         color: '#faca30'
     -
         title: 'Kultur Vermittlung'
-        uri: mediation
+        url: null
         text: 'Kultur Vermittlung'
         image: img_1.jpg
+        copyright: null
+        color: null
     -
         title: Schule
-        uri: scolaire
+        url: null
         text: Schule
         image: img_1.jpg
+        copyright: null
+        color: null
     -
         title: 'Die Datum'
-        uri: dates
+        url: null
         text: 'Die Datum'
         image: img_1.jpg
+        copyright: null
+        color: null
 entreprises:
     -
         image: logo.png

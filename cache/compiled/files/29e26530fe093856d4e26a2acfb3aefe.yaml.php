@@ -2,7 +2,7 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => '/Users/antoinequarroz/Sites/suffrageFeminin/system/blueprints/user/account.yaml',
-    'modified' => 1608003118,
+    'modified' => 1611307234,
     'data' => [
         'title' => 'Account',
         'form' => [
@@ -74,6 +74,15 @@ return [
                     'default' => 'en',
                     'help' => 'PLUGIN_ADMIN.LANGUAGE_HELP'
                 ],
+                'content_editor' => [
+                    'type' => 'select',
+                    'label' => 'PLUGIN_ADMIN.CONTENT_EDITOR',
+                    'size' => 'medium',
+                    'classes' => 'fancy',
+                    'data-options@' => 'Grav\\Plugin\\Admin\\Admin::contentEditor',
+                    'default' => 'default',
+                    'help' => 'PLUGIN_ADMIN.CONTENT_EDITOR_HELP'
+                ],
                 'twofa_check' => [
                     'type' => 'conditional',
                     'condition' => 'config.plugins.admin.twofa_enabled',
@@ -128,10 +137,12 @@ return [
                         'access' => [
                             'security@' => 'admin.super',
                             'type' => 'permissions',
+                            'check_authorize' => true,
                             'label' => 'PLUGIN_ADMIN.PERMISSIONS',
                             'ignore_empty' => true,
                             'validate' => [
-                                'type' => 'array'
+                                'type' => 'array',
+                                'value_type' => 'bool'
                             ]
                         ]
                     ]

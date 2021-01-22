@@ -2,7 +2,7 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => '/Users/antoinequarroz/Sites/suffrageFeminin/user/plugins/admin/languages/pt.yaml',
-    'modified' => 1608003118,
+    'modified' => 1611307256,
     'data' => [
         'PLUGIN_ADMIN' => [
             'ADMIN_BETA_MSG' => 'Esta é uma versão Beta! Use por sua conta em risco...',
@@ -48,7 +48,6 @@ return [
             'EXPERT' => 'Esperto',
             'EXPAND_ALL' => 'Expandir Tudo',
             'COLLAPSE_ALL' => 'Recolher Tudo',
-            'SECURE_DELETE_DESC' => 'Digite DELETE e confirme',
             'ERROR' => 'Erro',
             'CLOSE' => 'Fechar',
             'CANCEL' => 'Cancelar',

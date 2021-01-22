@@ -53,7 +53,7 @@ form:
                 .title:
                   type: text
                   label: Titre de la carte
-                .uri:
+                .url:
                   type: text
                   label: Lien de la carte
                 .text:

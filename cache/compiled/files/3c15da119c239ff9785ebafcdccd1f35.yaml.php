@@ -2,7 +2,7 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => '/Users/antoinequarroz/Sites/suffrageFeminin/system/languages/en.yaml',
-    'modified' => 1608003118,
+    'modified' => 1611307234,
     'data' => [
         'GRAV' => [
             'FRONTMATTER_ERROR_PAGE' => '---
@@ -127,7 +127,8 @@ Path: `%2$s`
             'FORM' => [
                 'VALIDATION_FAIL' => '<b>Validation failed:</b>',
                 'INVALID_INPUT' => 'Invalid input in',
-                'MISSING_REQUIRED_FIELD' => 'Missing required field:'
+                'MISSING_REQUIRED_FIELD' => 'Missing required field:',
+                'XSS_ISSUES' => 'Potential XSS issues detected in \'%s\' field'
             ],
             'MONTHS_OF_THE_YEAR' => [
                 0 => 'January',

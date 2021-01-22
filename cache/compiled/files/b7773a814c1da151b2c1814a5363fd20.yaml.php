@@ -2,7 +2,7 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => '/Users/antoinequarroz/Sites/suffrageFeminin/system/blueprints/config/system.yaml',
-    'modified' => 1608003118,
+    'modified' => 1611307234,
     'data' => [
         'title' => 'PLUGIN_ADMIN.SYSTEM',
         'form' => [
@@ -404,6 +404,40 @@ return [
                                         'type' => 'bool'
                                     ]
                                 ],
+                                'languages.include_default_lang_file_extension' => [
+                                    'type' => 'toggle',
+                                    'label' => 'PLUGIN_ADMIN.INCLUDE_DEFAULT_LANG_FILE_EXTENSION',
+                                    'help' => 'PLUGIN_ADMIN.INCLUDE_DEFAULT_LANG_HELP_FILE_EXTENSION',
+                                    'highlight' => 1,
+                                    'options' => [
+                                        1 => 'PLUGIN_ADMIN.YES',
+                                        0 => 'PLUGIN_ADMIN.NO'
+                                    ],
+                                    'validate' => [
+                                        'type' => 'bool'
+                                    ]
+                                ],
+                                'languages.content_fallback' => [
+                                    'type' => 'list',
+                                    'label' => 'PLUGIN_ADMIN.CONTENT_LANGUAGE_FALLBACKS',
+                                    'help' => 'PLUGIN_ADMIN.CONTENT_LANGUAGE_FALLBACKS_HELP',
+                                    'fields' => [
+                                        'key' => [
+                                            'type' => 'key',
+                                            'label' => 'PLUGIN_ADMIN.LANGUAGE',
+                                            'help' => 'PLUGIN_ADMIN.CONTENT_FALLBACK_LANGUAGE_HELP',
+                                            'placeholder' => 'fr-ca'
+                                        ],
+                                        'value' => [
+                                            'type' => 'selectize',
+                                            'size' => 'large',
+                                            'placeholder' => 'fr, en',
+                                            'label' => 'PLUGIN_ADMIN.CONTENT_LANGUAGE_FALLBACK',
+                                            'help' => 'PLUGIN_ADMIN.CONTENT_LANGUAGE_FALLBACK_HELP',
+                                            'classes' => 'fancy'
+                                        ]
+                                    ]
+                                ],
                                 'languages.pages_fallback_only' => [
                                     'type' => 'toggle',
                                     'label' => 'PLUGIN_ADMIN.PAGES_FALLBACK_ONLY',
@@ -419,8 +453,8 @@ return [
                                 ],
                                 'languages.translations' => [
                                     'type' => 'toggle',
-                                    'label' => 'PLUGIN_ADMIN.TRANSLATIONS_ENABLED',
-                                    'help' => 'PLUGIN_ADMIN.TRANSLATIONS_ENABLED_HELP',
+                                    'label' => 'PLUGIN_ADMIN.LANGUAGE_TRANSLATIONS',
+                                    'help' => 'PLUGIN_ADMIN.LANGUAGE_TRANSLATIONS_HELP',
                                     'highlight' => 1,
                                     'options' => [
                                         1 => 'PLUGIN_ADMIN.YES',
@@ -495,7 +529,7 @@ return [
                                 ],
                                 'pages.expires' => [
                                     'type' => 'text',
-                                    'size' => 'small',
+                                    'size' => 'x-small',
                                     'append' => 'GRAV.NICETIME.SECOND_PLURAL',
                                     'label' => 'PLUGIN_ADMIN.EXPIRES',
                                     'help' => 'PLUGIN_ADMIN.EXPIRES_HELP',
@@ -823,6 +857,73 @@ return [
                                     'type' => 'text',
                                     'size' => 'small',
                                     'label' => 'PLUGIN_ADMIN.REDIS_PASSWORD'
+                                ],
+                                'flex_caching' => [
+                                    'type' => 'section',
+                                    'title' => 'PLUGIN_ADMIN.FLEX_CACHING'
+                                ],
+                                'flex.cache.index.enabled' => [
+                                    'type' => 'toggle',
+                                    'label' => 'PLUGIN_ADMIN.FLEX_INDEX_CACHE_ENABLED',
+                                    'highlight' => 1,
+                                    'default' => 1,
+                                    'options' => [
+                                        1 => 'PLUGIN_ADMIN.ENABLED',
+                                        0 => 'PLUGIN_ADMIN.DISABLED'
+                                    ],
+                                    'validate' => [
+                                        'type' => 'bool'
+                                    ]
+                                ],
+                                'flex.cache.index.lifetime' => [
+                                    'type' => 'text',
+                                    'label' => 'PLUGIN_ADMIN.FLEX_INDEX_CACHE_LIFETIME',
+                                    'default' => 60,
+                                    'validate' => [
+                                        'type' => 'int'
+                                    ]
+                                ],
+                                'flex.cache.object.enabled' => [
+                                    'type' => 'toggle',
+                                    'label' => 'PLUGIN_ADMIN.FLEX_OBJECT_CACHE_ENABLED',
+                                    'highlight' => 1,
+                                    'default' => 1,
+                                    'options' => [
+                                        1 => 'PLUGIN_ADMIN.ENABLED',
+                                        0 => 'PLUGIN_ADMIN.DISABLED'
+                                    ],
+                                    'validate' => [
+                                        'type' => 'bool'
+                                    ]
+                                ],
+                                'flex.cache.object.lifetime' => [
+                                    'type' => 'text',
+                                    'label' => 'PLUGIN_ADMIN.FLEX_OBJECT_CACHE_LIFETIME',
+                                    'default' => 600,
+                                    'validate' => [
+                                        'type' => 'int'
+                                    ]
+                                ],
+                                'flex.cache.render.enabled' => [
+                                    'type' => 'toggle',
+                                    'label' => 'PLUGIN_ADMIN.FLEX_RENDER_CACHE_ENABLED',
+                                    'highlight' => 1,
+                                    'default' => 1,
+                                    'options' => [
+                                        1 => 'PLUGIN_ADMIN.ENABLED',
+                                        0 => 'PLUGIN_ADMIN.DISABLED'
+                                    ],
+                                    'validate' => [
+                                        'type' => 'bool'
+                                    ]
+                                ],
+                                'flex.cache.render.lifetime' => [
+                                    'type' => 'text',
+                                    'label' => 'PLUGIN_ADMIN.FLEX_RENDER_CACHE_LIFETIME',
+                                    'default' => 600,
+                                    'validate' => [
+                                        'type' => 'int'
+                                    ]
                                 ]
                             ]
                         ],
@@ -878,7 +979,8 @@ return [
                                     'type' => 'toggle',
                                     'label' => 'PLUGIN_ADMIN.AUTOESCAPE_VARIABLES',
                                     'help' => 'PLUGIN_ADMIN.AUTOESCAPE_VARIABLES_HELP',
-                                    'highlight' => 0,
+                                    'highlight' => 1,
+                                    'default' => 1,
                                     'options' => [
                                         1 => 'PLUGIN_ADMIN.YES',
                                         0 => 'PLUGIN_ADMIN.NO'
@@ -1165,6 +1267,30 @@ return [
                                         'type' => 'bool'
                                     ]
                                 ],
+                                'debugger.provider' => [
+                                    'type' => 'select',
+                                    'label' => 'PLUGIN_ADMIN.DEBUGGER_PROVIDER',
+                                    'help' => 'PLUGIN_ADMIN.DEBUGGER_PROVIDER_HELP',
+                                    'size' => 'medium',
+                                    'default' => 'debugbar',
+                                    'options' => [
+                                        'debugbar' => 'PLUGIN_ADMIN.DEBUGGER_DEBUGBAR',
+                                        'clockwork' => 'PLUGIN_ADMIN.DEBUGGER_CLOCKWORK'
+                                    ]
+                                ],
+                                'debugger.censored' => [
+                                    'type' => 'toggle',
+                                    'label' => 'PLUGIN_ADMIN.DEBUGGER_CENSORED',
+                                    'help' => 'PLUGIN_ADMIN.DEBUGGER_CENSORED_HELP',
+                                    'highlight' => 0,
+                                    'options' => [
+                                        1 => 'PLUGIN_ADMIN.YES',
+                                        0 => 'PLUGIN_ADMIN.NO'
+                                    ],
+                                    'validate' => [
+                                        'type' => 'bool'
+                                    ]
+                                ],
                                 'debugger.shutdown.close_connection' => [
                                     'type' => 'toggle',
                                     'label' => 'PLUGIN_ADMIN.SHUTDOWN_CLOSE_CONNECTION',
@@ -1240,13 +1366,25 @@ return [
                                     'type' => 'toggle',
                                     'label' => 'PLUGIN_ADMIN.IMAGES_AUTO_FIX_ORIENTATION',
                                     'help' => 'PLUGIN_ADMIN.IMAGES_AUTO_FIX_ORIENTATION_HELP',
-                                    'highlight' => 0,
+                                    'highlight' => 1,
                                     'options' => [
                                         1 => 'PLUGIN_ADMIN.YES',
                                         0 => 'PLUGIN_ADMIN.NO'
                                     ],
                                     'validate' => [
                                         'type' => 'bool'
+                                    ]
+                                ],
+                                'images.defaults.loading' => [
+                                    'type' => 'select',
+                                    'size' => 'small',
+                                    'label' => 'PLUGIN_ADMIN.IMAGES_LOADING',
+                                    'help' => 'PLUGIN_ADMIN.IMAGES_LOADING_HELP',
+                                    'highlight' => 'auto',
+                                    'options' => [
+                                        'auto' => 'Auto',
+                                        'lazy' => 'Lazy',
+                                        'eager' => 'Eager'
                                     ]
                                 ],
                                 'images.seofriendly' => [
@@ -1409,6 +1547,12 @@ return [
                                     'size' => 'small',
                                     'label' => 'PLUGIN_ADMIN.SESSION_PATH',
                                     'help' => 'PLUGIN_ADMIN.SESSION_PATH_HELP'
+                                ],
+                                'session.samesite' => [
+                                    'type' => 'text',
+                                    'size' => 'small',
+                                    'label' => 'PLUGIN_ADMIN.SESSION_SAMESITE',
+                                    'help' => 'PLUGIN_ADMIN.SESSION_SAMESITE_HELP'
                                 ],
                                 'session.split' => [
                                     'type' => 'toggle',
@@ -1652,17 +1796,25 @@ return [
                                         'type' => 'bool'
                                     ]
                                 ],
-                                'accounts.type' => [
-                                    'type' => 'hidden'
-                                ],
-                                'accounts.storage' => [
-                                    'type' => 'hidden'
+                                'strict_mode.blueprint_compat' => [
+                                    'type' => 'toggle',
+                                    'label' => 'PLUGIN_ADMIN.STRICT_BLUEPRINT_COMPAT',
+                                    'highlight' => 0,
+                                    'default' => 0,
+                                    'help' => 'PLUGIN_ADMIN.STRICT_BLUEPRINT_COMPAT_HELP',
+                                    'options' => [
+                                        1 => 'PLUGIN_ADMIN.YES',
+                                        0 => 'PLUGIN_ADMIN.NO'
+                                    ],
+                                    'validate' => [
+                                        'type' => 'bool'
+                                    ]
                                 ],
                                 'strict_mode.yaml_compat' => [
                                     'type' => 'toggle',
                                     'label' => 'PLUGIN_ADMIN.STRICT_YAML_COMPAT',
-                                    'highlight' => 1,
-                                    'default' => 1,
+                                    'highlight' => 0,
+                                    'default' => 0,
                                     'help' => 'PLUGIN_ADMIN.STRICT_YAML_COMPAT_HELP',
                                     'options' => [
                                         1 => 'PLUGIN_ADMIN.YES',
@@ -1675,8 +1827,8 @@ return [
                                 'strict_mode.twig_compat' => [
                                     'type' => 'toggle',
                                     'label' => 'PLUGIN_ADMIN.STRICT_TWIG_COMPAT',
-                                    'highlight' => 1,
-                                    'default' => 1,
+                                    'highlight' => 0,
+                                    'default' => 0,
                                     'help' => 'PLUGIN_ADMIN.STRICT_TWIG_COMPAT_HELP',
                                     'options' => [
                                         1 => 'PLUGIN_ADMIN.YES',
@@ -1684,6 +1836,44 @@ return [
                                     ],
                                     'validate' => [
                                         'type' => 'bool'
+                                    ]
+                                ]
+                            ]
+                        ],
+                        'experimental' => [
+                            'type' => 'tab',
+                            'title' => 'PLUGIN_ADMIN.EXPERIMENTAL',
+                            'fields' => [
+                                'experimental_section' => [
+                                    'type' => 'section',
+                                    'title' => 'PLUGIN_ADMIN.EXPERIMENTAL',
+                                    'underline' => true
+                                ],
+                                'pages.type' => [
+                                    'type' => 'hidden'
+                                ],
+                                'flex_accounts' => [
+                                    'type' => 'section',
+                                    'title' => 'Flex Accounts'
+                                ],
+                                'accounts.type' => [
+                                    'type' => 'select',
+                                    'label' => 'PLUGIN_ADMIN.ACCOUNTS_TYPE',
+                                    'highlight' => 'stable',
+                                    'help' => 'PLUGIN_ADMIN.ACCOUNTS_TYPE_HELP',
+                                    'options' => [
+                                        'regular' => 'PLUGIN_ADMIN.REGULAR',
+                                        'flex' => 'PLUGIN_ADMIN.FLEX'
+                                    ]
+                                ],
+                                'accounts.storage' => [
+                                    'type' => 'select',
+                                    'label' => 'PLUGIN_ADMIN.ACCOUNTS_STORAGE',
+                                    'highlight' => 'stable',
+                                    'help' => 'PLUGIN_ADMIN.ACCOUNTS_STORAGE_HELP',
+                                    'options' => [
+                                        'file' => 'PLUGIN_ADMIN.FILE',
+                                        'folder' => 'PLUGIN_ADMIN.FOLDER'
                                     ]
                                 ]
                             ]

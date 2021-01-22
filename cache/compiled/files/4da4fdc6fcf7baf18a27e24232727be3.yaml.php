@@ -2,7 +2,7 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => '/Users/antoinequarroz/Sites/suffrageFeminin/user/config/system.yaml',
-    'modified' => 1611048081,
+    'modified' => 1611307235,
     'data' => [
         'absolute_urls' => false,
         'timezone' => NULL,
@@ -229,7 +229,8 @@ return [
         ],
         'strict_mode' => [
             'yaml_compat' => true,
-            'twig_compat' => true
+            'twig_compat' => true,
+            'blueprint_compat' => true
         ]
     ]
 ];
