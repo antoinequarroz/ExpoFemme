@@ -1,6 +1,6 @@
 # Exposition 50 ans du suffragre féminin
 
-Exposition proposée par la Médiathèque Valais- Sion
+Exposition proposée par la Médiathèque Valais - Sion
 
 # Mon Développement
 
@@ -13,6 +13,8 @@ Exposition proposée par la Médiathèque Valais- Sion
 
 - PHP 7.3.6 or higher. Check the [required modules list](https://learn.getgrav.org/basics/requirements#php-requirements)
 - Check the [Apache](https://learn.getgrav.org/basics/requirements#apache-requirements) or [IIS](https://learn.getgrav.org/basics/requirements#iis-requirements) requirements
+
+# Créer par 
 
 <img src="https://pbs.twimg.com/profile_images/834321646932656129/a3Jxex5e_200x200.jpg" />
 
