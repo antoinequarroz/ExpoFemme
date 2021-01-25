@@ -2,9 +2,9 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => '/Users/antoinequarroz/Sites/suffrageFeminin/user/data/notifications/21232f297a57a5a743894a0e4a801fc3.yaml',
-    'modified' => 1611309164,
+    'modified' => 1611581908,
     'data' => [
-        'last_checked' => 1611309164,
+        'last_checked' => 1611581908,
         'data' => [
             'dashboard' => [
                 0 => [

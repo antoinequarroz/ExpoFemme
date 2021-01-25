@@ -18,7 +18,7 @@ Exposition proposée par la Médiathèque Valais - Sion
 
 <img src="https://pbs.twimg.com/profile_images/834321646932656129/a3Jxex5e_200x200.jpg" />
 
-Médiathèque valais
+Médiathèque Valais
 
 # License
 

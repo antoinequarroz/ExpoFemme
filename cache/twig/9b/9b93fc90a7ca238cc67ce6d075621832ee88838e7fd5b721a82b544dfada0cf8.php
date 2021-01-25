@@ -42,8 +42,8 @@ class __TwigTemplate_65a8bdc544c52f6834b59fb000126905ea9b45ca20514d27e1a77f6b65d
         // line 4
         echo "    <section class=\"v-background\">
 
-        <div class=\"container row\">
-        <nav class=\"nav-lang nav-lang-short ml-auto\">
+        <div class=\"container row \">
+        <nav class=\"nav-lang nav-lang-short ml-auto mt-3\">
                     <button class=\"btn btn-outline-dark btn-lg\" style=\"background: rgba(0,0,0,0)\">
                         <a href=\"";
         // line 9
@@ -68,7 +68,7 @@ class __TwigTemplate_65a8bdc544c52f6834b59fb000126905ea9b45ca20514d27e1a77f6b65d
         $context['_seq'] = twig_ensure_traversable($this->getAttribute($this->getAttribute(($context["page"] ?? null), "header", []), "titres", []));
         foreach ($context['_seq'] as $context["_key"] => $context["titre"]) {
             // line 21
-            echo "                    <h1 class=\"v-h1\" data-aos=\"fade-right\" data-aos-delay=\"700\">";
+            echo "                    <h1 class=\"v-h1 m-1\" data-aos=\"fade-right\" data-aos-delay=\"700\">";
             echo $this->getAttribute($context["titre"], "firsttitle", []);
             echo " <br> ";
             echo $this->getAttribute($context["titre"], "secondtitle", []);
@@ -90,7 +90,7 @@ class __TwigTemplate_65a8bdc544c52f6834b59fb000126905ea9b45ca20514d27e1a77f6b65d
         $context['_seq'] = twig_ensure_traversable($this->getAttribute($this->getAttribute(($context["page"] ?? null), "header", []), "paragraphes", []));
         foreach ($context['_seq'] as $context["_key"] => $context["para"]) {
             // line 26
-            echo "                <div class=\"v-box v-box-shadow\" data-aos=\"fade-up\" data-aos-duration=\"1000\" data-aos-delay=\"700\">
+            echo "                <div class=\"v-box\" data-aos=\"fade-up\" data-aos-duration=\"1000\" data-aos-delay=\"700\">
                     <p class=\"fs-4\">";
             // line 27
             echo $this->getAttribute($context["para"], "description", []);
@@ -156,7 +156,7 @@ class __TwigTemplate_65a8bdc544c52f6834b59fb000126905ea9b45ca20514d27e1a77f6b65d
         </div>
 
         <hr>
-        <img src=\"./user/themes/expoFemme/images/arsenaux.jpg\" alt=\"Arseanux\">
+        <img src=\"./user/themes/expoFemme/images/arsenaux.jpg\" alt=\"Arsenaux\">
     </section>
 ";
     }
@@ -196,8 +196,8 @@ class __TwigTemplate_65a8bdc544c52f6834b59fb000126905ea9b45ca20514d27e1a77f6b65d
 {% block content %}
     <section class=\"v-background\">
 
-        <div class=\"container row\">
-        <nav class=\"nav-lang nav-lang-short ml-auto\">
+        <div class=\"container row \">
+        <nav class=\"nav-lang nav-lang-short ml-auto mt-3\">
                     <button class=\"btn btn-outline-dark btn-lg\" style=\"background: rgba(0,0,0,0)\">
                         <a href=\"{{ base_url_simple }}/fr\" aria-label=\"Français\" class=\"text-dark\">FR</a>
                     </button>
@@ -211,12 +211,12 @@ class __TwigTemplate_65a8bdc544c52f6834b59fb000126905ea9b45ca20514d27e1a77f6b65d
         <div class=\"container\" >
             <div class=\"row\">
                 {% for titre in page.header.titres %}
-                    <h1 class=\"v-h1\" data-aos=\"fade-right\" data-aos-delay=\"700\">{{ titre.firsttitle}} <br> {{ titre.secondtitle }}</h1>
+                    <h1 class=\"v-h1 m-1\" data-aos=\"fade-right\" data-aos-delay=\"700\">{{ titre.firsttitle}} <br> {{ titre.secondtitle }}</h1>
                     <h2 class=\"v-h2 mb-5\" data-aos=\"fade-left\" data-aos-delay=\"700\">{{titre.thirdtitle}}</h2>
                 {% endfor %}
 
                 {% for para in page.header.paragraphes %}
-                <div class=\"v-box v-box-shadow\" data-aos=\"fade-up\" data-aos-duration=\"1000\" data-aos-delay=\"700\">
+                <div class=\"v-box\" data-aos=\"fade-up\" data-aos-duration=\"1000\" data-aos-delay=\"700\">
                     <p class=\"fs-4\">{{ para.description }}</p>
                 </div>
                 {% endfor %}
@@ -244,7 +244,7 @@ class __TwigTemplate_65a8bdc544c52f6834b59fb000126905ea9b45ca20514d27e1a77f6b65d
         </div>
 
         <hr>
-        <img src=\"./user/themes/expoFemme/images/arsenaux.jpg\" alt=\"Arseanux\">
+        <img src=\"./user/themes/expoFemme/images/arsenaux.jpg\" alt=\"Arsenaux\">
     </section>
 {% endblock %}
 

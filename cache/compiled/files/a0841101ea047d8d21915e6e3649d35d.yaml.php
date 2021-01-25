@@ -2,7 +2,7 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => '/Users/antoinequarroz/Sites/suffrageFeminin/user/themes/expoFemme/blueprints/scolaire.yaml',
-    'modified' => 1611309221,
+    'modified' => 1611572604,
     'data' => [
         'title' => 'Content item',
         '@extends' => [
@@ -25,7 +25,7 @@ return [
                                 'header.titres' => [
                                     'name' => 'titre',
                                     'type' => 'list',
-                                    'label' => 'Titre',
+                                    'label' => 'Titre de la page',
                                     'fields' => [
                                         '.titre' => [
                                             'type' => 'text',
@@ -36,7 +36,7 @@ return [
                                 'header.pages' => [
                                     'name' => 'description',
                                     'type' => 'list',
-                                    'label' => 'Texte',
+                                    'label' => 'Texte du paragraphe',
                                     'fields' => [
                                         '.description' => [
                                             'type' => 'textarea',
@@ -47,11 +47,27 @@ return [
                                 'header.liens' => [
                                     'name' => 'description',
                                     'type' => 'list',
-                                    'label' => 'Texte',
+                                    'label' => 'Texte email',
                                     'fields' => [
                                         '.mail' => [
                                             'type' => 'text',
                                             'label' => 'lien pour contact'
+                                        ]
+                                    ]
+                                ],
+                                'header.fichier' => [
+                                    'name' => 'description',
+                                    'type' => 'list',
+                                    'label' => 'Texte PDF',
+                                    'fields' => [
+                                        '.pdf' => [
+                                            'type' => 'filepicker',
+                                            'folder' => './user/themes/expoFemme/pdf',
+                                            'label' => 'PDF'
+                                        ],
+                                        '.text' => [
+                                            'type' => 'text',
+                                            'label' => 'Titre du PDF'
                                         ]
                                     ]
                                 ]

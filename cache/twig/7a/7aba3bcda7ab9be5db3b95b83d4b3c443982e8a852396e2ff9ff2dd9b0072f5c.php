@@ -128,12 +128,55 @@ class __TwigTemplate_5f3804e3a02c30315409c7adfcf74ae41a555939609ecbc7e52d86c896c
         // line 45
         echo "            </div>
         </div>
+        <div class=\"container\">
+            <div class=\"row\">
+                ";
+        // line 49
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable($this->getAttribute(($context["header"] ?? null), "fichier", []));
+        foreach ($context['_seq'] as $context["_key"] => $context["fichiers"]) {
+            // line 50
+            echo "                <div class=\"col-sm-3 col-sm-4 mt-5\">
+                <a href=\"";
+            // line 51
+            echo ($context["base_url_simple"] ?? null);
+            echo "/user/themes/expoFemme/pdf/";
+            echo $this->getAttribute($context["fichiers"], "pdf", []);
+            echo "\" target=\"_blank\">
+                    <div class=\"card\" style=\"background-color: #faca30\">
+                        <div class=\"card-body text-center\">
+                            <img src=\"";
+            // line 54
+            echo ($context["base_url_simple"] ?? null);
+            echo "/user/themes/expoFemme/images/svg/pdf.svg\" style=\"height: 100px\" alt=\"svg\" class=\"mt-2\">
+                            <p class=\"card-text mt-5\" style=\"color: black\">
+                                ";
+            // line 56
+            echo $this->getAttribute($context["fichiers"], "text", []);
+            echo "
+
+                            </p>
+                        </div>
+                    </div>
+                </a>
+                </div>
+                ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['fichiers'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 64
+        echo "            </div>
+        </div>
 
     </section>
+
+
+
 ";
     }
 
-    // line 51
+    // line 73
     public function block_footer($context, array $blocks = [])
     {
     }
@@ -150,7 +193,7 @@ class __TwigTemplate_5f3804e3a02c30315409c7adfcf74ae41a555939609ecbc7e52d86c896c
 
     public function getDebugInfo()
     {
-        return array (  137 => 51,  129 => 45,  120 => 43,  116 => 42,  109 => 37,  100 => 35,  96 => 34,  89 => 29,  80 => 27,  76 => 26,  70 => 23,  57 => 13,  50 => 9,  43 => 4,  40 => 3,  30 => 1,);
+        return array (  180 => 73,  169 => 64,  155 => 56,  150 => 54,  142 => 51,  139 => 50,  135 => 49,  129 => 45,  120 => 43,  116 => 42,  109 => 37,  100 => 35,  96 => 34,  89 => 29,  80 => 27,  76 => 26,  70 => 23,  57 => 13,  50 => 9,  43 => 4,  40 => 3,  30 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -209,8 +252,30 @@ class __TwigTemplate_5f3804e3a02c30315409c7adfcf74ae41a555939609ecbc7e52d86c896c
                 {% endfor %}
             </div>
         </div>
+        <div class=\"container\">
+            <div class=\"row\">
+                {% for fichiers in header.fichier %}
+                <div class=\"col-sm-3 col-sm-4 mt-5\">
+                <a href=\"{{ base_url_simple }}/user/themes/expoFemme/pdf/{{ fichiers.pdf }}\" target=\"_blank\">
+                    <div class=\"card\" style=\"background-color: #faca30\">
+                        <div class=\"card-body text-center\">
+                            <img src=\"{{ base_url_simple }}/user/themes/expoFemme/images/svg/pdf.svg\" style=\"height: 100px\" alt=\"svg\" class=\"mt-2\">
+                            <p class=\"card-text mt-5\" style=\"color: black\">
+                                {{ fichiers.text}}
+
+                            </p>
+                        </div>
+                    </div>
+                </a>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
 
     </section>
+
+
+
 {% endblock %}
 
 {% block footer %}

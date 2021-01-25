@@ -46,49 +46,53 @@ class __TwigTemplate_e488c71f36d7d6c8e8aa359d7f93ab021f1b978ae134d37203225c64046
 ";
         // line 5
         $this->displayBlock('head', $context, $blocks);
-        // line 22
-        echo "
-";
         // line 23
+        echo "
+";
+        // line 24
         $this->displayBlock('stylesheets', $context, $blocks);
-        // line 35
-        echo "
-";
         // line 36
-        $this->displayBlock('javascripts', $context, $blocks);
-        // line 46
         echo "
 ";
+        // line 37
+        $this->displayBlock('javascripts', $context, $blocks);
         // line 47
+        echo "
+";
+        // line 48
         $this->displayBlock('assets', $context, $blocks);
-        // line 51
+        // line 52
         echo "</head>
 
 
 
 <body id=\"top\" class=\"";
-        // line 55
+        // line 56
         echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute(($context["page"] ?? null), "header", []), "body_classes", []));
         echo "\">
 
 ";
-        // line 57
+        // line 58
         $this->displayBlock('body', $context, $blocks);
-        // line 66
+        // line 67
         echo "
 <footer>
     ";
-        // line 68
+        // line 69
         $this->displayBlock('footer', $context, $blocks);
-        // line 70
+        // line 71
         echo "</footer>
 
 ";
-        // line 72
+        // line 73
         $this->displayBlock('bottom', $context, $blocks);
-        // line 75
+        // line 76
         echo "
 </body>
+
+    <script defer src=\"/your-path-to-fontawesome/js/brands.js\"></script>
+    <script defer src=\"/your-path-to-fontawesome/js/solid.js\"></script>
+    <script defer src=\"/your-path-to-fontawesome/js/fontawesome.js\"></script>
     <script src=\"https://unpkg.com/aos@next/dist/aos.js\"></script>
     <script>
         AOS.init();
@@ -138,59 +142,60 @@ class __TwigTemplate_e488c71f36d7d6c8e8aa359d7f93ab021f1b978ae134d37203225c64046
         echo "\" />
     <link rel=\"stylesheet\" href=\"https://unpkg.com/aos@next/dist/aos.css\" />
     <link rel=\"stylesheet\" href=\"./node_modules/sal.js/dist/sal.css\">
+    <link href=\"/your-path-to-fontawesome/css/all.css\" rel=\"stylesheet\">
 
 
 
 ";
     }
 
-    // line 23
+    // line 24
     public function block_stylesheets($context, array $blocks = [])
     {
-        // line 24
-        echo "    ";
-        $this->getAttribute(($context["assets"] ?? null), "addCss", [0 => "https://unpkg.com/purecss@1.0.0/build/pure-min.css", 1 => 98], "method");
         // line 25
         echo "    ";
-        $this->getAttribute(($context["assets"] ?? null), "addCss", [0 => "https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css", 1 => 99], "method");
+        $this->getAttribute(($context["assets"] ?? null), "addCss", [0 => "https://unpkg.com/purecss@1.0.0/build/pure-min.css", 1 => 98], "method");
         // line 26
         echo "    ";
-        $this->getAttribute(($context["assets"] ?? null), "addCss", [0 => "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css", 1 => 97], "method");
+        $this->getAttribute(($context["assets"] ?? null), "addCss", [0 => "https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css", 1 => 99], "method");
         // line 27
         echo "    ";
-        $this->getAttribute(($context["assets"] ?? null), "addCss", [0 => "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css", 1 => 96], "method");
+        $this->getAttribute(($context["assets"] ?? null), "addCss", [0 => "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css", 1 => 97], "method");
         // line 28
         echo "    ";
-        $this->getAttribute(($context["assets"] ?? null), "addCss", [0 => "theme://css/custom.css", 1 => 100], "method");
+        $this->getAttribute(($context["assets"] ?? null), "addCss", [0 => "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css", 1 => 96], "method");
         // line 29
         echo "    ";
-        $this->getAttribute(($context["assets"] ?? null), "addCss", [0 => "https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap", 1 => 95], "method");
+        $this->getAttribute(($context["assets"] ?? null), "addCss", [0 => "theme://css/custom.css", 1 => 90], "method");
         // line 30
         echo "    ";
-        $this->getAttribute(($context["assets"] ?? null), "addCss", [0 => "https://unpkg.com/flickity@2/dist/flickity.min.css", 1 => 94], "method");
+        $this->getAttribute(($context["assets"] ?? null), "addCss", [0 => "https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap", 1 => 95], "method");
         // line 31
+        echo "    ";
+        $this->getAttribute(($context["assets"] ?? null), "addCss", [0 => "https://unpkg.com/flickity@2/dist/flickity.min.css", 1 => 94], "method");
+        // line 32
         echo "
 
 
 ";
     }
 
-    // line 36
+    // line 37
     public function block_javascripts($context, array $blocks = [])
     {
-        // line 37
-        echo "    ";
-        $this->getAttribute(($context["assets"] ?? null), "addJs", [0 => "jquery", 1 => 100], "method");
         // line 38
         echo "    ";
-        $this->getAttribute(($context["assets"] ?? null), "addJs", [0 => "theme://js/script.js", 1 => 98], "method");
+        $this->getAttribute(($context["assets"] ?? null), "addJs", [0 => "jquery", 1 => 100], "method");
         // line 39
         echo "    ";
-        $this->getAttribute(($context["assets"] ?? null), "addJs", [0 => "https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js", 1 => 99], "method");
+        $this->getAttribute(($context["assets"] ?? null), "addJs", [0 => "theme://js/script.js", 1 => 98], "method");
         // line 40
         echo "    ";
-        $this->getAttribute(($context["assets"] ?? null), "addJs", [0 => "https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js", 1 => 97], "method");
+        $this->getAttribute(($context["assets"] ?? null), "addJs", [0 => "https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js", 1 => 99], "method");
         // line 41
+        echo "    ";
+        $this->getAttribute(($context["assets"] ?? null), "addJs", [0 => "https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js", 1 => 97], "method");
+        // line 42
         echo "
 
 
@@ -203,55 +208,55 @@ class __TwigTemplate_e488c71f36d7d6c8e8aa359d7f93ab021f1b978ae134d37203225c64046
         $this->env->getExtension('Phive\Twig\Extensions\Deferred\DeferredExtension')->defer($this, 'assets');
     }
 
-    // line 47
+    // line 48
     public function block_assets_deferred($context, array $blocks = array())
     {
-        // line 48
+        // line 49
         echo "    ";
         echo $this->getAttribute(($context["assets"] ?? null), "css", [], "method");
         echo "
     ";
-        // line 49
+        // line 50
         echo $this->getAttribute(($context["assets"] ?? null), "js", [], "method");
         echo "
 ";
         $this->env->getExtension('Phive\Twig\Extensions\Deferred\DeferredExtension')->resolve($this, $context, $blocks);
     }
 
-    // line 57
+    // line 58
     public function block_body($context, array $blocks = [])
     {
-        // line 58
+        // line 59
         echo "    <section id=\"body\">
         <div class=\"wrapper padding\">
         ";
-        // line 60
+        // line 61
         $this->displayBlock('content', $context, $blocks);
-        // line 63
+        // line 64
         echo "        </div>
     </section>
 ";
     }
 
-    // line 60
+    // line 61
     public function block_content($context, array $blocks = [])
     {
-        // line 61
+        // line 62
         echo "
         ";
     }
 
-    // line 68
+    // line 69
     public function block_footer($context, array $blocks = [])
     {
-        // line 69
+        // line 70
         echo "    ";
     }
 
-    // line 72
+    // line 73
     public function block_bottom($context, array $blocks = [])
     {
-        // line 73
+        // line 74
         echo "    ";
         echo $this->getAttribute(($context["assets"] ?? null), "js", [0 => "bottom"], "method");
         echo "
@@ -270,7 +275,7 @@ class __TwigTemplate_e488c71f36d7d6c8e8aa359d7f93ab021f1b978ae134d37203225c64046
 
     public function getDebugInfo()
     {
-        return array (  255 => 73,  252 => 72,  248 => 69,  245 => 68,  240 => 61,  237 => 60,  231 => 63,  229 => 60,  225 => 58,  222 => 57,  215 => 49,  210 => 48,  207 => 47,  194 => 41,  191 => 40,  188 => 39,  185 => 38,  182 => 37,  179 => 36,  172 => 31,  169 => 30,  166 => 29,  163 => 28,  160 => 27,  157 => 26,  154 => 25,  151 => 24,  148 => 23,  137 => 15,  133 => 14,  129 => 12,  127 => 11,  116 => 7,  113 => 6,  110 => 5,  90 => 75,  88 => 72,  84 => 70,  82 => 68,  78 => 66,  76 => 57,  71 => 55,  65 => 51,  63 => 47,  60 => 46,  58 => 36,  55 => 35,  53 => 23,  50 => 22,  48 => 5,  43 => 3,  40 => 2,  38 => 1,);
+        return array (  260 => 74,  257 => 73,  253 => 70,  250 => 69,  245 => 62,  242 => 61,  236 => 64,  234 => 61,  230 => 59,  227 => 58,  220 => 50,  215 => 49,  212 => 48,  199 => 42,  196 => 41,  193 => 40,  190 => 39,  187 => 38,  184 => 37,  177 => 32,  174 => 31,  171 => 30,  168 => 29,  165 => 28,  162 => 27,  159 => 26,  156 => 25,  153 => 24,  141 => 15,  137 => 14,  133 => 12,  131 => 11,  120 => 7,  117 => 6,  114 => 5,  90 => 76,  88 => 73,  84 => 71,  82 => 69,  78 => 67,  76 => 58,  71 => 56,  65 => 52,  63 => 48,  60 => 47,  58 => 37,  55 => 36,  53 => 24,  50 => 23,  48 => 5,  43 => 3,  40 => 2,  38 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -300,6 +305,7 @@ class __TwigTemplate_e488c71f36d7d6c8e8aa359d7f93ab021f1b978ae134d37203225c64046
     <link rel=\"canonical\" href=\"{{ page.url(true, true)|e }}\" />
     <link rel=\"stylesheet\" href=\"https://unpkg.com/aos@next/dist/aos.css\" />
     <link rel=\"stylesheet\" href=\"./node_modules/sal.js/dist/sal.css\">
+    <link href=\"/your-path-to-fontawesome/css/all.css\" rel=\"stylesheet\">
 
 
 
@@ -310,7 +316,7 @@ class __TwigTemplate_e488c71f36d7d6c8e8aa359d7f93ab021f1b978ae134d37203225c64046
     {% do assets.addCss('https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css', 99) %}
     {% do assets.addCss('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css', 97) %}
     {% do assets.addCss('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css', 96) %}
-    {% do assets.addCss('theme://css/custom.css', 100) %}
+    {% do assets.addCss('theme://css/custom.css', 90) %}
     {% do assets.addCss('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap', 95) %}
     {% do assets.addCss('https://unpkg.com/flickity@2/dist/flickity.min.css', 94) %}
 
@@ -359,6 +365,10 @@ class __TwigTemplate_e488c71f36d7d6c8e8aa359d7f93ab021f1b978ae134d37203225c64046
 {% endblock %}
 
 </body>
+
+    <script defer src=\"/your-path-to-fontawesome/js/brands.js\"></script>
+    <script defer src=\"/your-path-to-fontawesome/js/solid.js\"></script>
+    <script defer src=\"/your-path-to-fontawesome/js/fontawesome.js\"></script>
     <script src=\"https://unpkg.com/aos@next/dist/aos.js\"></script>
     <script>
         AOS.init();
