@@ -2,7 +2,7 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => '/Users/antoinequarroz/Sites/suffrageFeminin/user/plugins/git-sync/blueprints.yaml',
-    'modified' => 1610988493,
+    'modified' => 1611665606,
     'data' => [
         'name' => 'Git Sync',
         'version' => '2.1.1',

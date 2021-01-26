@@ -2,10 +2,10 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledJsonFile',
     'filename' => '/Users/antoinequarroz/Sites/suffrageFeminin/user/data/flex/indexes/pages.json',
-    'modified' => 1611572747,
+    'modified' => 1611647798,
     'data' => [
         'version' => '1.5',
-        'timestamp' => 1611572747,
+        'timestamp' => 1611647798,
         'count' => 11,
         'index' => [
             '' => [
@@ -46,76 +46,76 @@ return [
                 'key' => 'irisvonroten',
                 'storage_key' => '02.irisvonroten',
                 'template' => 'thematique',
-                'storage_timestamp' => 1611563202,
+                'storage_timestamp' => 1611647780,
                 'markdown' => [
                     'de' => [
                         'thematique' => 1611047567
                     ],
                     'fr' => [
-                        'thematique' => 1610984895
+                        'thematique' => 1611647780
                     ]
                 ],
-                'checksum' => '1d1c27f9cd32020ad7629a48bd2ef657'
+                'checksum' => 'f4be0ca1bdcac10b3f21e83c458322e0'
             ],
             '03.hommes' => [
                 'key' => 'hommes',
                 'storage_key' => '03.hommes',
                 'template' => 'thematique',
-                'storage_timestamp' => 1611563202,
+                'storage_timestamp' => 1611647780,
                 'markdown' => [
                     'de' => [
                         'thematique' => 1611047567
                     ],
                     'fr' => [
-                        'thematique' => 1610984901
+                        'thematique' => 1611647780
                     ]
                 ],
-                'checksum' => '00661ba048194dc227e3a5fe6fee56f4'
+                'checksum' => 'ca622d3b06aa5a81b00afeb58756292b'
             ],
             '04.cause' => [
                 'key' => 'cause',
                 'storage_key' => '04.cause',
                 'template' => 'thematique',
-                'storage_timestamp' => 1611563202,
+                'storage_timestamp' => 1611647780,
                 'markdown' => [
                     'de' => [
                         'thematique' => 1611047567
                     ],
                     'fr' => [
-                        'thematique' => 1610984908
+                        'thematique' => 1611647780
                     ]
                 ],
-                'checksum' => 'cac80bb20fa02f16451c5377d7600117'
+                'checksum' => '288d7cc6857e9e34a0e7b40368881d1f'
             ],
             '05.apres' => [
                 'key' => 'apres',
                 'storage_key' => '05.apres',
                 'template' => 'thematique',
-                'storage_timestamp' => 1611563202,
+                'storage_timestamp' => 1611647780,
                 'markdown' => [
                     'de' => [
                         'thematique' => 1611047567
                     ],
                     'fr' => [
-                        'thematique' => 1610984915
+                        'thematique' => 1611647780
                     ]
                 ],
-                'checksum' => 'aa4e2c50c109b078973d42a41bd7cf43'
+                'checksum' => 'b41f8046df2366ceb35a4ac767a24a96'
             ],
             '06.mediation' => [
                 'key' => 'mediation',
                 'storage_key' => '06.mediation',
                 'template' => 'mediation',
-                'storage_timestamp' => 1611563202,
+                'storage_timestamp' => 1611647780,
                 'markdown' => [
                     'de' => [
                         'mediation' => 1611047567
                     ],
                     'fr' => [
-                        'mediation' => 1610984920
+                        'mediation' => 1611647780
                     ]
                 ],
-                'checksum' => '8b7510a80b4fee69477cb62f8417d4bd'
+                'checksum' => '241bb69a5c3c227d140aa88ff9adb511'
             ],
             '07.scolaire' => [
                 'key' => 'scolaire',
