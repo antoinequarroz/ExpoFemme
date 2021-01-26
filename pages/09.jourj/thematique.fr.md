@@ -11,9 +11,7 @@ colors:
         background: '#faca30'
 images:
     -
-        image: logo.png
-    -
-        image: img_1.jpg
+        image: jourJ.jpg
 titre:
     -
         title: 'Le jour J'

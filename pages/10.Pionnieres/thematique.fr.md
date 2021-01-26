@@ -1,5 +1,4 @@
 ---
-title: 'Les pionnières'
 titres:
     -
         theme: 'De Gabrielle Nanchen à Viola Amherd, elles sont les pionnières'
@@ -9,5 +8,8 @@ pages:
 colors:
     -
         background: '#6093ac'
+images:
+    -
+        image: pionneres.png
 ---
 
