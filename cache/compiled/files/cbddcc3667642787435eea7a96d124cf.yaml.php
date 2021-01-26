@@ -2,7 +2,7 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => '/Users/antoinequarroz/Sites/suffrageFeminin/system/config/security.yaml',
-    'modified' => 1608003118,
+    'modified' => 1611307234,
     'data' => [
         'xss_whitelist' => [
             0 => 'admin.super'
@@ -47,6 +47,7 @@ return [
             2 => 'htm',
             3 => 'js',
             4 => 'exe'
-        ]
+        ],
+        'sanitize_svg' => true
     ]
 ];

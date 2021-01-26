@@ -2,7 +2,7 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => '/Users/antoinequarroz/Sites/suffrageFeminin/user/plugins/admin/languages/bg.yaml',
-    'modified' => 1608003118,
+    'modified' => 1611307256,
     'data' => [
         'PLUGIN_ADMIN' => [
             'ADMIN_BETA_MSG' => 'Това е Бета версия! Използвате на ваша отговорност...',

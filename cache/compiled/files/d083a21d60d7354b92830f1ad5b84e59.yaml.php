@@ -2,7 +2,7 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => '/Users/antoinequarroz/Sites/suffrageFeminin/user/themes/expoFemme/blueprints/dates.yaml',
-    'modified' => 1610699675,
+    'modified' => 1611307586,
     'data' => [
         'title' => 'Content item',
         '@extends' => [
@@ -19,7 +19,7 @@ return [
                             'fields' => [
                                 'header_options' => [
                                     'type' => 'section',
-                                    'title' => 'Page du thème',
+                                    'title' => 'Page des dates',
                                     'underline' => true
                                 ],
                                 'header.titres' => [
@@ -27,13 +27,13 @@ return [
                                     'type' => 'list',
                                     'label' => 'Titre',
                                     'fields' => [
-                                        '.theme' => [
+                                        '.titre' => [
                                             'type' => 'text',
                                             'label' => 'Votre titre'
                                         ]
                                     ]
                                 ],
-                                'header.pages' => [
+                                'header.dates' => [
                                     'name' => 'description',
                                     'type' => 'list',
                                     'label' => 'Texte',
@@ -41,6 +41,10 @@ return [
                                         '.description' => [
                                             'type' => 'textarea',
                                             'label' => 'Rentrer le texte'
+                                        ],
+                                        '.date' => [
+                                            'type' => 'text',
+                                            'label' => 'Date'
                                         ]
                                     ]
                                 ]

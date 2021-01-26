@@ -16,7 +16,7 @@ form:
 
             header_options:
               type: section
-              title: Page du thème
+              title: Page des dates
               underline: true
 
             header.titres:
@@ -24,12 +24,12 @@ form:
               type: list
               label: Titre
               fields:
-                .theme:
+                .titre:
                   type: text
                   label: Votre titre
 
 
-            header.pages:
+            header.dates:
               name: description
               type: list
               label: Texte
@@ -37,11 +37,6 @@ form:
                 .description:
                   type: textarea
                   label: Rentrer le texte
-                .image:
-                  type: filepicker
-                  folder: './user/themes/expoFemme/images'
-                  label: Image
-                  preview_images: true
-                  accept:
-                    - .png
-                    - .jpg
+                .date:
+                  type: text
+                  label: Date

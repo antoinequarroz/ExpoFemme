@@ -2,7 +2,7 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => '/Users/antoinequarroz/Sites/suffrageFeminin/system/config/site.yaml',
-    'modified' => 1608003118,
+    'modified' => 1611307234,
     'data' => [
         'title' => 'Grav',
         'default_lang' => 'en',

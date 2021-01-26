@@ -2,7 +2,7 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => '/Users/antoinequarroz/Sites/suffrageFeminin/user/plugins/admin/blueprints/admin/pages/modular_new.yaml',
-    'modified' => 1608003118,
+    'modified' => 1611307256,
     'data' => [
         'rules' => [
             'slug' => [
@@ -16,7 +16,7 @@ return [
             'fields' => [
                 'section' => [
                     'type' => 'section',
-                    'title' => 'PLUGIN_ADMIN.ADD_MODULAR_CONTENT'
+                    'title' => 'PLUGIN_ADMIN.ADD_MODULE_CONTENT'
                 ],
                 'title' => [
                     'type' => 'text',
@@ -44,7 +44,7 @@ return [
                 'name' => [
                     'type' => 'select',
                     'classes' => 'fancy',
-                    'label' => 'PLUGIN_ADMIN.MODULAR_TEMPLATE',
+                    'label' => 'PLUGIN_ADMIN.MODULE_TEMPLATE',
                     'help' => 'PLUGIN_ADMIN.PAGE_FILE_HELP',
                     'default' => 'default',
                     'data-options@' => '\\Grav\\Plugin\\AdminPlugin::pagesModularTypes',

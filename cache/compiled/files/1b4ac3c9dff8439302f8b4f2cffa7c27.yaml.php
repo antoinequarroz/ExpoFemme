@@ -2,7 +2,7 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => '/Users/antoinequarroz/Sites/suffrageFeminin/user/plugins/admin/languages/sl.yaml',
-    'modified' => 1608003118,
+    'modified' => 1611307256,
     'data' => [
         'PLUGIN_ADMIN' => [
             'ADMIN_REPORT_ISSUE' => 'Ste naleteli na težavo? Prijavite jo na GitHub-u.',

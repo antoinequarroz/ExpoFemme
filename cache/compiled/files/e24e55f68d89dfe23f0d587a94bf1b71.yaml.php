@@ -2,7 +2,7 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => '/Users/antoinequarroz/Sites/suffrageFeminin/system/blueprints/config/security.yaml',
-    'modified' => 1608003118,
+    'modified' => 1611307234,
     'data' => [
         'title' => 'PLUGIN_ADMIN.SECURITY',
         'form' => [
@@ -120,6 +120,20 @@ return [
                     'classes' => 'fancy',
                     'validate' => [
                         'type' => 'commalist'
+                    ]
+                ],
+                'sanitize_svg' => [
+                    'type' => 'toggle',
+                    'label' => 'PLUGIN_ADMIN.SANITIZE_SVG',
+                    'help' => 'PLUGIN_ADMIN.SANITIZE_SVG_HELP',
+                    'highlight' => 1,
+                    'options' => [
+                        1 => 'PLUGIN_ADMIN.YES',
+                        0 => 'PLUGIN_ADMIN.NO'
+                    ],
+                    'default' => true,
+                    'validate' => [
+                        'type' => 'bool'
                     ]
                 ]
             ]

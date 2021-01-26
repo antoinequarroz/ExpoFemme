@@ -1,8 +1,8 @@
 <?php
 return [
     '@class' => 'Grav\\Common\\Config\\CompiledConfig',
-    'timestamp' => 1610975649,
-    'checksum' => 'a4fdc28b48ad194ba31223e6626705f0',
+    'timestamp' => 1611307258,
+    'checksum' => '4a788ee29f90ad1566fbb489bd1075fe',
     'files' => [
         'user/config' => [
             'backups' => [
@@ -12,6 +12,14 @@ return [
             'media' => [
                 'file' => 'user/config/media.yaml',
                 'modified' => 1610526109
+            ],
+            'plugins/admin' => [
+                'file' => 'user/config/plugins/admin.yaml',
+                'modified' => 1611130141
+            ],
+            'plugins/git-sync' => [
+                'file' => 'user/config/plugins/git-sync.yaml',
+                'modified' => 1610989467
             ],
             'scheduler' => [
                 'file' => 'user/config/scheduler.yaml',
@@ -31,37 +39,37 @@ return [
             ],
             'system' => [
                 'file' => 'user/config/system.yaml',
-                'modified' => 1610975645
+                'modified' => 1611307235
             ],
             'versions' => [
                 'file' => 'user/config/versions.yaml',
-                'modified' => 1610526109
+                'modified' => 1611307235
             ]
         ],
         'system/config' => [
             'backups' => [
                 'file' => 'system/config/backups.yaml',
-                'modified' => 1608003118
+                'modified' => 1611307234
             ],
             'media' => [
                 'file' => 'system/config/media.yaml',
-                'modified' => 1608003118
+                'modified' => 1611307234
+            ],
+            'permissions' => [
+                'file' => 'system/config/permissions.yaml',
+                'modified' => 1611307234
             ],
             'security' => [
                 'file' => 'system/config/security.yaml',
-                'modified' => 1608003118
+                'modified' => 1611307234
             ],
             'site' => [
                 'file' => 'system/config/site.yaml',
-                'modified' => 1608003118
-            ],
-            'streams' => [
-                'file' => 'system/config/streams.yaml',
-                'modified' => 1608003118
+                'modified' => 1611307234
             ],
             'system' => [
                 'file' => 'system/config/system.yaml',
-                'modified' => 1608003118
+                'modified' => 1611307234
             ]
         ],
         'user/plugins' => [
@@ -73,9 +81,13 @@ return [
                 'file' => 'user/plugins/form/form.yaml',
                 'modified' => 1608003118
             ],
+            'plugins/flex-objects' => [
+                'file' => 'user/plugins/flex-objects/flex-objects.yaml',
+                'modified' => 1611307253
+            ],
             'plugins/admin' => [
                 'file' => 'user/plugins/admin/admin.yaml',
-                'modified' => 1608003118
+                'modified' => 1611307256
             ],
             'plugins/problems' => [
                 'file' => 'user/plugins/problems/problems.yaml',
@@ -84,6 +96,10 @@ return [
             'plugins/devtools' => [
                 'file' => 'user/plugins/devtools/devtools.yaml',
                 'modified' => 1606919106
+            ],
+            'plugins/git-sync' => [
+                'file' => 'user/plugins/git-sync/git-sync.yaml',
+                'modified' => 1610988493
             ],
             'plugins/error' => [
                 'file' => 'user/plugins/error/error.yaml',
@@ -97,9 +113,32 @@ return [
                 'file' => 'user/plugins/email/email.yaml',
                 'modified' => 1608003118
             ]
+        ],
+        'user/themes' => [
+            'themes/quark' => [
+                'file' => 'user/themes/quark/quark.yaml',
+                'modified' => 1608003118
+            ]
         ]
     ],
     'data' => [
+        'themes' => [
+            'quark' => [
+                'enabled' => true,
+                'production-mode' => true,
+                'grid-size' => 'grid-lg',
+                'header-fixed' => true,
+                'header-animated' => true,
+                'header-dark' => false,
+                'header-transparent' => false,
+                'sticky-footer' => true,
+                'blog-page' => '/blog',
+                'spectre' => [
+                    'exp' => false,
+                    'icons' => false
+                ]
+            ]
+        ],
         'plugins' => [
             'markdown-notices' => [
                 'enabled' => true,
@@ -137,19 +176,32 @@ return [
                     'secret_key' => NULL
                 ]
             ],
+            'flex-objects' => [
+                'enabled' => true,
+                'built_in_css' => true,
+                'extra_admin_twig_path' => 'theme://admin/templates',
+                'admin_list' => [
+                    'per_page' => 15,
+                    'order' => [
+                        'by' => 'updated_timestamp',
+                        'dir' => 'desc'
+                    ]
+                ],
+                'directories' => [
+                    0 => 'blueprints://flex-objects/pages.yaml',
+                    1 => 'blueprints://flex-objects/user-accounts.yaml',
+                    2 => 'blueprints://flex-objects/user-groups.yaml'
+                ]
+            ],
             'admin' => [
                 'enabled' => true,
                 'route' => '/admin',
                 'cache_enabled' => false,
                 'theme' => 'grav',
-                'logo_text' => '',
-                'body_classes' => '',
+                'logo_text' => NULL,
+                'body_classes' => NULL,
                 'content_padding' => true,
                 'twofa_enabled' => true,
-                'log_viewer_files' => [
-                    0 => 'grav',
-                    1 => 'email'
-                ],
                 'sidebar' => [
                     'activate' => 'tab',
                     'hover_delay' => 100,
@@ -158,7 +210,7 @@ return [
                 'dashboard' => [
                     'days_of_stats' => 7
                 ],
-                'widgets' => [
+                'widgets_display' => [
                     'dashboard-maintenance' => true,
                     'dashboard-statistics' => true,
                     'dashboard-notifications' => true,
@@ -167,20 +219,16 @@ return [
                 ],
                 'pages' => [
                     'show_parents' => 'both',
-                    'show_modular' => true
+                    'show_modular' => true,
+                    'parents_levels' => NULL
                 ],
                 'session' => [
                     'timeout' => 1800
-                ],
-                'warnings' => [
-                    'delete_page' => true,
-                    'secure_delete' => false
                 ],
                 'edit_mode' => 'normal',
                 'frontend_preview_target' => 'inline',
                 'show_github_msg' => true,
                 'pages_list_display_field' => 'title',
-                'google_fonts' => false,
                 'admin_icons' => 'line-awesome',
                 'enable_auto_updates_check' => true,
                 'notifications' => [
@@ -196,10 +244,84 @@ return [
                         1 => '/modular'
                     ],
                     'history' => [
-                        'daily' => 30,
-                        'monthly' => 12,
-                        'visitors' => 20
+                        'daily' => '30',
+                        'monthly' => '12',
+                        'visitors' => '20'
                     ]
+                ],
+                'whitelabel' => [
+                    'quicktray_recompile' => false,
+                    'codemirror_theme' => 'paper',
+                    'codemirror_fontsize' => 'md',
+                    'codemirror_md_font' => 'sans',
+                    'logo_custom' => NULL,
+                    'logo_login' => NULL,
+                    'color_scheme' => [
+                        'accents' => [
+                            'primary-accent' => 'button',
+                            'secondary-accent' => 'notice',
+                            'tertiary-accent' => 'critical'
+                        ],
+                        'colors' => [
+                            'logo-bg' => '#323640',
+                            'logo-link' => '#FFFFFF',
+                            'nav-bg' => '#3D424E',
+                            'nav-text' => '#B7B9BD',
+                            'nav-link' => '#ffffff',
+                            'nav-selected-bg' => '#323640',
+                            'nav-selected-link' => '#ffffff',
+                            'nav-hover-bg' => '#434753',
+                            'nav-hover-link' => '#ffffff',
+                            'toolbar-bg' => '#ffffff',
+                            'toolbar-text' => '#3D424E',
+                            'page-bg' => '#F6F6F6',
+                            'page-text' => '#6f7b8a',
+                            'page-link' => '#0090D9',
+                            'content-bg' => '#ffffff',
+                            'content-text' => '#6f7b8a',
+                            'content-link' => '#0090D9',
+                            'content-link2' => '#da4b46',
+                            'content-header' => '#414147',
+                            'content-tabs-bg' => '#e6e6e6',
+                            'content-tabs-text' => '#808080',
+                            'button-bg' => '#0090D9',
+                            'button-text' => '#ffffff',
+                            'notice-bg' => '#06A599',
+                            'notice-text' => '#ffffff',
+                            'update-bg' => '#77559D',
+                            'update-text' => '#ffffff',
+                            'critical-bg' => '#F45857',
+                            'critical-text' => '#ffffff'
+                        ]
+                    ]
+                ],
+                'log_viewer_files' => [
+                    0 => 'grav',
+                    1 => 'email'
+                ],
+                'widgets' => [
+                    'dashboard-maintenance' => true,
+                    'dashboard-statistics' => true,
+                    'dashboard-notifications' => true,
+                    'dashboard-feed' => true,
+                    'dashboard-pages' => true
+                ],
+                'warnings' => [
+                    'delete_page' => true,
+                    'secure_delete' => false
+                ],
+                'google_fonts' => false,
+                'show_beta_msg' => NULL,
+                'hide_page_types' => NULL,
+                'hide_modular_page_types' => NULL,
+                'pagemedia' => [
+                    'resize_width' => 0,
+                    'resize_height' => 0,
+                    'res_min_width' => 0,
+                    'res_min_height' => 0,
+                    'res_max_width' => 0,
+                    'res_max_height' => 0,
+                    'resize_quality' => 0.8
                 ]
             ],
             'problems' => [
@@ -209,6 +331,40 @@ return [
             'devtools' => [
                 'enabled' => true,
                 'collision_check' => true
+            ],
+            'git-sync' => [
+                'enabled' => false,
+                'folders' => [
+                    0 => 'pages'
+                ],
+                'sync' => [
+                    'on_save' => true,
+                    'on_delete' => true,
+                    'on_media' => true,
+                    'cron_enable' => false,
+                    'cron_at' => '0 12,23 * * *'
+                ],
+                'local_repository' => NULL,
+                'repository' => 'https://github.com/antoinequarroz/ExpoFemme.git',
+                'no_user' => '0',
+                'user' => 'antoinequarroz.mediam@gmail.com',
+                'password' => 'gitsync-def5020001cac64822d811b17ab33a944f9c05883b03ed691f3286c44c38d495bbb06ac8466d14b28a1023a6b58951549674b5aaeeaa8607617152d259afa14675aec6ceecab4d1662979f2bb3c4257ac976e35d3407ad1143576e07e56a432bc8',
+                'webhook' => '/_git-sync-4c1692f09cb1',
+                'webhook_enabled' => '1',
+                'webhook_secret' => 'c1878125e84fb3ddf474d02607eb29082bf4980e5e8bc967',
+                'branch' => 'master',
+                'remote' => [
+                    'name' => 'origin',
+                    'branch' => 'master'
+                ],
+                'git' => [
+                    'author' => 'gituser',
+                    'message' => '(Grav GitSync) Automatic Commit',
+                    'name' => 'GitSync',
+                    'email' => 'git-sync@trilby.media',
+                    'bin' => 'git'
+                ],
+                'logging' => false
             ],
             'error' => [
                 'enabled' => true,
@@ -369,6 +525,11 @@ node_modules'
                     'type' => 'image',
                     'thumb' => 'media/thumb-png.png',
                     'mime' => 'image/png'
+                ],
+                'webp' => [
+                    'type' => 'image',
+                    'thumb' => 'media/thumb-webp.png',
+                    'mime' => 'image/webp'
                 ],
                 'gif' => [
                     'type' => 'animated',
@@ -602,6 +763,77 @@ node_modules'
                 ]
             ]
         ],
+        'permissions' => [
+            'actions' => [
+                'site' => [
+                    'type' => 'access',
+                    'label' => 'Site'
+                ],
+                'admin' => [
+                    'type' => 'access',
+                    'label' => 'Admin'
+                ],
+                'admin.pages' => [
+                    'type' => 'access',
+                    'label' => 'Pages'
+                ],
+                'admin.users' => [
+                    'type' => 'access',
+                    'label' => 'User Accounts'
+                ]
+            ],
+            'types' => [
+                'default' => [
+                    'type' => 'access'
+                ],
+                'crud' => [
+                    'type' => 'compact',
+                    'letters' => [
+                        'c' => [
+                            'action' => 'create',
+                            'label' => 'PLUGIN_ADMIN.CREATE'
+                        ],
+                        'r' => [
+                            'action' => 'read',
+                            'label' => 'PLUGIN_ADMIN.READ'
+                        ],
+                        'u' => [
+                            'action' => 'update',
+                            'label' => 'PLUGIN_ADMIN.UPDATE'
+                        ],
+                        'd' => [
+                            'action' => 'delete',
+                            'label' => 'PLUGIN_ADMIN.DELETE'
+                        ]
+                    ]
+                ],
+                'crudp' => [
+                    'type' => 'crud',
+                    'letters' => [
+                        'p' => [
+                            'action' => 'publish',
+                            'label' => 'PLUGIN_ADMIN.PUBLISH'
+                        ]
+                    ]
+                ],
+                'crudl' => [
+                    'type' => 'crud',
+                    'letters' => [
+                        'l' => [
+                            'action' => 'list',
+                            'label' => 'PLUGIN_ADMIN.LIST'
+                        ]
+                    ]
+                ],
+                'crudpl' => [
+                    'type' => 'crud',
+                    'use' => [
+                        0 => 'crudp',
+                        1 => 'crudl'
+                    ]
+                ]
+            ]
+        ],
         'security' => [
             'xss_whitelist' => [
                 0 => 'admin.super'
@@ -647,6 +879,7 @@ node_modules'
                 3 => 'js',
                 4 => 'exe'
             ],
+            'sanitize_svg' => true,
             'salt' => 'Le3Wb52ojfauUh'
         ],
         'site' => [
@@ -675,29 +908,6 @@ node_modules'
                 'route' => '/blog'
             ]
         ],
-        'streams' => [
-            'schemes' => [
-                'image' => [
-                    'type' => 'Stream',
-                    'paths' => [
-                        0 => 'user://images',
-                        1 => 'system://images'
-                    ]
-                ],
-                'page' => [
-                    'type' => 'ReadOnlyStream',
-                    'paths' => [
-                        0 => 'user://pages'
-                    ]
-                ],
-                'account' => [
-                    'type' => 'ReadOnlyStream',
-                    'paths' => [
-                        0 => 'user://accounts'
-                    ]
-                ]
-            ]
-        ],
         'system' => [
             'absolute_urls' => false,
             'timezone' => NULL,
@@ -724,18 +934,23 @@ node_modules'
                 ],
                 'default_lang' => 'fr',
                 'include_default_lang' => true,
-                'pages_fallback_only' => true,
+                'include_default_lang_file_extension' => true,
                 'translations' => true,
                 'translations_fallback' => true,
                 'session_store_active' => false,
                 'http_accept_language' => true,
-                'override_locale' => false
+                'override_locale' => false,
+                'content_fallback' => [
+                    
+                ],
+                'pages_fallback_only' => true
             ],
             'home' => [
                 'alias' => '/home',
                 'hide_in_urls' => false
             ],
             'pages' => [
+                'type' => 'regular',
                 'theme' => 'expoFemme',
                 'order' => [
                     'by' => 'default',
@@ -880,6 +1095,8 @@ node_modules'
             ],
             'debugger' => [
                 'enabled' => false,
+                'provider' => 'clockwork',
+                'censored' => false,
                 'shutdown' => [
                     'close_connection' => true
                 ],
@@ -891,7 +1108,10 @@ node_modules'
                 'cache_perms' => '0755',
                 'debug' => false,
                 'auto_fix_orientation' => false,
-                'seofriendly' => false
+                'seofriendly' => false,
+                'defaults' => [
+                    'loading' => 'auto'
+                ]
             ],
             'media' => [
                 'enable_media_timestamp' => false,
@@ -908,6 +1128,7 @@ node_modules'
                 'uniqueness' => 'path',
                 'secure' => false,
                 'httponly' => true,
+                'samesite' => 'Lax',
                 'split' => true,
                 'path' => NULL
             ],
@@ -922,22 +1143,51 @@ node_modules'
                 'type' => 'data',
                 'storage' => 'file'
             ],
+            'flex' => [
+                'cache' => [
+                    'index' => [
+                        'enabled' => true,
+                        'lifetime' => 60
+                    ],
+                    'object' => [
+                        'enabled' => true,
+                        'lifetime' => 600
+                    ],
+                    'render' => [
+                        'enabled' => true,
+                        'lifetime' => 600
+                    ]
+                ]
+            ],
             'strict_mode' => [
                 'yaml_compat' => true,
-                'twig_compat' => true
+                'twig_compat' => true,
+                'blueprint_compat' => true
             ]
         ],
         'scheduler' => [
             
         ],
+        'streams' => [
+            
+        ],
         'versions' => [
             'core' => [
                 'grav' => [
-                    'version' => '1.6.31',
+                    'version' => '1.7.3',
                     'history' => [
                         'version' => '1.6.31',
-                        'date' => '2021-01-13 08:21:49'
-                    ]
+                        'date' => '2021-01-13 08:21:49',
+                        0 => [
+                            'version' => '1.7.0',
+                            'date' => '2021-01-20 08:09:09'
+                        ],
+                        1 => [
+                            'version' => '1.7.3',
+                            'date' => '2021-01-22 09:20:35'
+                        ]
+                    ],
+                    'schema' => '1.7.0_2020-11-20_1'
                 ]
             ]
         ]
