@@ -75,7 +75,7 @@ cards:
         color: null
 entreprises:
     -
-        image: logo.png
+        image: arsenaux.jpg
     -
         image: logo.png
     -
