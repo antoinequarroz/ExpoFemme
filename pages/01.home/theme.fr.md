@@ -28,7 +28,7 @@ cards:
         title: 'Iris von Roten, la Simone de Beauvoir suisse'
         url: irisvonroten
         text: 'En France, tout le monde, ou presque, connaît Simone de Beauvoir, figure féministe qui a marqué de son empreinte l’histoire du 20e siècle.'
-        image: img_1.jpg
+        image: irisVonRoten.jpg
         copyright: null
         color: '#7ebab5'
     -
