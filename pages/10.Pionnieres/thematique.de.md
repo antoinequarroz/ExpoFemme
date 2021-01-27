@@ -18,5 +18,17 @@ cvs:
         image: pionneres.png
         titre: 'Gabrielle Nanchen'
         pdf: gabrielleNanchen.pdf
+    -
+        image: pionneres.png
+        titre: 'Gabrielle Nanchen'
+        pdf: gabrielleNanchen.pdf
+    -
+        image: pionneres.png
+        titre: 'Gabrielle Nanchen'
+        pdf: gabrielleNanchen.pdf
+    -
+        image: pionneres.png
+        titre: 'Gabrielle Nanchen'
+        pdf: gabrielleNanchen.pdf
 ---
 
