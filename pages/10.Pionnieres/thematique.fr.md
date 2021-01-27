@@ -15,7 +15,7 @@ images:
         paragraphe: null
 cvs:
     -
-        image: pionneres.png
+        image: gabrielleNanchen.png
         titre: 'Gabrielle Nanchen'
         pdf: gabrielleNanchen.pdf
     -
