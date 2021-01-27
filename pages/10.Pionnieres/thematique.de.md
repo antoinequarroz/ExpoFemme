@@ -8,24 +8,7 @@ pages:
 colors:
     -
         background: '#6093ac'
-images:
-    -
-        image: pionneres.png
-        titre: null
-        paragraphe: null
 cvs:
-    -
-        image: pionneres.png
-        titre: 'Gabrielle Nanchen'
-        pdf: gabrielleNanchen.pdf
-    -
-        image: pionneres.png
-        titre: 'Gabrielle Nanchen'
-        pdf: gabrielleNanchen.pdf
-    -
-        image: pionneres.png
-        titre: 'Gabrielle Nanchen'
-        pdf: gabrielleNanchen.pdf
     -
         image: pionneres.png
         titre: 'Gabrielle Nanchen'
