@@ -18,6 +18,5 @@ titre:
 videos:
     -
         youtube: 'https://www.youtube.com/watch?v=Se-L0ACArdw'
-        youtube2: null
 ---
 
