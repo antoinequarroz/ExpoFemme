@@ -2,10 +2,10 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledJsonFile',
     'filename' => '/Users/antoinequarroz/Sites/suffrageFeminin/user/data/flex/indexes/pages.json',
-    'modified' => 1611738828,
+    'modified' => 1611741999,
     'data' => [
         'version' => '1.5',
-        'timestamp' => 1611738828,
+        'timestamp' => 1611741999,
         'count' => 11,
         'index' => [
             '' => [
@@ -31,16 +31,16 @@ return [
                 'key' => 'home',
                 'storage_key' => '01.home',
                 'template' => 'theme',
-                'storage_timestamp' => 1611738819,
+                'storage_timestamp' => 1611738861,
                 'markdown' => [
                     'de' => [
-                        'theme' => 1611738771
+                        'theme' => 1611738861
                     ],
                     'fr' => [
                         'theme' => 1611738819
                     ]
                 ],
-                'checksum' => 'c264c66e4148829e829d62247a9c2fa9'
+                'checksum' => '3918a26ff5ea6124450fa41d47bf2217'
             ],
             '02.irisvonroten' => [
                 'key' => 'irisvonroten',
@@ -151,16 +151,16 @@ return [
                 'key' => 'jourj',
                 'storage_key' => '09.jourj',
                 'template' => 'thematique',
-                'storage_timestamp' => 1611732601,
+                'storage_timestamp' => 1611741990,
                 'markdown' => [
                     'de' => [
                         'thematique' => 1611732601
                     ],
                     'fr' => [
-                        'thematique' => 1611130270
+                        'thematique' => 1611741990
                     ]
                 ],
-                'checksum' => 'bbee259c27a9e09b88b893a3823472f0'
+                'checksum' => '324f6e7510383b1f49f4149c3d4d7545'
             ],
             '10.Pionnieres' => [
                 'key' => 'pionnieres',

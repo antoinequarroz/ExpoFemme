@@ -157,13 +157,38 @@ class __TwigTemplate_0156702992f71c424008aecef7a45c2a99d64ff905b84558d363d53dbff
             </div>
         </div>
 
-    
+
+    <div class=\"container mt-5\">
+        <div class=\"row\">
+            <h3>Retrouver nos vidéos</h3>
+            ";
+        // line 64
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable($this->getAttribute($this->getAttribute(($context["page"] ?? null), "header", []), "videos", []));
+        foreach ($context['_seq'] as $context["_key"] => $context["video"]) {
+            // line 65
+            echo "            <div class=\"col-6\">
+                    <div class=\"plyr__video-embed\" id=\"player\">
+                        <iframe src=\"";
+            // line 67
+            echo $this->getAttribute($context["video"], "youtube", []);
+            echo "\" allowfullscreen allowtransparency allow=\"autoplay\"></iframe>
+                    </div>
+            </div>
+            ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['video'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 71
+        echo "        </div>
+    </div>
     
     </section>
 ";
     }
 
-    // line 65
+    // line 77
     public function block_footer($context, array $blocks = [])
     {
     }
@@ -180,7 +205,7 @@ class __TwigTemplate_0156702992f71c424008aecef7a45c2a99d64ff905b84558d363d53dbff
 
     public function getDebugInfo()
     {
-        return array (  167 => 65,  156 => 56,  144 => 52,  139 => 49,  135 => 48,  127 => 42,  118 => 39,  115 => 38,  111 => 37,  104 => 32,  95 => 30,  91 => 29,  84 => 25,  78 => 21,  66 => 15,  59 => 11,  50 => 6,  46 => 5,  43 => 4,  40 => 3,  30 => 1,);
+        return array (  192 => 77,  184 => 71,  174 => 67,  170 => 65,  166 => 64,  156 => 56,  144 => 52,  139 => 49,  135 => 48,  127 => 42,  118 => 39,  115 => 38,  111 => 37,  104 => 32,  95 => 30,  91 => 29,  84 => 25,  78 => 21,  66 => 15,  59 => 11,  50 => 6,  46 => 5,  43 => 4,  40 => 3,  30 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -252,7 +277,19 @@ class __TwigTemplate_0156702992f71c424008aecef7a45c2a99d64ff905b84558d363d53dbff
             </div>
         </div>
 
-    
+
+    <div class=\"container mt-5\">
+        <div class=\"row\">
+            <h3>Retrouver nos vidéos</h3>
+            {% for video in page.header.videos %}
+            <div class=\"col-6\">
+                    <div class=\"plyr__video-embed\" id=\"player\">
+                        <iframe src=\"{{video.youtube}}\" allowfullscreen allowtransparency allow=\"autoplay\"></iframe>
+                    </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
     
     </section>
 {% endblock %}

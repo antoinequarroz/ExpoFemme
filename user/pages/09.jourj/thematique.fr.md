@@ -15,5 +15,8 @@ images:
 titre:
     -
         title: 'Le jour J'
+videos:
+    -
+        youtube: 'https://www.youtube.com/watch?v=Se-L0ACArdw'
 ---
 

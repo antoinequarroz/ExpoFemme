@@ -2,7 +2,7 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => '/Users/antoinequarroz/Sites/suffrageFeminin/user/themes/expoFemme/blueprints/thematique.yaml',
-    'modified' => 1610967511,
+    'modified' => 1611742052,
     'data' => [
         'title' => 'Content item',
         '@extends' => [
@@ -65,6 +65,17 @@ return [
                                             'folder' => './user/themes/expoFemme/images',
                                             'label' => 'Image',
                                             'preview_images' => true
+                                        ]
+                                    ]
+                                ],
+                                'header.videos' => [
+                                    'name' => 'vidéos',
+                                    'type' => 'list',
+                                    'label' => 'Ajout des viéos via YouTube',
+                                    'fields' => [
+                                        '.youtube' => [
+                                            'type' => 'text',
+                                            'label' => 'Inserer l\'url YouTube de la vidéo'
                                         ]
                                     ]
                                 ]

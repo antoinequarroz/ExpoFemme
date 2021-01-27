@@ -46,47 +46,47 @@ class __TwigTemplate_e488c71f36d7d6c8e8aa359d7f93ab021f1b978ae134d37203225c64046
 ";
         // line 5
         $this->displayBlock('head', $context, $blocks);
-        // line 23
-        echo "
-";
         // line 24
+        echo "
+";
+        // line 25
         $this->displayBlock('stylesheets', $context, $blocks);
-        // line 36
+        // line 38
         echo "
 ";
-        // line 37
+        // line 39
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 47
+        // line 49
         echo "
 ";
-        // line 48
+        // line 50
         $this->displayBlock('assets', $context, $blocks);
-        // line 52
+        // line 54
         echo "</head>
 
 
 
 <body id=\"top\" class=\"";
-        // line 56
+        // line 58
         echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute(($context["page"] ?? null), "header", []), "body_classes", []));
         echo "\">
 
 ";
-        // line 58
+        // line 60
         $this->displayBlock('body', $context, $blocks);
-        // line 67
+        // line 69
         echo "
 <footer>
     ";
-        // line 69
-        $this->displayBlock('footer', $context, $blocks);
         // line 71
+        $this->displayBlock('footer', $context, $blocks);
+        // line 73
         echo "</footer>
 
 ";
-        // line 73
+        // line 75
         $this->displayBlock('bottom', $context, $blocks);
-        // line 76
+        // line 78
         echo "
 </body>
 
@@ -102,7 +102,11 @@ class __TwigTemplate_e488c71f36d7d6c8e8aa359d7f93ab021f1b978ae134d37203225c64046
 <script>
     sal()
 </script>
-
+<script src=\"https://cdn.plyr.io/3.6.3/plyr.js\"></script>
+<script src=\"path/to/plyr.js\"></script>
+<script>
+    const player = new Plyr('#player');
+</script>
 
 
 </html>
@@ -143,59 +147,63 @@ class __TwigTemplate_e488c71f36d7d6c8e8aa359d7f93ab021f1b978ae134d37203225c64046
     <link rel=\"stylesheet\" href=\"https://unpkg.com/aos@next/dist/aos.css\" />
     <link rel=\"stylesheet\" href=\"./node_modules/sal.js/dist/sal.css\">
     <link href=\"/your-path-to-fontawesome/css/all.css\" rel=\"stylesheet\">
+    <link rel=\"stylesheet\" href=\"path/to/plyr.css\" />
 
 
 
 ";
     }
 
-    // line 24
+    // line 25
     public function block_stylesheets($context, array $blocks = [])
     {
-        // line 25
-        echo "    ";
-        $this->getAttribute(($context["assets"] ?? null), "addCss", [0 => "https://unpkg.com/purecss@1.0.0/build/pure-min.css", 1 => 98], "method");
         // line 26
         echo "    ";
-        $this->getAttribute(($context["assets"] ?? null), "addCss", [0 => "https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css", 1 => 99], "method");
+        $this->getAttribute(($context["assets"] ?? null), "addCss", [0 => "https://unpkg.com/purecss@1.0.0/build/pure-min.css", 1 => 98], "method");
         // line 27
         echo "    ";
-        $this->getAttribute(($context["assets"] ?? null), "addCss", [0 => "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css", 1 => 97], "method");
+        $this->getAttribute(($context["assets"] ?? null), "addCss", [0 => "https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css", 1 => 99], "method");
         // line 28
         echo "    ";
-        $this->getAttribute(($context["assets"] ?? null), "addCss", [0 => "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css", 1 => 96], "method");
+        $this->getAttribute(($context["assets"] ?? null), "addCss", [0 => "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css", 1 => 97], "method");
         // line 29
         echo "    ";
-        $this->getAttribute(($context["assets"] ?? null), "addCss", [0 => "theme://css/custom.css", 1 => 90], "method");
+        $this->getAttribute(($context["assets"] ?? null), "addCss", [0 => "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css", 1 => 96], "method");
         // line 30
         echo "    ";
-        $this->getAttribute(($context["assets"] ?? null), "addCss", [0 => "https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap", 1 => 95], "method");
+        $this->getAttribute(($context["assets"] ?? null), "addCss", [0 => "theme://css/custom.css", 1 => 90], "method");
         // line 31
         echo "    ";
-        $this->getAttribute(($context["assets"] ?? null), "addCss", [0 => "https://unpkg.com/flickity@2/dist/flickity.min.css", 1 => 94], "method");
+        $this->getAttribute(($context["assets"] ?? null), "addCss", [0 => "theme://css/plyr.css", 1 => 89], "method");
         // line 32
+        echo "    ";
+        $this->getAttribute(($context["assets"] ?? null), "addCss", [0 => "https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap", 1 => 95], "method");
+        // line 33
+        echo "    ";
+        $this->getAttribute(($context["assets"] ?? null), "addCss", [0 => "https://unpkg.com/flickity@2/dist/flickity.min.css", 1 => 94], "method");
+        // line 34
         echo "
 
 
 ";
     }
 
-    // line 37
+    // line 39
     public function block_javascripts($context, array $blocks = [])
     {
-        // line 38
-        echo "    ";
-        $this->getAttribute(($context["assets"] ?? null), "addJs", [0 => "jquery", 1 => 100], "method");
-        // line 39
-        echo "    ";
-        $this->getAttribute(($context["assets"] ?? null), "addJs", [0 => "theme://js/script.js", 1 => 98], "method");
         // line 40
         echo "    ";
-        $this->getAttribute(($context["assets"] ?? null), "addJs", [0 => "https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js", 1 => 99], "method");
+        $this->getAttribute(($context["assets"] ?? null), "addJs", [0 => "jquery", 1 => 100], "method");
         // line 41
         echo "    ";
-        $this->getAttribute(($context["assets"] ?? null), "addJs", [0 => "https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js", 1 => 97], "method");
+        $this->getAttribute(($context["assets"] ?? null), "addJs", [0 => "theme://js/script.js", 1 => 98], "method");
         // line 42
+        echo "    ";
+        $this->getAttribute(($context["assets"] ?? null), "addJs", [0 => "https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js", 1 => 99], "method");
+        // line 43
+        echo "    ";
+        $this->getAttribute(($context["assets"] ?? null), "addJs", [0 => "https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js", 1 => 97], "method");
+        // line 44
         echo "
 
 
@@ -208,55 +216,55 @@ class __TwigTemplate_e488c71f36d7d6c8e8aa359d7f93ab021f1b978ae134d37203225c64046
         $this->env->getExtension('Phive\Twig\Extensions\Deferred\DeferredExtension')->defer($this, 'assets');
     }
 
-    // line 48
+    // line 50
     public function block_assets_deferred($context, array $blocks = array())
     {
-        // line 49
+        // line 51
         echo "    ";
         echo $this->getAttribute(($context["assets"] ?? null), "css", [], "method");
         echo "
     ";
-        // line 50
+        // line 52
         echo $this->getAttribute(($context["assets"] ?? null), "js", [], "method");
         echo "
 ";
         $this->env->getExtension('Phive\Twig\Extensions\Deferred\DeferredExtension')->resolve($this, $context, $blocks);
     }
 
-    // line 58
+    // line 60
     public function block_body($context, array $blocks = [])
     {
-        // line 59
+        // line 61
         echo "    <section id=\"body\">
         <div class=\"wrapper padding\">
         ";
-        // line 61
+        // line 63
         $this->displayBlock('content', $context, $blocks);
-        // line 64
+        // line 66
         echo "        </div>
     </section>
 ";
     }
 
-    // line 61
+    // line 63
     public function block_content($context, array $blocks = [])
     {
-        // line 62
+        // line 64
         echo "
         ";
     }
 
-    // line 69
+    // line 71
     public function block_footer($context, array $blocks = [])
     {
-        // line 70
+        // line 72
         echo "    ";
     }
 
-    // line 73
+    // line 75
     public function block_bottom($context, array $blocks = [])
     {
-        // line 74
+        // line 76
         echo "    ";
         echo $this->getAttribute(($context["assets"] ?? null), "js", [0 => "bottom"], "method");
         echo "
@@ -275,7 +283,7 @@ class __TwigTemplate_e488c71f36d7d6c8e8aa359d7f93ab021f1b978ae134d37203225c64046
 
     public function getDebugInfo()
     {
-        return array (  260 => 74,  257 => 73,  253 => 70,  250 => 69,  245 => 62,  242 => 61,  236 => 64,  234 => 61,  230 => 59,  227 => 58,  220 => 50,  215 => 49,  212 => 48,  199 => 42,  196 => 41,  193 => 40,  190 => 39,  187 => 38,  184 => 37,  177 => 32,  174 => 31,  171 => 30,  168 => 29,  165 => 28,  162 => 27,  159 => 26,  156 => 25,  153 => 24,  141 => 15,  137 => 14,  133 => 12,  131 => 11,  120 => 7,  117 => 6,  114 => 5,  90 => 76,  88 => 73,  84 => 71,  82 => 69,  78 => 67,  76 => 58,  71 => 56,  65 => 52,  63 => 48,  60 => 47,  58 => 37,  55 => 36,  53 => 24,  50 => 23,  48 => 5,  43 => 3,  40 => 2,  38 => 1,);
+        return array (  268 => 76,  265 => 75,  261 => 72,  258 => 71,  253 => 64,  250 => 63,  244 => 66,  242 => 63,  238 => 61,  235 => 60,  228 => 52,  223 => 51,  220 => 50,  207 => 44,  204 => 43,  201 => 42,  198 => 41,  195 => 40,  192 => 39,  185 => 34,  182 => 33,  179 => 32,  176 => 31,  173 => 30,  170 => 29,  167 => 28,  164 => 27,  161 => 26,  158 => 25,  145 => 15,  141 => 14,  137 => 12,  135 => 11,  124 => 7,  121 => 6,  118 => 5,  90 => 78,  88 => 75,  84 => 73,  82 => 71,  78 => 69,  76 => 60,  71 => 58,  65 => 54,  63 => 50,  60 => 49,  58 => 39,  55 => 38,  53 => 25,  50 => 24,  48 => 5,  43 => 3,  40 => 2,  38 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -306,6 +314,7 @@ class __TwigTemplate_e488c71f36d7d6c8e8aa359d7f93ab021f1b978ae134d37203225c64046
     <link rel=\"stylesheet\" href=\"https://unpkg.com/aos@next/dist/aos.css\" />
     <link rel=\"stylesheet\" href=\"./node_modules/sal.js/dist/sal.css\">
     <link href=\"/your-path-to-fontawesome/css/all.css\" rel=\"stylesheet\">
+    <link rel=\"stylesheet\" href=\"path/to/plyr.css\" />
 
 
 
@@ -317,6 +326,7 @@ class __TwigTemplate_e488c71f36d7d6c8e8aa359d7f93ab021f1b978ae134d37203225c64046
     {% do assets.addCss('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css', 97) %}
     {% do assets.addCss('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css', 96) %}
     {% do assets.addCss('theme://css/custom.css', 90) %}
+    {% do assets.addCss('theme://css/plyr.css', 89) %}
     {% do assets.addCss('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap', 95) %}
     {% do assets.addCss('https://unpkg.com/flickity@2/dist/flickity.min.css', 94) %}
 
@@ -378,7 +388,11 @@ class __TwigTemplate_e488c71f36d7d6c8e8aa359d7f93ab021f1b978ae134d37203225c64046
 <script>
     sal()
 </script>
-
+<script src=\"https://cdn.plyr.io/3.6.3/plyr.js\"></script>
+<script src=\"path/to/plyr.js\"></script>
+<script>
+    const player = new Plyr('#player');
+</script>
 
 
 </html>

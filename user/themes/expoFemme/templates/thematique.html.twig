@@ -57,19 +57,19 @@
             </div>
         </div>
 
-    <div class="container">
+
+    <div class="container mt-5">
         <div class="row">
+            <h3>Retrouver nos vidéos</h3>
             {% for video in page.header.videos %}
-            <div class="col-sm-3">
-                <div class="plyr__video-embed">
-                    <iframe src="{{ video.youtube }}" frameborder="0"></iframe>
-                </div>
+            <div class="col-6">
+                    <div class="plyr__video-embed" id="player">
+                        <iframe src="{{video.youtube}}" allowfullscreen allowtransparency allow="autoplay"></iframe>
+                    </div>
             </div>
             {% endfor %}
         </div>
     </div>
-
-    
     
     </section>
 {% endblock %}

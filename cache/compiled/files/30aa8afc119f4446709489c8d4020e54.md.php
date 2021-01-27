@@ -2,7 +2,7 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledMarkdownFile',
     'filename' => '/Users/antoinequarroz/Sites/suffrageFeminin/user/pages/09.jourj/thematique.fr.md',
-    'modified' => 1611130270,
+    'modified' => 1611742078,
     'data' => [
         'header' => [
             'title' => 'jourJ',
@@ -30,6 +30,11 @@ return [
                 0 => [
                     'title' => 'Le jour J'
                 ]
+            ],
+            'videos' => [
+                0 => [
+                    'youtube' => 'https://www.youtube.com/watch?v=Se-L0ACArdw'
+                ]
             ]
         ],
         'frontmatter' => 'title: jourJ
@@ -47,7 +52,10 @@ images:
         image: jourJ.jpg
 titre:
     -
-        title: \'Le jour J\'',
+        title: \'Le jour J\'
+videos:
+    -
+        youtube: \'https://www.youtube.com/watch?v=Se-L0ACArdw\'',
         'markdown' => ''
     ]
 ];

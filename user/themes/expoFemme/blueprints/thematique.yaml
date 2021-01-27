@@ -59,11 +59,11 @@ form:
                   preview_images: true
 
 
-             header.videos:
-               name: vidéos
-               type: list
-               label : Ajout des viéos via YouTube
-               fields:
-                 .youtube:
-                   type: text
-                   label: Inserer l'url YouTube de la vidéo
+            header.videos:
+              name: vidéos
+              type: list
+              label : Ajout des viéos via YouTube
+              fields:
+                .youtube:
+                  type: text
+                  label: Inserer l'url YouTube de la vidéo
