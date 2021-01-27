@@ -88,7 +88,7 @@ entreprises:
         taille: '70'
     -
         image: archive.png
-        lien: archives
+        lien: 'https://www.vs.ch/web/culture/aev'
         taille: '100'
 images:
     -
