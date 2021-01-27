@@ -17,6 +17,6 @@ cvs:
     -
         image: pionneres.png
         titre: 'Gabrielle Nanchen'
-        pdf: null
+        pdf: gabrielleNanchen.pdf
 ---
 
