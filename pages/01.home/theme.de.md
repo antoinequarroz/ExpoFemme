@@ -12,7 +12,7 @@ paragraphes:
 cards:
     -
         title: 'Der Tag X'
-        url: tagx
+        url: jourj
         text: '12. April 1970. Hat dieses Datum keine Bedeutung für Sie? Immerhin markiert es einen Wendepunkt im Leben der Walliserinnen und Walliser.'
         image: jourJ.jpg
         copyright: '© Léonard Gianadda, Médiathèque Valais - Martigny'
