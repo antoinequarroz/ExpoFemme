@@ -77,7 +77,7 @@ entreprises:
     -
         image: arsenaux.jpg
     -
-        image: logo.png
+        image: ofCantonalEgaliteFamilleDe.png
     -
         image: logo.png
     -
