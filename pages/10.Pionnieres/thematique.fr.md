@@ -18,9 +18,5 @@ cvs:
         image: gabrielleNanchen.png
         titre: 'Gabrielle Nanchen'
         pdf: gabrielleNanchen.pdf
-    -
-        image: null
-        titre: null
-        pdf: null
 ---
 
