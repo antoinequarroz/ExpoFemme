@@ -80,7 +80,7 @@ entreprises:
         taille: '100'
     -
         image: mediathèque.jpg
-        lien: null
+        lien: 'https://www.mediatheque.ch/de/homepage.html'
         taille: '100'
     -
         image: ofCantonalEgaliteFamilleDe.png
