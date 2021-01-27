@@ -83,13 +83,13 @@ entreprises:
         lien: null
         taille: '100'
     -
-        image: archive.png
-        lien: 'https://www.vs.ch/de/web/culture/aev'
-        taille: '100'
-    -
         image: ofCantonalEgaliteFamilleDe.png
         lien: 'https://www.vs.ch/de/web/sef'
         taille: '70'
+    -
+        image: archive.png
+        lien: 'https://www.vs.ch/de/web/culture/aev'
+        taille: '100'
 images:
     -
         image: img_1.jpg
