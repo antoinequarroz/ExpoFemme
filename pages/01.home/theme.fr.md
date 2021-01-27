@@ -77,7 +77,7 @@ entreprises:
     -
         image: logo.png
     -
-        image: logo.png
+        image: ofCantonalEgaliteFamilleFr.png
     -
         image: logo.png
     -
