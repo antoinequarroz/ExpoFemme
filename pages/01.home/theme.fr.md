@@ -49,8 +49,8 @@ cards:
         title: 'Et après ?'
         url: apres
         text: 'Si la conquête du suffrage féminin est une grande victoire pour les femmes, elle ne signifie pas pour autant l’égalité entre femmes et hommes.'
-        image: img_1.jpg
-        copyright: null
+        image: apres.jpg
+        copyright: '© Photographie Zufferey'
         color: '#faca30'
     -
         title: 'Médiation culturelle'
