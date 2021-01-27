@@ -1,7 +1,7 @@
 ---
 titres:
     -
-        titre: 'Titre en allemand'
+        titre: '50 ans suffrage féminin – Dates clefs et personnages principaux'
         soustitre: 'Dates clefs'
 dates:
     -
