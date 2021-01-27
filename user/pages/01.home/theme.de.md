@@ -12,76 +12,80 @@ paragraphes:
 cards:
     -
         title: 'Der Tag X'
-        url: tagx
+        url: de/jourj
         text: '12. April 1970. Hat dieses Datum keine Bedeutung für Sie? Immerhin markiert es einen Wendepunkt im Leben der Walliserinnen und Walliser.'
         image: jourJ.jpg
         copyright: '© Léonard Gianadda, Médiathèque Valais - Martigny'
         color: '#faca30'
     -
         title: 'Die Pionierinnen: von Gabrielle Nanchen bis Viola Amherd'
-        url: null
+        url: de/pionnieres
         text: 'Die Erlangung des aktiven und passiven Wahlrechts ist nur der erste Schritt. Nun gilt es, gewählt zu werden.'
         image: pionneres.png
         copyright: '© Dessin de Pauline Lugon, 2021'
         color: '#6093ac'
     -
         title: 'Iris von Roten, die Simone de Beauvoir der Schweiz'
-        url: null
+        url: de/irisvonroten
         text: 'In Frankreich kennt fast jede und jeder Simone de Beauvoir, die als Feministin die Geschichte des 20.'
         image: img_1.jpg
         copyright: null
         color: '#7ebab5'
     -
         title: 'Die Männer hinter dem Frauenstimmrecht'
-        url: null
+        url: de/hommes
         text: 'Ohne sie hätte es das Anliegen des Frauenstimmrechts wahrscheinlich nie auf die politische Bühne geschafft.'
         image: img_1.jpg
         copyright: null
         color: '#61993b'
     -
         title: 'Nicht alle sind begeistert'
-        url: null
+        url: de/cause
         text: '"Die Schweizer Frauen haben schon immer gewusst, dass sie auch ohne Stimmrecht regieren können, weshalb sie gerne darauf verzichten."'
         image: img_1.jpg
         copyright: null
         color: '#6093ac'
     -
         title: 'Und was folgt nun?'
-        url: null
+        url: de/apres
         text: 'Auch wenn die Erlangung des Frauenstimmrechts ein bedeutender Sieg für die Frauen ist, so bedeutet dies noch keine Gleichberechtigung zwischen Frauen und Männern.'
         image: img_1.jpg
         copyright: null
         color: '#faca30'
     -
         title: 'Kultur Vermittlung'
-        url: null
+        url: de/mediation
         text: 'Kultur Vermittlung'
         image: img_1.jpg
         copyright: null
         color: null
     -
         title: Schule
-        url: null
+        url: de/scolaire
         text: Schule
         image: img_1.jpg
         copyright: null
         color: null
     -
         title: 'Die Datum'
-        url: null
+        url: de/dates
         text: 'Die Datum'
         image: img_1.jpg
         copyright: null
         color: null
 entreprises:
     -
-        image: logo.png
+        image: arsenaux.jpg
+        lien: 'https://www.vs.ch/de/web/culture/les-arsenaux-sion'
+        taille: '150'
+    -
+        image: ofCantonalEgaliteFamilleDe.png
+        lien: 'https://www.vs.ch/de/web/sef'
+        taille: '100'
     -
         image: logo.png
-    -
-        image: logo.png
-    -
-        image: logo.png
+        lien: null
+        taille: '100'
 images:
     -
         image: img_1.jpg

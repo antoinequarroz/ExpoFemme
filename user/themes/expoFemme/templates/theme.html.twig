@@ -35,7 +35,7 @@
             {% for card in page.header.cards %}
             <div class="col-sm-3 col-sm-4 mt-5">
                             <a href="{{ card.url }}" class="card link-trapeze-horizontal text-dark" style="box-shadow: 10px -10px {{ card.color }}">
-                                <div class="card-body" style="height: 550px">
+                                <div class="card-body" style="height: auto">
                                     <picture class="card-img-top">
                                         <img src="{{ base_url_simple }}/user/themes/expoFemme/images/{{ card.image }}" class="img-fluid" title="{{ card.copyright }}" alt="{{ card.copyright }}" />
                                     </picture>
@@ -51,7 +51,13 @@
         </div>
 
         <hr>
-        <img src="./user/themes/expoFemme/images/arsenaux.jpg" alt="Arsenaux">
+        <div class="col-12 text-center">
+            {% for entreprise in page.header.entreprises %}
+                <a href="{{ entreprise.lien }}">
+            <img src="{{ base_url_simple }}/user/themes/expoFemme/images/{{ entreprise.image }}" height="{{ entreprise.taille }}px" alt="Arsenaux">
+                </a>
+            {% endfor %}
+        </div>
     </section>
 {% endblock %}
 

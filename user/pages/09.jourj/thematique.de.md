@@ -1,4 +1,5 @@
 ---
+title: jourJ
 titres:
     -
         theme: 'Der Tag X'
@@ -11,6 +12,5 @@ colors:
 images:
     -
         image: jourJ.jpg
-title: Jourj
 ---
 

@@ -75,13 +75,17 @@ cards:
         color: null
 entreprises:
     -
-        image: logo.png
+        image: arsenaux.jpg
+        lien: 'https://www.vs.ch/web/culture/les-arsenaux-sion'
+        taille: '150'
+    -
+        image: ofCantonalEgaliteFamilleFr.png
+        lien: 'https://www.vs.ch/fr/web/sef'
+        taille: '100'
     -
         image: logo.png
-    -
-        image: logo.png
-    -
-        image: logo.png
+        lien: null
+        taille: '100'
 images:
     -
         image: img_1.jpg

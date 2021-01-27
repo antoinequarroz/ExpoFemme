@@ -2,10 +2,10 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledJsonFile',
     'filename' => '/Users/antoinequarroz/Sites/suffrageFeminin/user/data/flex/indexes/pages.json',
-    'modified' => 1611647798,
+    'modified' => 1611738828,
     'data' => [
         'version' => '1.5',
-        'timestamp' => 1611647798,
+        'timestamp' => 1611738828,
         'count' => 11,
         'index' => [
             '' => [
@@ -31,16 +31,16 @@ return [
                 'key' => 'home',
                 'storage_key' => '01.home',
                 'template' => 'theme',
-                'storage_timestamp' => 1611132437,
+                'storage_timestamp' => 1611738819,
                 'markdown' => [
                     'de' => [
-                        'theme' => 1611132437
+                        'theme' => 1611738771
                     ],
                     'fr' => [
-                        'theme' => 1611132427
+                        'theme' => 1611738819
                     ]
                 ],
-                'checksum' => '2743c95ee85748978df17fe6d560f2fa'
+                'checksum' => 'c264c66e4148829e829d62247a9c2fa9'
             ],
             '02.irisvonroten' => [
                 'key' => 'irisvonroten',
@@ -151,16 +151,16 @@ return [
                 'key' => 'jourj',
                 'storage_key' => '09.jourj',
                 'template' => 'thematique',
-                'storage_timestamp' => 1611567026,
+                'storage_timestamp' => 1611732601,
                 'markdown' => [
                     'de' => [
-                        'thematique' => 1611567026
+                        'thematique' => 1611732601
                     ],
                     'fr' => [
                         'thematique' => 1611130270
                     ]
                 ],
-                'checksum' => '91a68babc9bfa1c8313d5e27bd25982a'
+                'checksum' => 'bbee259c27a9e09b88b893a3823472f0'
             ],
             '10.Pionnieres' => [
                 'key' => 'pionnieres',

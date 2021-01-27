@@ -74,6 +74,24 @@ form:
                   type: text
                   label: Couleur des thèmes
 
+            header.arsenaux:
+              name: Arsenaux
+              type: list
+              style: vertical
+              label: Logo des Arsenaux
+              fields:
+                .image:
+                  type: filepicker
+                  folder: './user/themes/expoFemme/images'
+                  label: Image
+                  preview_images: true
+                  accept:
+                    - .png
+                    - .jpg
+                .lien:
+                  type: text
+                  label: Lien vers la page
+
             header.entreprises:
               name: entreprise
               type: list
@@ -88,3 +106,10 @@ form:
                   accept:
                     - .png
                     - .jpg
+                .lien:
+                  type: text
+                  label: Lien vers la page
+                .taille:
+                  type: text
+                  label: taille de l'image en px
+
