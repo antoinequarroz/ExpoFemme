@@ -8,5 +8,10 @@ pages:
 colors:
     -
         background: '#7ebab5'
+images:
+    -
+        image: irisVonRoten.jpg
+        titre: 'Titre de la photo'
+        paragraphe: 'lorem ipsum'
 ---
 
