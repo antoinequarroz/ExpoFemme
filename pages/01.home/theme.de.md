@@ -28,7 +28,7 @@ cards:
         title: 'Iris von Roten, die Simone de Beauvoir der Schweiz'
         url: de/irisvonroten
         text: 'In Frankreich kennt fast jede und jeder Simone de Beauvoir, die als Feministin die Geschichte des 20.'
-        image: img_1.jpg
+        image: irisVonRoten.jpg
         copyright: null
         color: '#7ebab5'
     -
