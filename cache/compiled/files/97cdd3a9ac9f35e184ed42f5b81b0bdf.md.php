@@ -2,7 +2,7 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledMarkdownFile',
     'filename' => '/Users/antoinequarroz/Sites/suffrageFeminin/user/pages/01.home/theme.fr.md',
-    'modified' => 1611132427,
+    'modified' => 1611738819,
     'data' => [
         'header' => [
             'title' => 'Home',
@@ -96,16 +96,19 @@ A l’occasion des 50 ans du suffrage féminin en Valais et en Suisse, la Média
             ],
             'entreprises' => [
                 0 => [
-                    'image' => 'logo.png'
+                    'image' => 'arsenaux.jpg',
+                    'lien' => 'https://www.vs.ch/web/culture/les-arsenaux-sion',
+                    'taille' => '150'
                 ],
                 1 => [
-                    'image' => 'logo.png'
+                    'image' => 'ofCantonalEgaliteFamilleFr.png',
+                    'lien' => 'https://www.vs.ch/fr/web/sef',
+                    'taille' => '100'
                 ],
                 2 => [
-                    'image' => 'logo.png'
-                ],
-                3 => [
-                    'image' => 'logo.png'
+                    'image' => 'logo.png',
+                    'lien' => NULL,
+                    'taille' => '100'
                 ]
             ],
             'images' => [
@@ -190,13 +193,17 @@ cards:
         color: null
 entreprises:
     -
-        image: logo.png
+        image: arsenaux.jpg
+        lien: \'https://www.vs.ch/web/culture/les-arsenaux-sion\'
+        taille: \'150\'
+    -
+        image: ofCantonalEgaliteFamilleFr.png
+        lien: \'https://www.vs.ch/fr/web/sef\'
+        taille: \'100\'
     -
         image: logo.png
-    -
-        image: logo.png
-    -
-        image: logo.png
+        lien: null
+        taille: \'100\'
 images:
     -
         image: img_1.jpg',

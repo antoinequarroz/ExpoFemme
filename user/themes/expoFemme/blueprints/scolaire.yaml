@@ -22,7 +22,7 @@ form:
             header.titres:
               name: titre
               type: list
-              label: Titre
+              label: Titre de la page
               fields:
                 .titre:
                   type: text
@@ -32,7 +32,7 @@ form:
             header.pages:
               name: description
               type: list
-              label: Texte
+              label: Texte du paragraphe
               fields:
                 .description:
                   type: textarea
@@ -42,8 +42,22 @@ form:
             header.liens:
               name: description
               type: list
-              label: Texte
+              label: Texte email
               fields:
                 .mail:
                   type: text
                   label: lien pour contact
+
+
+            header.fichier:
+              name: description
+              type: list
+              label: Texte PDF
+              fields:
+                .pdf:
+                  type: filepicker
+                  folder: './user/themes/expoFemme/pdf'
+                  label: PDF
+                .text:
+                  type: text
+                  label: Titre du PDF

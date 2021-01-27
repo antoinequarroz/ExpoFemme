@@ -42,8 +42,8 @@ class __TwigTemplate_65a8bdc544c52f6834b59fb000126905ea9b45ca20514d27e1a77f6b65d
         // line 4
         echo "    <section class=\"v-background\">
 
-        <div class=\"container row\">
-        <nav class=\"nav-lang nav-lang-short ml-auto\">
+        <div class=\"container row \">
+        <nav class=\"nav-lang nav-lang-short ml-auto mt-3\">
                     <button class=\"btn btn-outline-dark btn-lg\" style=\"background: rgba(0,0,0,0)\">
                         <a href=\"";
         // line 9
@@ -68,7 +68,7 @@ class __TwigTemplate_65a8bdc544c52f6834b59fb000126905ea9b45ca20514d27e1a77f6b65d
         $context['_seq'] = twig_ensure_traversable($this->getAttribute($this->getAttribute(($context["page"] ?? null), "header", []), "titres", []));
         foreach ($context['_seq'] as $context["_key"] => $context["titre"]) {
             // line 21
-            echo "                    <h1 class=\"v-h1\" data-aos=\"fade-right\" data-aos-delay=\"700\">";
+            echo "                    <h1 class=\"v-h1 m-1\" data-aos=\"fade-right\" data-aos-delay=\"700\">";
             echo $this->getAttribute($context["titre"], "firsttitle", []);
             echo " <br> ";
             echo $this->getAttribute($context["titre"], "secondtitle", []);
@@ -90,7 +90,7 @@ class __TwigTemplate_65a8bdc544c52f6834b59fb000126905ea9b45ca20514d27e1a77f6b65d
         $context['_seq'] = twig_ensure_traversable($this->getAttribute($this->getAttribute(($context["page"] ?? null), "header", []), "paragraphes", []));
         foreach ($context['_seq'] as $context["_key"] => $context["para"]) {
             // line 26
-            echo "                <div class=\"v-box v-box-shadow\" data-aos=\"fade-up\" data-aos-duration=\"1000\" data-aos-delay=\"700\">
+            echo "                <div class=\"v-box\" data-aos=\"fade-up\" data-aos-duration=\"1000\" data-aos-delay=\"700\">
                     <p class=\"fs-4\">";
             // line 27
             echo $this->getAttribute($context["para"], "description", []);
@@ -120,7 +120,7 @@ class __TwigTemplate_65a8bdc544c52f6834b59fb000126905ea9b45ca20514d27e1a77f6b65d
             echo "\" class=\"card link-trapeze-horizontal text-dark\" style=\"box-shadow: 10px -10px ";
             echo $this->getAttribute($context["card"], "color", []);
             echo "\">
-                                <div class=\"card-body\">
+                                <div class=\"card-body\" style=\"height: auto\">
                                     <picture class=\"card-img-top\">
                                         <img src=\"";
             // line 40
@@ -156,12 +156,37 @@ class __TwigTemplate_65a8bdc544c52f6834b59fb000126905ea9b45ca20514d27e1a77f6b65d
         </div>
 
         <hr>
-        <img src=\"./user/themes/expoFemme/images/arsenaux.jpg\" alt=\"Arseanux\">
+        <div class=\"col-12 text-center\">
+            ";
+        // line 55
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable($this->getAttribute($this->getAttribute(($context["page"] ?? null), "header", []), "entreprises", []));
+        foreach ($context['_seq'] as $context["_key"] => $context["entreprise"]) {
+            // line 56
+            echo "                <a href=\"";
+            echo $this->getAttribute($context["entreprise"], "lien", []);
+            echo "\">
+            <img src=\"";
+            // line 57
+            echo ($context["base_url_simple"] ?? null);
+            echo "/user/themes/expoFemme/images/";
+            echo $this->getAttribute($context["entreprise"], "image", []);
+            echo "\" height=\"";
+            echo $this->getAttribute($context["entreprise"], "taille", []);
+            echo "px\" alt=\"Arsenaux\">
+                </a>
+            ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['entreprise'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 60
+        echo "        </div>
     </section>
 ";
     }
 
-    // line 58
+    // line 64
     public function block_footer($context, array $blocks = [])
     {
     }
@@ -178,7 +203,7 @@ class __TwigTemplate_65a8bdc544c52f6834b59fb000126905ea9b45ca20514d27e1a77f6b65d
 
     public function getDebugInfo()
     {
-        return array (  165 => 58,  155 => 50,  143 => 44,  139 => 43,  127 => 40,  119 => 37,  116 => 36,  112 => 35,  105 => 30,  96 => 27,  93 => 26,  89 => 25,  86 => 24,  78 => 22,  71 => 21,  67 => 20,  57 => 13,  50 => 9,  43 => 4,  40 => 3,  30 => 1,);
+        return array (  190 => 64,  184 => 60,  171 => 57,  166 => 56,  162 => 55,  155 => 50,  143 => 44,  139 => 43,  127 => 40,  119 => 37,  116 => 36,  112 => 35,  105 => 30,  96 => 27,  93 => 26,  89 => 25,  86 => 24,  78 => 22,  71 => 21,  67 => 20,  57 => 13,  50 => 9,  43 => 4,  40 => 3,  30 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -196,8 +221,8 @@ class __TwigTemplate_65a8bdc544c52f6834b59fb000126905ea9b45ca20514d27e1a77f6b65d
 {% block content %}
     <section class=\"v-background\">
 
-        <div class=\"container row\">
-        <nav class=\"nav-lang nav-lang-short ml-auto\">
+        <div class=\"container row \">
+        <nav class=\"nav-lang nav-lang-short ml-auto mt-3\">
                     <button class=\"btn btn-outline-dark btn-lg\" style=\"background: rgba(0,0,0,0)\">
                         <a href=\"{{ base_url_simple }}/fr\" aria-label=\"Français\" class=\"text-dark\">FR</a>
                     </button>
@@ -211,12 +236,12 @@ class __TwigTemplate_65a8bdc544c52f6834b59fb000126905ea9b45ca20514d27e1a77f6b65d
         <div class=\"container\" >
             <div class=\"row\">
                 {% for titre in page.header.titres %}
-                    <h1 class=\"v-h1\" data-aos=\"fade-right\" data-aos-delay=\"700\">{{ titre.firsttitle}} <br> {{ titre.secondtitle }}</h1>
+                    <h1 class=\"v-h1 m-1\" data-aos=\"fade-right\" data-aos-delay=\"700\">{{ titre.firsttitle}} <br> {{ titre.secondtitle }}</h1>
                     <h2 class=\"v-h2 mb-5\" data-aos=\"fade-left\" data-aos-delay=\"700\">{{titre.thirdtitle}}</h2>
                 {% endfor %}
 
                 {% for para in page.header.paragraphes %}
-                <div class=\"v-box v-box-shadow\" data-aos=\"fade-up\" data-aos-duration=\"1000\" data-aos-delay=\"700\">
+                <div class=\"v-box\" data-aos=\"fade-up\" data-aos-duration=\"1000\" data-aos-delay=\"700\">
                     <p class=\"fs-4\">{{ para.description }}</p>
                 </div>
                 {% endfor %}
@@ -228,7 +253,7 @@ class __TwigTemplate_65a8bdc544c52f6834b59fb000126905ea9b45ca20514d27e1a77f6b65d
             {% for card in page.header.cards %}
             <div class=\"col-sm-3 col-sm-4 mt-5\">
                             <a href=\"{{ card.url }}\" class=\"card link-trapeze-horizontal text-dark\" style=\"box-shadow: 10px -10px {{ card.color }}\">
-                                <div class=\"card-body\">
+                                <div class=\"card-body\" style=\"height: auto\">
                                     <picture class=\"card-img-top\">
                                         <img src=\"{{ base_url_simple }}/user/themes/expoFemme/images/{{ card.image }}\" class=\"img-fluid\" title=\"{{ card.copyright }}\" alt=\"{{ card.copyright }}\" />
                                     </picture>
@@ -244,11 +269,18 @@ class __TwigTemplate_65a8bdc544c52f6834b59fb000126905ea9b45ca20514d27e1a77f6b65d
         </div>
 
         <hr>
-        <img src=\"./user/themes/expoFemme/images/arsenaux.jpg\" alt=\"Arseanux\">
+        <div class=\"col-12 text-center\">
+            {% for entreprise in page.header.entreprises %}
+                <a href=\"{{ entreprise.lien }}\">
+            <img src=\"{{ base_url_simple }}/user/themes/expoFemme/images/{{ entreprise.image }}\" height=\"{{ entreprise.taille }}px\" alt=\"Arsenaux\">
+                </a>
+            {% endfor %}
+        </div>
     </section>
 {% endblock %}
 
 {% block footer %}
-{% endblock %}", "theme.html.twig", "/Users/antoinequarroz/Sites/suffrageFeminin/user/themes/expoFemme/templates/theme.html.twig");
+{% endblock %}
+", "theme.html.twig", "/Users/antoinequarroz/Sites/suffrageFeminin/user/themes/expoFemme/templates/theme.html.twig");
     }
 }
