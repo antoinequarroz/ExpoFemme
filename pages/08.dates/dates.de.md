@@ -2,6 +2,7 @@
 titres:
     -
         titre: 'Titre en allemand'
+        soustitre: 'Dates clefs'
 dates:
     -
         description: 'Motion von Peter von Roten im Walliser Grossrat für die Einführung des Frauenstimmrechts auf kantonaler Ebene. Motion abgelehnt.'
