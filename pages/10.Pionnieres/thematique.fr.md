@@ -11,5 +11,16 @@ colors:
 images:
     -
         image: pionneres.png
+        titre: null
+        paragraphe: null
+cvs:
+    -
+        image: pionneres.png
+        titre: 'Gabrielle Nanchen'
+        pdf: gabrielleNanchen.pdf
+    -
+        image: null
+        titre: null
+        pdf: null
 ---
 
