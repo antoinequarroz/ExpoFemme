@@ -19,7 +19,7 @@ cards:
         color: '#faca30'
     -
         title: 'Die Pionierinnen: von Gabrielle Nanchen bis Viola Amherd'
-        url: de/pionneres
+        url: de/pionnieres
         text: 'Die Erlangung des aktiven und passiven Wahlrechts ist nur der erste Schritt. Nun gilt es, gewählt zu werden.'
         image: pionneres.png
         copyright: '© Dessin de Pauline Lugon, 2021'
