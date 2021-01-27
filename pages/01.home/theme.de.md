@@ -49,8 +49,8 @@ cards:
         title: 'Und was folgt nun?'
         url: de/apres
         text: 'Auch wenn die Erlangung des Frauenstimmrechts ein bedeutender Sieg für die Frauen ist, so bedeutet dies noch keine Gleichberechtigung zwischen Frauen und Männern.'
-        image: img_1.jpg
-        copyright: null
+        image: apres.jpg
+        copyright: '© Photographie Zufferey'
         color: '#faca30'
     -
         title: 'Kultur Vermittlung'
