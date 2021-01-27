@@ -14,6 +14,7 @@ cards:
         title: 'Le jour J'
         url: jourj
         text: '12 avril 1970. Cette date ne vous dit rien ? Pourtant, elle marque un tournant dans la vie des Valaisans et des Valaisannes.'
+        margin: '30'
         image: jourJ.jpg
         copyright: '© Léonard Gianadda, Médiathèque Valais - Martigny'
         color: '#faca30'
@@ -21,6 +22,7 @@ cards:
         title: 'De Gabrielle Nanchen à Viola Amherd, elles sont les pionnières'
         url: pionnieres
         text: 'Obtenir le droit de vote et d’éligibilité n’est qu’une première étape. Désormais, il faut se faire élire.'
+        margin: '1'
         image: pionneres.png
         copyright: '© Dessin de Pauline Lugon, 2021'
         color: '#6093ac'
@@ -28,6 +30,7 @@ cards:
         title: 'Iris von Roten, la Simone de Beauvoir suisse'
         url: irisvonroten
         text: 'En France, tout le monde, ou presque, connaît Simone de Beauvoir, figure féministe qui a marqué de son empreinte l’histoire du 20e siècle.'
+        margin: '60'
         image: irisVonRoten.jpg
         copyright: '© Photographie Jean-Philipe Dubuis'
         color: '#7ebab5'
@@ -35,6 +38,7 @@ cards:
         title: 'Derrière le suffrage féminin, des hommes'
         url: hommes
         text: 'Sans eux, la cause du suffrage féminin n’aurait probablement jamais été portée dans l’arène politique.'
+        margin: '30'
         image: motion.jpg
         copyright: '© Photographie Jean-Philipe Dubuis'
         color: '#61993b'
@@ -42,6 +46,7 @@ cards:
         title: 'Pas tous·tes acquis·es à la cause'
         url: cause
         text: '« La femme suisse sait depuis toujours qu’elle peut gouverner l’homme sans droit de vote, c’est pourquoi elle s’en passe avec plaisir. »'
+        margin: '35'
         image: ouiNon.jpg
         copyright: '© Photographie Jean-Philipe Dubuis'
         color: '#6093ac'
@@ -49,6 +54,7 @@ cards:
         title: 'Et après ?'
         url: apres
         text: 'Si la conquête du suffrage féminin est une grande victoire pour les femmes, elle ne signifie pas pour autant l’égalité entre femmes et hommes.'
+        margin: '40'
         image: apres.jpg
         copyright: '© Photographie Florence Zufferey'
         color: '#faca30'
@@ -56,6 +62,7 @@ cards:
         title: 'Médiation culturelle'
         url: mediation
         text: 'Médiation culturelle'
+        margin: null
         image: img_1.jpg
         copyright: null
         color: null
@@ -63,6 +70,7 @@ cards:
         title: Scolaire
         url: scolaire
         text: Scolaire
+        margin: null
         image: img_1.jpg
         copyright: null
         color: null
@@ -70,6 +78,7 @@ cards:
         title: 'Les dates'
         url: dates
         text: 'Les dates'
+        margin: null
         image: img_1.jpg
         copyright: null
         color: null
