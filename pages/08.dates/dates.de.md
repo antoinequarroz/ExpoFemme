@@ -1,7 +1,7 @@
 ---
 titres:
     -
-        titre: '50 ans suffrage féminin – Dates clefs et personnages principaux'
+        titre: '50 Jahre Frauenstimmrecht im Wallis – Dates clefs et personnages principaux'
         soustitre: 'Dates clefs'
 dates:
     -
