@@ -35,15 +35,15 @@ cards:
         title: 'Derrière le suffrage féminin, des hommes'
         url: hommes
         text: 'Sans eux, la cause du suffrage féminin n’aurait probablement jamais été portée dans l’arène politique.'
-        image: img_1.jpg
-        copyright: null
+        image: motion.jpg
+        copyright: '© Photographie Jean-Philipe Dubuis'
         color: '#61993b'
     -
         title: 'Pas tous·tes acquis·es à la cause'
         url: cause
         text: '« La femme suisse sait depuis toujours qu’elle peut gouverner l’homme sans droit de vote, c’est pourquoi elle s’en passe avec plaisir. »'
-        image: img_1.jpg
-        copyright: null
+        image: ouiNon.jpg
+        copyright: '© Photographie Jean-Philipe Dubuis'
         color: '#6093ac'
     -
         title: 'Et après ?'
