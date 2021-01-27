@@ -85,7 +85,7 @@ entreprises:
     -
         image: ofCantonalEgaliteFamilleFr.png
         lien: 'https://www.vs.ch/fr/web/sef'
-        taille: '80'
+        taille: '70'
     -
         image: archive.png
         lien: archives
