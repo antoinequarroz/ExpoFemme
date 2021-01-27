@@ -29,7 +29,7 @@ cards:
         url: de/irisvonroten
         text: 'In Frankreich kennt fast jede und jeder Simone de Beauvoir, die als Feministin die Geschichte des 20.'
         image: irisVonRoten.jpg
-        copyright: null
+        copyright: '© Photographie Jean-Philipe Dubuis'
         color: '#7ebab5'
     -
         title: 'Die Männer hinter dem Frauenstimmrecht'
