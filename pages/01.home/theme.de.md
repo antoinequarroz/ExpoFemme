@@ -75,7 +75,7 @@ cards:
         color: null
 entreprises:
     -
-        image: arsenaux.jpg
+        image: arseanux.png
         lien: 'https://www.vs.ch/de/web/culture/les-arsenaux-sion'
         taille: '100'
     -
