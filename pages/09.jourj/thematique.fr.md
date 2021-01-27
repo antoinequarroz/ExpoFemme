@@ -18,5 +18,6 @@ titre:
 videos:
     -
         youtube: 'https://www.youtube.com/watch?v=Se-L0ACArdw'
+        title: 'Campagne pour le suffrage Féminin'
 ---
 
