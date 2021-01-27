@@ -2,12 +2,13 @@
 titres:
     -
         titre: '50 ans suffrage féminin – Dates clefs et personnages principaux'
+        soustitre: 'Dates clefs'
 pages:
     -
         description: Dates
 dates:
     -
-        description: "Motion de Peter von Roten au Grand Conseil pour\r\nl’introduction du suffrage féminin au niveau cantonal.\r\nCette motion est refusée par le Grand Conseil. "
+        description: "Motion de Peter von Roten au Grand Conseil pour\r\nl’introduction du suffrage féminin au niveau cantonal.\r\nCette motion est refusée par le Grand Conseil."
         date: '1945'
     -
         description: "Création de l’Association valaisanne pour le suffrage\r\nféminin (AVPSF) dont Renée de Sépibus devient la\r\nprésidente. Hermann Pellegrini lui succède en 1969."
