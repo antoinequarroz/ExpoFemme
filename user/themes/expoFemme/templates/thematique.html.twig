@@ -57,6 +57,18 @@
             </div>
         </div>
 
+    <div class="container">
+        <div class="row">
+            {% for video in page.header.videos %}
+            <div class="col-sm-3">
+                <div class="plyr__video-embed">
+                    <iframe src="{{ video.youtube }}" frameborder="0"></iframe>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
     
     
     </section>
