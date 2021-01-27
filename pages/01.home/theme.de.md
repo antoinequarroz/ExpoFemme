@@ -77,12 +77,15 @@ entreprises:
     -
         image: arsenaux.jpg
         lien: 'https://www.vs.ch/de/web/culture/les-arsenaux-sion'
+        taille: '150'
     -
         image: ofCantonalEgaliteFamilleDe.png
         lien: 'https://www.vs.ch/de/web/sef'
+        taille: '100'
     -
         image: logo.png
         lien: null
+        taille: '100'
 images:
     -
         image: img_1.jpg
