@@ -19,6 +19,6 @@ videos:
     -
         youtube: 'https://www.youtube.com/watch?v=Se-L0ACArdw'
     -
-        youtube: 'https://www.youtube.com/watch?v=Ljgkekodnks&t=564s'
+        youtube: 'https://youtu.be/Ljgkekodnks'
 ---
 
