@@ -21,5 +21,6 @@ videos:
     -
         youtube: 'https://www.youtube.com/watch?v=Se-L0ACArdw'
         title: 'Campagne pour le suffrage Féminin'
+        paragraphe: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam consequatur, dolor error est iure molestias necessitatibus quas voluptatem voluptates. Aliquid consequatur enim eveniet iusto laborum minima nihil quidem quis, vitae!'
 ---
 
