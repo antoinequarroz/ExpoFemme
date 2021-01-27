@@ -12,6 +12,8 @@ colors:
 images:
     -
         image: jourJ.jpg
+        titre: 'Titre de la photo'
+        paragraphe: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam consequatur, dolor error est iure molestias necessitatibus quas voluptatem voluptates. Aliquid consequatur enim eveniet iusto laborum minima nihil quidem quis, vitae!'
 titre:
     -
         title: 'Le jour J'
