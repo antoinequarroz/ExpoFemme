@@ -83,9 +83,6 @@ entreprises:
     -
         image: logo.png
         lien: null
-    -
-        image: logo.png
-        lien: null
 images:
     -
         image: img_1.jpg
