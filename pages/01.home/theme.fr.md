@@ -29,7 +29,7 @@ cards:
         url: irisvonroten
         text: 'En France, tout le monde, ou presque, connaît Simone de Beauvoir, figure féministe qui a marqué de son empreinte l’histoire du 20e siècle.'
         image: irisVonRoten.jpg
-        copyright: null
+        copyright: '© Photographie Jean-Philipe Dubuis'
         color: '#7ebab5'
     -
         title: 'Derrière le suffrage féminin, des hommes'
