@@ -35,15 +35,15 @@ cards:
         title: 'Die Männer hinter dem Frauenstimmrecht'
         url: de/hommes
         text: 'Ohne sie hätte es das Anliegen des Frauenstimmrechts wahrscheinlich nie auf die politische Bühne geschafft.'
-        image: img_1.jpg
-        copyright: null
+        image: motion.jpg
+        copyright: '© Photographie Jean-Philipe Dubuis'
         color: '#61993b'
     -
         title: 'Nicht alle sind begeistert'
         url: de/cause
         text: '"Die Schweizer Frauen haben schon immer gewusst, dass sie auch ohne Stimmrecht regieren können, weshalb sie gerne darauf verzichten."'
-        image: img_1.jpg
-        copyright: null
+        image: ouiNon.jpg
+        copyright: '© Photographie Jean-Philipe Dubuis'
         color: '#6093ac'
     -
         title: 'Und was folgt nun?'
