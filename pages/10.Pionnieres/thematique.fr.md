@@ -11,12 +11,16 @@ colors:
 images:
     -
         image: pionneres.png
-        titre: null
-        paragraphe: null
+        titre: 'Titre de la photo'
+        paragraphe: lorem
 cvs:
     -
         image: gabrielleNanchen.png
         titre: 'Gabrielle Nanchen'
         pdf: gabrielleNanchen.pdf
+    -
+        image: null
+        titre: null
+        pdf: null
 ---
 
