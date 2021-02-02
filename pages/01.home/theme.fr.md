@@ -11,14 +11,6 @@ paragraphes:
         description: "Le 12 avril 1970, les Valaisannes obtiennent le droit de vote et d’éligibilité au niveau cantonal. Moins d’une année plus tard, le 7 février 1971, ce sont les Suissesses qui deviennent citoyennes sur le plan fédéral.\r\nA l’occasion des 50 ans du suffrage féminin en Valais et en Suisse, la Médiathèque Valais – Sion , les Archives de l’Etat du Valais et l’Office cantonal de l’égalité et de la famille se sont associés pour vous proposer une exposition qui retrace cette histoire du point de vue cantonal, des débuts de la lutte pour le suffrage féminin, en 1945, à la Grève des femmes de 2019, en passant par la désormais célèbre votation à Unterbäch, en 1957, les premières élues et le début de l’égalité entre les femmes et les hommes."
 cards:
     -
-        title: 'Le jour J'
-        url: jourj
-        text: '12 avril 1970. Cette date ne vous dit rien ? Pourtant, elle marque un tournant dans la vie des Valaisans et des Valaisannes.'
-        margin: '20'
-        image: jourJ.jpg
-        copyright: '© Léonard Gianadda, Médiathèque Valais - Martigny'
-        color: '#faca30'
-    -
         title: 'De Gabrielle Nanchen à Viola Amherd, elles sont les pionnières'
         url: pionnieres
         text: 'Obtenir le droit de vote et d’éligibilité n’est qu’une première étape. Désormais, il faut se faire élire.'
@@ -26,6 +18,14 @@ cards:
         image: pionneres.png
         copyright: '© Dessin de Pauline Lugon, 2021'
         color: '#6093ac'
+    -
+        title: 'Le jour J'
+        url: jourj
+        text: '12 avril 1970. Cette date ne vous dit rien ? Pourtant, elle marque un tournant dans la vie des Valaisans et des Valaisannes.'
+        margin: '20'
+        image: jourJ.jpg
+        copyright: '© Léonard Gianadda, Médiathèque Valais - Martigny'
+        color: '#faca30'
     -
         title: 'Iris von Roten, la Simone de Beauvoir suisse'
         url: irisvonroten
