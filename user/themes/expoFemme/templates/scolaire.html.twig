@@ -1,0 +1,74 @@
+{% extends 'partials/base.html.twig' %}
+
+{% block content %}
+    <section class="v-background">
+
+        <div class="container row">
+            <nav class="nav-lang nav-lang-short ml-auto">
+                <button class="btn btn-outline-dark btn-lg" style="background: rgba(0,0,0,0)">
+                    <a href="{{ base_url_simple }}/fr" aria-label="Français" class="text-dark">FR</a>
+                </button>
+
+                <button class="btn btn-outline-dark btn-lg" style="background: rgba(0,0,0,0)">
+                    <a href="{{ base_url_simple }}/de" aria-label="Deutsch" class="text-dark">DE</a>
+                </button>
+            </nav>
+        </div>
+
+
+        <div class="container">
+            <div class="row">
+                <div class="align-right mt-3">
+                    <button class="btn btn-outline-dark btn-lg" style="background: rgba(0,0,0,0)" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="500">
+                        <a href="{{ base_url_simple }}" style="color: rgba(0,0,0)">Retour</a>
+                    </button>
+                </div>
+        {% for titre in header.titres %}
+            <h1 class="display-1 mb-5" data-aos="fade-right">{{ titre.titre }}</h1>
+        {% endfor %}
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                {% for page in header.pages %}
+                    <p>{{ page.description }}</p>
+                {% endfor %}
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                {% for lien in header.liens %}
+                    <p>{{ lien.mail }}</p>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                {% for fichiers in header.fichier %}
+                <div class="col-sm-3 col-sm-4 mt-5">
+                <a href="{{ base_url_simple }}/user/themes/expoFemme/pdf/{{ fichiers.pdf }}" target="_blank">
+                    <div class="card" style="background-color: #faca30">
+                        <div class="card-body text-center">
+                            <img src="{{ base_url_simple }}/user/themes/expoFemme/images/svg/pdf.svg" style="height: 100px" alt="svg" class="mt-2">
+                            <p class="card-text mt-5" style="color: black">
+                                {{ fichiers.text}}
+
+                            </p>
+                        </div>
+                    </div>
+                </a>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+
+    </section>
+
+
+
+{% endblock %}
+
+{% block footer %}
+{% endblock %}

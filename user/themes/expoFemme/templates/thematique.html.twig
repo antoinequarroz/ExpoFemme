@@ -1,0 +1,78 @@
+{% extends 'partials/base.html.twig' %}
+
+{% block content %}
+
+    {% for color in header.colors %}
+        <section style="background: {{color.background}}">
+
+        <div class="container row">
+            <nav class="nav-lang nav-lang-short ml-auto">
+                <button class="btn btn-outline-dark btn-lg" style="background: rgba(0,0,0,0)">
+                    <a href="{{ base_url_simple }}/fr" aria-label="Français" class="text-dark">FR</a>
+                </button>
+
+                <button class="btn btn-outline-dark btn-lg" style="background: rgba(0,0,0,0)">
+                    <a href="{{ base_url_simple }}/de" aria-label="Deutsch" class="text-dark">DE</a>
+                </button>
+            </nav>
+        </div>
+
+    {% endfor %}
+        <div class="container">
+            <div class="row">
+                <div class="align-right mt-3">
+                <button class="btn btn-outline-dark btn-lg" style="background: rgba(0,0,0,0)" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="500">
+                    <a href="{{ base_url_simple }}" style="color: rgba(0,0,0)">Retour</a>
+                </button>
+                </div>
+
+                {% for titre in page.header.titres %}
+                <h1 class="display-1 mb-5" data-aos="fade-right">{{ titre.theme }}</h1>
+                {% endfor %}
+            </div>
+        </div>
+
+        <div class="container" data-aos="fade-left">
+            <div class="row">
+                {% for page in page.header.pages %}
+                    <div class="v-box v-box-shadow">
+                <p class="fs-4">{{ page.description }}</p>
+                    </div>
+                {% endfor %}
+
+            </div>
+        </div>
+
+        <div class="container mt-5" data-aos="fade-up" data-aos-duration="1000">
+            <div class="row">
+                    {% for image in page.header.images %}
+                <div class="col-sm-3 col-sm-4 mt-5">
+                    <div class="card-group">
+                        <div class="card">
+                            <img src="{{ base_url_simple }}/user/themes/expoFemme/images/{{ image.image }}" class="card-img-top" alt="...">
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+
+
+    <div class="container mt-5">
+        <div class="row">
+            <h3>Retrouver nos vidéos</h3>
+            {% for video in page.header.videos %}
+            <div class="col-6">
+                    <div class="plyr__video-embed" id="player">
+                        <iframe src="{{video.youtube}}" allowfullscreen allowtransparency allow="autoplay"></iframe>
+                    </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    
+    </section>
+{% endblock %}
+
+{% block footer %}
+{% endblock %}

@@ -1,0 +1,65 @@
+{% extends 'partials/base.html.twig' %}
+
+{% block content %}
+    <section class="v-background">
+
+        <div class="container row ">
+        <nav class="nav-lang nav-lang-short ml-auto mt-3">
+                    <button class="btn btn-outline-dark btn-lg" style="background: rgba(0,0,0,0)">
+                        <a href="{{ base_url_simple }}/fr" aria-label="Français" class="text-dark">FR</a>
+                    </button>
+
+                <button class="btn btn-outline-dark btn-lg" style="background: rgba(0,0,0,0)">
+                    <a href="{{ base_url_simple }}/de" aria-label="Deutsch" class="text-dark">DE</a>
+                </button>
+        </nav>
+        </div>
+
+        <div class="container" >
+            <div class="row">
+                {% for titre in page.header.titres %}
+                    <h1 class="v-h1 m-1" data-aos="fade-right" data-aos-delay="700">{{ titre.firsttitle}} <br> {{ titre.secondtitle }}</h1>
+                    <h2 class="v-h2 mb-5" data-aos="fade-left" data-aos-delay="700">{{titre.thirdtitle}}</h2>
+                {% endfor %}
+
+                {% for para in page.header.paragraphes %}
+                <div class="v-box" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="700">
+                    <p class="fs-4">{{ para.description }}</p>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+
+        <div class="container" data-aos="fade-up" data-aos-duration="1000">
+            <div class="row">
+            {% for card in page.header.cards %}
+            <div class="col-sm-3 col-sm-4 mt-5">
+                            <a href="{{ card.url }}" class="card link-trapeze-horizontal text-dark" style="box-shadow: 10px -10px {{ card.color }}">
+                                <div class="card-body" style="height: auto">
+                                    <picture class="card-img-top">
+                                        <img src="{{ base_url_simple }}/user/themes/expoFemme/images/{{ card.image }}" class="img-fluid" title="{{ card.copyright }}" alt="{{ card.copyright }}" />
+                                    </picture>
+
+                                        <h3 class="card-title" style="overflow-wrap: initial;">{{ card.title }}</h3>
+                                        <p class="card-text">{{ card.text }}</p>
+
+                                </div>
+                            </a>
+                    </div>
+            {% endfor %}
+            </div>
+        </div>
+
+        <hr>
+        <div class="col-12 text-center">
+            {% for entreprise in page.header.entreprises %}
+                <a href="{{ entreprise.lien }}">
+            <img src="{{ base_url_simple }}/user/themes/expoFemme/images/{{ entreprise.image }}" height="{{ entreprise.taille }}px" alt="Arsenaux">
+                </a>
+            {% endfor %}
+        </div>
+    </section>
+{% endblock %}
+
+{% block footer %}
+{% endblock %}

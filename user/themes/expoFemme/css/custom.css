@@ -1,0 +1,55 @@
+
+body {
+    font-family: 'Roboto Slab', serif;
+    padding: 1px;
+}
+
+
+.v-background {
+    background-image: url('https://mv-sion-mak.synology.me/mv-suffrageFeminin/assets/50_picto_fond.png');
+    background-attachment: fixed;
+    background-position: center;
+    background-size: initial;
+    background-repeat: no-repeat;
+}
+
+
+.v-h1 {
+    font-size: 200px;
+    text-align: left;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.v-h2 {
+    font-size: 100px;
+    text-align: right;
+    font-weight: bold;
+}
+
+@media (max-width: 1200px) {
+    .v-h1 {
+        font-size: 10vw;
+    }
+    .v-h2 {
+        font-size: 5vw;
+    }
+}
+
+
+.v-theme-p {
+    text-align: center;
+    font-size: 70px;
+}
+
+.v-box {
+    border-style: solid;
+}
+
+
+.v-footer {
+    background: rgba(0,0,0,0);
+}
+
+.v-card-image {
+    height: 300px;
+}
